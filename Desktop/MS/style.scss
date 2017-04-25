@@ -1,0 +1,123 @@
+$primary-color: #9D9C9E;
+$font: 'Open Sans Condensed', sans-serif;;
+
+html {
+	body {
+		font-family: $font;
+		background: url(images/bg.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		.wrapper {
+			display: flex;
+			margin-top: 10%;
+			.column {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				color: white;
+				// padding: 20px;
+				margin: 10px;
+			}
+			.main-column {
+				flex: 5;
+				height: 50%;
+				.main-image {
+					// background: rgba(0, 0, 0, 0.6);
+					padding: 20px;
+					display: block;
+					img {
+						display: block;
+						height: 150px;
+						width: auto;
+						border-radius: 50%;
+						margin: 0 auto;
+						margin-bottom: -10px;
+					}
+				}
+				.about-content {
+					background: rgba(0, 0, 0, 0.6);
+					padding: 20px;
+					display: none;
+					.name {
+						font-size: 30px;
+						font-weight: bold;
+						margin: 0;
+					}
+				}
+				ul {
+					background: rgba(0, 0, 0, 0.4);
+					margin: 0 auto;
+					li {
+						// letter-spacing: 2px;
+						font-size: 20px;
+						.fa{
+							color: white;
+
+						}
+					}
+				}
+			}
+			.port-wrapper {
+				flex: 8;
+				flex-direction: row;
+				background: transparent;
+				margin-top: 3%;
+				.skills {
+					// margin-top: 15%;
+					.skill {
+						padding: 5px;
+						padding-left: 10px;
+					}
+				}
+				.skills-text {
+					flex: 3;
+					.skill-text {
+						height: 14em;
+						p{
+							display: none;
+						}
+					}
+				}
+				.skills-name {
+					flex: 1;
+					text-align: center;
+					font-weight: 1000;
+					.skill-name {
+						height: 4em;
+						// &:hover > div {
+						// 	background: rgba(119, 187, 255, 0.5);
+						// }
+						// &:hover > div:hover {
+						// 	background: rgba(119, 187, 255, 1);
+						// }
+						// a {
+							// color: white;
+							// text-decoration: none;
+							// cursor: pointer;
+							// &:hover > h3 {
+							// 	background: rgba(119, 187, 255, 0.5);
+							// }
+							// &:hover > h3:hover {
+							// 	background: rgba(119, 187, 255, 0.9);
+							// }
+							div {
+								background: rgba(119, 187, 255, 0.9);
+								padding: 10px;
+								&:hover {
+									background: rgba(119, 187, 255, 0.9);
+								}
+							}
+						// }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.modal {
+
+}

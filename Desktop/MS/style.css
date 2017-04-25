@@ -1,0 +1,71 @@
+html body {
+  font-family: "Open Sans Condensed", sans-serif;
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  html body .wrapper {
+    display: flex;
+    margin-top: 10%; }
+    html body .wrapper .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin: 10px; }
+    html body .wrapper .main-column {
+      flex: 5;
+      height: 50%; }
+      html body .wrapper .main-column .main-image {
+        padding: 20px;
+        display: block; }
+        html body .wrapper .main-column .main-image img {
+          display: block;
+          height: 150px;
+          width: auto;
+          border-radius: 50%;
+          margin: 0 auto;
+          margin-bottom: -10px; }
+      html body .wrapper .main-column .about-content {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        display: none; }
+        html body .wrapper .main-column .about-content .name {
+          font-size: 30px;
+          font-weight: bold;
+          margin: 0; }
+      html body .wrapper .main-column ul {
+        background: rgba(0, 0, 0, 0.4);
+        margin: 0 auto; }
+        html body .wrapper .main-column ul li {
+          font-size: 20px; }
+          html body .wrapper .main-column ul li .fa {
+            color: white; }
+    html body .wrapper .port-wrapper {
+      flex: 8;
+      flex-direction: row;
+      background: transparent;
+      margin-top: 3%; }
+      html body .wrapper .port-wrapper .skills .skill {
+        padding: 5px;
+        padding-left: 10px; }
+      html body .wrapper .port-wrapper .skills-text {
+        flex: 3; }
+        html body .wrapper .port-wrapper .skills-text .skill-text {
+          height: 14em; }
+          html body .wrapper .port-wrapper .skills-text .skill-text p {
+            display: none; }
+      html body .wrapper .port-wrapper .skills-name {
+        flex: 1;
+        text-align: center;
+        font-weight: 1000; }
+        html body .wrapper .port-wrapper .skills-name .skill-name {
+          height: 4em; }
+          html body .wrapper .port-wrapper .skills-name .skill-name div {
+            background: rgba(119, 187, 255, 0.9);
+            padding: 10px; }
+            html body .wrapper .port-wrapper .skills-name .skill-name div:hover {
+              background: rgba(119, 187, 255, 0.9); }
+
+/*# sourceMappingURL=style.css.map */
