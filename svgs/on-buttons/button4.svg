@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="166.667px" height="87.18px" viewBox="0 0 166.667 87.18" enable-background="new 0 0 166.667 87.18" xml:space="preserve">
+
+<g>
+	
+		<rect x="33.917" y="26.089" opacity="0.4" fill="#2084C6" stroke="#FFFFFF" stroke-miterlimit="10" enable-background="new    " width="98.833" height="35.001"/>
+	<g>
+		<rect x="33.917" y="26.089" fill="#2084C6" width="21.332" height="35.001"/>
+		<polyline fill="#2084C6" points="55.249,48.314 61.255,43.589 55.249,38.564 55.249,48.314 		"/>
+	</g>
+	<g>
+		<g>
+			<g>
+				<path fill="#FFFFFF" d="M44.583,53.067c-0.861,0-1.562-0.679-1.562-1.513s0.7-1.514,1.562-1.514
+					c0.861,0,1.562,0.679,1.562,1.514S45.443,53.067,44.583,53.067z M44.583,50.525c-0.586,0-1.062,0.461-1.062,1.029
+					c0,0.566,0.477,1.028,1.062,1.028c0.584,0,1.062-0.461,1.062-1.028C45.645,50.986,45.167,50.525,44.583,50.525z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#FFFFFF" d="M44.583,50.525c-0.139,0-0.25-0.106-0.25-0.241V46.81c0-0.133,0.111-0.242,0.25-0.242
+					c0.138,0,0.25,0.109,0.25,0.242v3.474C44.833,50.418,44.721,50.525,44.583,50.525z"/>
+			</g>
+		</g>
+		<g>
+			<path fill="#FFFFFF" d="M37.431,38.712v7.409h14.305v-7.409H37.431z M42.833,45.88h-1v-2.421h1V45.88z M44.333,42.309v3.571h-1
+				v-2.663v-1.846h1V42.309z M45.833,45.88h-1v-3.328h1V45.88z M47.331,45.88h-1v-3.571v-1.754h1V45.88z"/>
+		</g>
+		<g>
+			<rect x="36.837" y="37.576" fill="#FFFFFF" width="15.492" height="0.895"/>
+		</g>
+		<g>
+			<rect x="36.837" y="46.363" fill="#FFFFFF" width="15.492" height="0.896"/>
+		</g>
+	</g>
+	<polygon fill="none" points="149.255,58.939 66.589,58.939 67.255,25.938 149.255,25.938 	"/>
+	<text transform="matrix(1 0 0 1 67.0366 42.5784)" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">GIS</text>
+	<text transform="matrix(1 0 0 1 66.8428 52.179)" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">Web Interface</text>
+</g>
+</svg>

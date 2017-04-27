@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="test1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="166.667px" height="87.18px" viewBox="0 0 166.667 87.18" enable-background="new 0 0 166.667 87.18" xml:space="preserve">
-<rect x="279.917" y="26.089" opacity="0.4" fill="#2084C6" stroke="#FFFFFF" stroke-miterlimit="10" width="98.833" height="35.001"/>
+
+
+<!-- <rect x="279.917" y="26.089" opacity="0.4" fill="#2084C6" stroke="#FFFFFF" stroke-miterlimit="10" width="98.833" height="35.001"/>
 <g>
 	<rect x="279.917" y="26.089" fill="#2084C6" width="21.333" height="35.001"/>
 	<polyline fill="#2084C6" points="301.25,48.314 307.256,43.589 301.25,38.564 301.25,48.314 	"/>
@@ -33,7 +35,10 @@
 		<rect x="282.837" y="46.363" fill="#FFFFFF" width="15.492" height="0.895"/>
 	</g>
 </g>
-<rect x="33.917" y="26.089" opacity="0.6" fill="none" stroke="#2084C6" stroke-width="0.5" stroke-miterlimit="10" width="98.833" height="35.001"/>
+ -->
+
+
+<rect x="33.917" y="26.089" opacity="0.75" fill="#fff" stroke="#2084C6" stroke-width="0.5" stroke-miterlimit="10" width="98.833" height="35.001"/>
 <g opacity="0.6">
 	<rect x="33.917" y="26.089" fill="#2084C6" width="21.333" height="35.001"/>
 	<polyline fill="#2084C6" points="55.25,48.314 61.256,43.589 55.25,38.564 55.25,48.314 	"/>
@@ -60,7 +65,11 @@
 	</g>
 </g>
 <polygon fill="none" points="149.256,58.939 66.59,58.939 67.256,25.938 149.256,25.938 "/>
-<text transform="matrix(1 0 0 1 67.0366 42.5781)" opacity="0.6"><tspan x="0" y="0" fill="#2084C6" font-family="'KozGoPr6N-Light-83pv-RKSJ-H'" font-size="8">SPATIAL </tspan><tspan x="-0.194" y="9.601" fill="#2084C6" font-family="'KozGoPr6N-Light-83pv-RKSJ-H'" font-size="8">REGRESSION</tspan></text>
+
+<text transform="matrix(1 0 0 1 67.0366 42.5781)" opacity="0.95"><tspan x="0" y="0" fill="#2084C6" font-family="'KozGoPr6N-Light-83pv-RKSJ-H'" font-size="8">JOHN RUDELL</tspan><tspan x="-0.194" y="9.601" fill="#2084C6" font-family="'KozGoPr6N-Light-83pv-RKSJ-H'" font-size="8">IS HAWT</tspan></text>
+
+<!-- 
 <polygon fill="none" points="395.256,58.939 312.59,58.939 313.256,25.938 395.256,25.938 "/>
-<text transform="matrix(1 0 0 1 313.0371 42.5781)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">SPATIAL </tspan><tspan x="-0.194" y="9.601" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">REGRESSION</tspan></text>
+<text transform="matrix(1 0 0 1 313.0371 42.5781)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">SPATIAL </tspan><tspan x="-0.194" y="9.601" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">REGRESSION</tspan></text> -->
+
 </svg>

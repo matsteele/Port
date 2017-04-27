@@ -2,6 +2,7 @@ $primary-color: #9D9C9E;
 $font: 'Open Sans Condensed', sans-serif;;
 
 html {
+	height: 100%;
 	body {
 		font-family: $font;
 		background: url(images/bg.jpg) no-repeat center center fixed; 
@@ -9,6 +10,9 @@ html {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 		.wrapper {
 			display: flex;
 			margin-top: 10%;
@@ -39,6 +43,8 @@ html {
 				.about-content {
 					background: rgba(0, 0, 0, 0.6);
 					padding: 20px;
+					// padding-bottom: 0px;
+					height: auto;
 					display: none;
 					.name {
 						font-size: 30px;
@@ -54,6 +60,10 @@ html {
 						font-size: 20px;
 						.fa{
 							color: white;
+							&:hover {
+								color: #2084C6;
+								font-size: 30px;
+							}
 
 						}
 					}
@@ -63,18 +73,19 @@ html {
 				flex: 8;
 				flex-direction: row;
 				background: transparent;
-				margin-top: 3%;
+				margin: 0;
+				margin-top: -5%;
 				.skills {
 					// margin-top: 15%;
 					.skill {
-						padding: 5px;
-						padding-left: 10px;
 					}
 				}
 				.skills-text {
 					flex: 3;
 					.skill-text {
 						height: 14em;
+						padding: 5px;
+						padding-left: 10px;
 						p{
 							display: none;
 						}
@@ -85,7 +96,8 @@ html {
 					text-align: center;
 					font-weight: 1000;
 					.skill-name {
-						height: 4em;
+						margin-top: -10%;
+						// height: 4em;
 						// &:hover > div {
 						// 	background: rgba(119, 187, 255, 0.5);
 						// }
@@ -93,8 +105,8 @@ html {
 						// 	background: rgba(119, 187, 255, 1);
 						// }
 						a {
-							color: white;
-							text-decoration: none;
+							// color: white;
+							// text-decoration: none;
 							cursor: pointer;
 							// &:hover > h3 {
 							// 	background: rgba(119, 187, 255, 0.5);
@@ -102,17 +114,28 @@ html {
 							// &:hover > h3:hover {
 							// 	background: rgba(119, 187, 255, 0.9);
 							// }
-							div {
-								background: rgba(119, 187, 255, 0.9);
-								padding: 10px;
+							img {
+								width: 300px;
+								height: auto;
+								// background: rgba(119, 187, 255, 0.9);
+								// padding: 10px;
 								&:hover {
-									background: rgba(119, 187, 255, 0.9);
+									// background: rgba(119, 187, 255, 0.9);
+									cursor: pointer;
 								}
 							}
 						}
 					}
 				}
 			}
+		}
+		footer {
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: absolute;
+			font-size: 10px;
+			// flex: 1;
 		}
 	}
 }
@@ -121,3 +144,49 @@ html {
 .modal {
 
 }
+
+@media screen and (max-width: 524px) {
+	html {
+		body {
+			.wrapper {
+				display: block;
+				.port-wrapper {
+					.skills-text {
+						display: none;
+					}
+					.skills-name {
+						margin-top: 8%;
+					}
+				}
+			}
+			footer {
+				position: static;
+			}
+		}
+	}
+}
+
+@media (min-width:525px) and (max-width:1000px) {
+	html {
+		body {
+			.wrapper {
+				.port-wrapper {
+					.skills-text {
+						display: none;
+					}
+					.skills-name {
+						margin-left: -10%;
+						margin-top: 10%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
