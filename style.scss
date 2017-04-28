@@ -1,5 +1,5 @@
 $primary-color: #9D9C9E;
-$font: 'Open Sans Condensed', sans-serif;;
+$font: 'Open Sans Condensed', sans-serif;
 
 html {
 	height: 100%;
@@ -178,6 +178,22 @@ html {
 						margin-left: -10%;
 						margin-top: 10%;
 					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// Under Construction Header //
+
+@media screen and (max-width: 550px) {
+	html {
+		body {
+			.wrapper {
+				header {
+					margin-left: 10% !important;
 				}
 			}
 		}

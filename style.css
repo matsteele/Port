@@ -100,5 +100,8 @@ html {
   html body .wrapper .port-wrapper .skills-name {
     margin-left: -10%;
     margin-top: 10%; } }
+@media screen and (max-width: 550px) {
+  html body .wrapper header {
+    margin-left: 10% !important; } }
 
 /*# sourceMappingURL=style.css.map */
