@@ -2,7 +2,7 @@ html {
   height: 100%; }
   html body {
     font-family: "Open Sans Condensed", sans-serif;
-    background: url(images/bg.jpg) no-repeat center center fixed;
+    background: url(../images/bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -78,12 +78,6 @@ html {
                 height: auto; }
                 html body .wrapper .port-wrapper .skills-name .skill-name a img:hover {
                   cursor: pointer; }
-    html body footer {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-      font-size: 10px; }
 
 @media screen and (max-width: 524px) {
   html body .wrapper {
@@ -91,9 +85,7 @@ html {
     html body .wrapper .port-wrapper .skills-text {
       display: none; }
     html body .wrapper .port-wrapper .skills-name {
-      margin-top: 8%; }
-  html body footer {
-    position: static; } }
+      margin-top: 8%; } }
 @media (min-width: 525px) and (max-width: 1000px) {
   html body .wrapper .port-wrapper .skills-text {
     display: none; }

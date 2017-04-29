@@ -5,7 +5,7 @@ html {
 	height: 100%;
 	body {
 		font-family: $font;
-		background: url(images/bg.jpg) no-repeat center center fixed; 
+		background: url(../images/bg.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -129,14 +129,13 @@ html {
 				}
 			}
 		}
-		footer {
-			bottom: 0;
-			left: 0;
-			right: 0;
-			position: absolute;
-			font-size: 10px;
-			// flex: 1;
-		}
+		// footer {
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	position: absolute;
+		// 	font-size: 10px;
+		// }
 	}
 }
 
@@ -159,9 +158,9 @@ html {
 					}
 				}
 			}
-			footer {
-				position: static;
-			}
+			// footer {
+			// 	position: static;
+			// }
 		}
 	}
 }
