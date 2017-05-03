@@ -38,6 +38,6 @@
 	</g>
 	<polygon fill="none" points="149.255,58.939 66.589,58.939 67.255,25.938 149.255,25.938 	"/>
 	<text transform="matrix(1 0 0 1 67.0366 42.5784)" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">GIS</text>
-	<text transform="matrix(1 0 0 1 66.8428 52.179)" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">Web Interface</text>
+	<text transform="matrix(1 0 0 1 66.8428 52.179)" fill="#FFFFFF" font-family="'KozGoPr6N-Bold-83pv-RKSJ-H'" font-size="8">Web Application</text>
 </g>
 </svg>

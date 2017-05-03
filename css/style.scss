@@ -21,14 +21,27 @@ html {
 				display: flex;
 				flex-direction: column;
 				color: white;
-				// padding: 20px;
 				margin: 10px;
 			}
 			.main-column {
 				flex: 5;
 				height: 50%;
+				.social {
+					background: rgba(0, 0, 0, 0.4);
+					margin: 0 auto;
+					list-style: none;
+					li {
+						font-size: 20px;
+						.fa{
+							color: white;
+							&:hover {
+								color: #2084C6;
+							}
+
+						}
+					}
+				}
 				.main-image {
-					// background: rgba(0, 0, 0, 0.6);
 					padding: 20px;
 					display: block;
 					img {
@@ -40,10 +53,11 @@ html {
 						margin-bottom: -10px;
 					}
 				}
-				.about-content {
+				.about-content, .about1 {
 					background: rgba(0, 0, 0, 0.6);
+					margin: 0 auto;
 					padding: 20px;
-					// padding-bottom: 0px;
+					max-width: 300px;
 					height: auto;
 					display: none;
 					.name {
@@ -52,20 +66,33 @@ html {
 						margin: 0;
 					}
 				}
-				ul {
-					background: rgba(0, 0, 0, 0.4);
+				.eIcons {
 					margin: 0 auto;
-					li {
-						// letter-spacing: 2px;
-						font-size: 20px;
-						.fa{
-							color: white;
-							&:hover {
-								color: #2084C6;
-								font-size: 30px;
+					ul {
+						background: rgba(0, 0, 0, 0.4);
+						margin: 0 auto;
+						list-style: none;
+						max-width: 300px;
+						li {
+							font-size: 20px;
+							padding: 2px 5px 2px 5px;
+							.fa, img{
+								color: white;
+								&:hover {
+									color: #2084C6;
+								}
+
 							}
+						}
+					}
+					.edu {
+						#EduButton {
+							width: auto;
+							height: 25px;
 
 						}
+					}
+					.exp {
 					}
 				}
 			}
@@ -97,30 +124,13 @@ html {
 					font-weight: 1000;
 					.skill-name {
 						margin-top: -10%;
-						// height: 4em;
-						// &:hover > div {
-						// 	background: rgba(119, 187, 255, 0.5);
-						// }
-						// &:hover > div:hover {
-						// 	background: rgba(119, 187, 255, 1);
-						// }
 						a {
-							// color: white;
-							// text-decoration: none;
+
 							cursor: pointer;
-							// &:hover > h3 {
-							// 	background: rgba(119, 187, 255, 0.5);
-							// }
-							// &:hover > h3:hover {
-							// 	background: rgba(119, 187, 255, 0.9);
-							// }
 							img {
 								width: 300px;
 								height: auto;
-								// background: rgba(119, 187, 255, 0.9);
-								// padding: 10px;
 								&:hover {
-									// background: rgba(119, 187, 255, 0.9);
 									cursor: pointer;
 								}
 							}
@@ -129,13 +139,6 @@ html {
 				}
 			}
 		}
-		// footer {
-		// 	bottom: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	position: absolute;
-		// 	font-size: 10px;
-		// }
 	}
 }
 
@@ -158,9 +161,6 @@ html {
 					}
 				}
 			}
-			// footer {
-			// 	position: static;
-			// }
 		}
 	}
 }
