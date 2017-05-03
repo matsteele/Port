@@ -67,7 +67,7 @@ html {
                 color: white; }
                 html body .wrapper .main-column .eIcons ul li .fa:hover, html body .wrapper .main-column .eIcons ul li img:hover {
                   color: #2084C6; }
-          html body .wrapper .main-column .eIcons .edu #EduButton {
+          html body .wrapper .main-column .eIcons .edu .edu-button {
             width: auto;
             height: 25px; }
       html body .wrapper .port-wrapper {
