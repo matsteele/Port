@@ -63,13 +63,15 @@ html {
             html body .wrapper .main-column .eIcons ul li {
               font-size: 20px;
               padding: 2px 5px 2px 5px; }
-              html body .wrapper .main-column .eIcons ul li .fa, html body .wrapper .main-column .eIcons ul li img {
+              html body .wrapper .main-column .eIcons ul li .fa, html body .wrapper .main-column .eIcons ul li embed {
                 color: white; }
-                html body .wrapper .main-column .eIcons ul li .fa:hover, html body .wrapper .main-column .eIcons ul li img:hover {
+                html body .wrapper .main-column .eIcons ul li .fa:hover, html body .wrapper .main-column .eIcons ul li embed:hover {
                   color: #2084C6; }
-          html body .wrapper .main-column .eIcons .edu .edu-button {
-            width: auto;
-            height: 25px; }
+          html body .wrapper .main-column .eIcons .edu .e1 {
+            margin-top: -4px; }
+            html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
+              width: auto;
+              height: 24px; }
       html body .wrapper .port-wrapper {
         flex: 8;
         flex-direction: row;
@@ -97,6 +99,23 @@ html {
                 height: auto; }
                 html body .wrapper .port-wrapper .skills-name .skill-name a img:hover {
                   cursor: pointer; }
+
+.modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content2 {
+  height: auto; }
+  .modal .modal-dialog .modal-content .buttonDiv, .modal .modal-dialog .modal-content2 .buttonDiv {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center; }
+    .modal .modal-dialog .modal-content .buttonDiv:hover, .modal .modal-dialog .modal-content2 .buttonDiv:hover {
+      background-color: #2084C6; }
+    .modal .modal-dialog .modal-content .buttonDiv p, .modal .modal-dialog .modal-content2 .buttonDiv p {
+      color: white; }
+  .modal .modal-dialog .modal-content .siteSample, .modal .modal-dialog .modal-content2 .siteSample {
+    display: none;
+    width: 100%;
+    height: 100%; }
+.modal .modal-dialog .modal-content2 {
+  height: 900px; }
 
 @media screen and (max-width: 524px) {
   html body .wrapper {

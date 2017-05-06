@@ -76,7 +76,7 @@ html {
 						li {
 							font-size: 20px;
 							padding: 2px 5px 2px 5px;
-							.fa, img{
+							.fa, embed{
 								color: white;
 								&:hover {
 									color: #2084C6;
@@ -86,10 +86,13 @@ html {
 						}
 					}
 					.edu {
-						.edu-button {
-							width: auto;
-							height: 25px;
+						.e1 {
+							margin-top: -4px;
+							.edu-button {
+								width: auto;
+								height: 24px;
 
+							}
 						}
 					}
 					.exp {
@@ -143,8 +146,63 @@ html {
 }
 
 
-.modal {
 
+
+
+
+
+.modal {
+	 
+	.modal-dialog {
+
+		.modal-content, .modal-content2 {
+			height: auto;
+
+
+			.buttonDiv {
+				margin: 0 auto;
+				background-color: rgba(0, 0, 0, 0.4);;
+				text-align: center;
+				&:hover {
+					background-color: #2084C6;
+				}
+
+				p{
+
+					color:white;
+
+					// font-family: open-sans-serif;
+
+
+				}
+			}
+
+
+
+
+
+			.siteSample{
+
+				display: none;
+				width: 100%;
+				height: 100%;
+
+
+
+			}
+		}
+
+		.modal-content2{
+			height: 900px;
+
+		}
+
+
+
+
+
+
+	}
 }
 
 @media screen and (max-width: 524px) {
