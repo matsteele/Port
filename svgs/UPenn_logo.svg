@@ -3,14 +3,18 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 125 125" style="enable-background:new 0 0 125 125;" xml:space="preserve">
 <style type="text/css">
+	g{cursor: pointer}
 
 	.st0{fill:#FFFFFF;}
+	.st0:hover{fill: blue;}
 	.st1{fill:none;stroke:#7F7C7F;stroke-width:1.2479;stroke-miterlimit:3.8636;}
 	.st2{fill:none;stroke:#FFFFFF;stroke-width:1.2479;stroke-miterlimit:3.8636;}
 	.st3{fill:#7F7C7F;fill-opacity:0.8;}
 	.st4{fill:none;stroke:#7F7C7F;stroke-miterlimit:10;}
 	.st5{fill:none;stroke:#FFFFFF;stroke-width:1.295;stroke-miterlimit:3.8636;}
-	.hov:hover{stroke: blue;}
+	.hov{pointer-events:all;}
+	.hov:hover{stroke: #337ab7; stroke-width: 10;}
+	
 
 </style>
 <g id="svg3399" inkscape:version="0.48.1 " sodipodi:docname="New document 4" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">

@@ -63,15 +63,17 @@ html {
             html body .wrapper .main-column .eIcons ul li {
               font-size: 20px;
               padding: 2px 5px 2px 5px; }
-              html body .wrapper .main-column .eIcons ul li .fa, html body .wrapper .main-column .eIcons ul li embed {
+              html body .wrapper .main-column .eIcons ul li .fa {
                 color: white; }
-                html body .wrapper .main-column .eIcons ul li .fa:hover, html body .wrapper .main-column .eIcons ul li embed:hover {
+                html body .wrapper .main-column .eIcons ul li .fa:hover {
                   color: #2084C6; }
-          html body .wrapper .main-column .eIcons .edu .e1 {
-            margin-top: -4px; }
-            html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
-              width: auto;
-              height: 24px; }
+          html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
+            width: 23px;
+            height: 23px;
+            margin-bottom: -5px;
+            display: inline; }
+            html body .wrapper .main-column .eIcons .edu .e1 .edu-button:hover {
+              fill: blue; }
       html body .wrapper .port-wrapper {
         flex: 8;
         flex-direction: row;

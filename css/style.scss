@@ -76,7 +76,7 @@ html {
 						li {
 							font-size: 20px;
 							padding: 2px 5px 2px 5px;
-							.fa, embed{
+							.fa{
 								color: white;
 								&:hover {
 									color: #2084C6;
@@ -87,10 +87,16 @@ html {
 					}
 					.edu {
 						.e1 {
-							margin-top: -4px;
+							// margin-top: 10px;
 							.edu-button {
-								width: auto;
-								height: 24px;
+								width: 23px;
+								height: 23px;
+								margin-bottom: -5px;
+								// background: url(../svgs/UPenn_Logo.svg) no-repeat;
+								display: inline;
+								&:hover {
+									fill: blue;
+								}
 
 							}
 						}
