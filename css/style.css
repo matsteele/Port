@@ -69,9 +69,9 @@ html {
                 html body .wrapper .main-column .eIcons ul li .fa:hover {
                   color: #2084C6; }
           html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
-            width: 22px;
-            height: 22px;
-            margin-bottom: 1px;
+            width: 25px;
+            height: 25px;
+            margin-bottom: -7px;
             display: inline; }
             html body .wrapper .main-column .eIcons .edu .e1 .edu-button:hover {
               fill: blue; }
