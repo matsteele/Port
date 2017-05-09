@@ -81,9 +81,8 @@ html {
 							.fa{
 								color: white;
 								&:hover {
-									color: #2084C6;
+									color: #ffcb04;
 								}
-
 							}
 						}
 					}
@@ -97,7 +96,7 @@ html {
 								// background: url(../svgs/UPenn_Logo.svg) no-repeat;
 								display: inline;
 								&:hover {
-									fill: blue;
+									cursor: pointer;
 								}
 
 							}

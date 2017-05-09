@@ -67,14 +67,14 @@ html {
               html body .wrapper .main-column .eIcons ul li .fa {
                 color: white; }
                 html body .wrapper .main-column .eIcons ul li .fa:hover {
-                  color: #2084C6; }
+                  color: #ffcb04; }
           html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
             width: 25px;
             height: 25px;
             margin-bottom: -7px;
             display: inline; }
             html body .wrapper .main-column .eIcons .edu .e1 .edu-button:hover {
-              fill: blue; }
+              cursor: pointer; }
       html body .wrapper .port-wrapper {
         flex: 8;
         flex-direction: row;

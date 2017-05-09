@@ -33,14 +33,6 @@ $(document).ready(function(){
 		$(this).text(function(i, text){
           return text === "DISPLAY SAMPLE" ? "DISPLAY DESCRIPTION" : "DISPLAY SAMPLE";
       })
-
-
-
-
-
-
 	});
-
-
 
 });
