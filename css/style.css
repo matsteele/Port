@@ -24,10 +24,11 @@ html {
         height: 50%; }
         html body .wrapper .main-column .social {
           background: rgba(0, 0, 0, 0.4);
-          margin: 0 auto;
-          list-style: none; }
+          text-align: center;
+          margin: 0 auto; }
           html body .wrapper .main-column .social li {
-            font-size: 20px; }
+            font-size: 20px;
+            margin: 0 auto; }
             html body .wrapper .main-column .social li .fa {
               color: white; }
               html body .wrapper .main-column .social li .fa:hover {
@@ -68,9 +69,9 @@ html {
                 html body .wrapper .main-column .eIcons ul li .fa:hover {
                   color: #2084C6; }
           html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
-            width: 23px;
-            height: 23px;
-            margin-bottom: -5px;
+            width: 22px;
+            height: 22px;
+            margin-bottom: 1px;
             display: inline; }
             html body .wrapper .main-column .eIcons .edu .e1 .edu-button:hover {
               fill: blue; }
@@ -118,6 +119,9 @@ html {
     height: 100%; }
 .modal .modal-dialog .modal-content2 {
   height: 900px; }
+
+.hov {
+  fill: green; }
 
 @media screen and (max-width: 524px) {
   html body .wrapper {

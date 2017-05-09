@@ -16,13 +16,13 @@ $(document).ready(function(){
 		})
 	});
 
-	$('.main-image, .about-content, .list-inline').hover(function() {
-		$('.about-content').css("display", "inline");
-		$('.edu, .exp').css("margin", "0 0");
-	}, function () {
-		$('.about-content').css("display", "none");
-		$('.edu, .exp').css("margin", "0 auto");
-	})
+	// $('.main-image, .about-content, .list-inline').hover(function() {
+	// 	$('.about-content').css("display", "inline");
+	// 	$('.edu, .exp').css("margin", "0 0");
+	// }, function () {
+	// 	$('.about-content').css("display", "none");
+	// 	$('.edu, .exp').css("margin", "0 auto");
+	// })
 
 
 	$('.showIframe').click("slow", function() {
