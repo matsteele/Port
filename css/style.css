@@ -21,7 +21,8 @@ html {
         margin: 10px; }
       html body .wrapper .main-column {
         flex: 5;
-        height: 50%; }
+        height: 50%;
+        z-index: 999; }
         html body .wrapper .main-column .social {
           background: rgba(0, 0, 0, 0.4);
           text-align: center;
@@ -86,13 +87,15 @@ html {
           html body .wrapper .port-wrapper .skills-text .skill-text {
             height: 14em;
             padding: 5px;
-            padding-left: 10px; }
+            padding-left: 10px;
+            z-index: 999; }
             html body .wrapper .port-wrapper .skills-text .skill-text p {
               display: none; }
         html body .wrapper .port-wrapper .skills-name {
           flex: 1;
           text-align: center;
-          font-weight: 1000; }
+          font-weight: 1000;
+          z-index: 999; }
           html body .wrapper .port-wrapper .skills-name .skill-name {
             margin-top: -10%; }
             html body .wrapper .port-wrapper .skills-name .skill-name a {
@@ -103,14 +106,22 @@ html {
                 html body .wrapper .port-wrapper .skills-name .skill-name a img:hover {
                   cursor: pointer; }
 
-.city-points {
-  width: 100%;
-  height: 100%;
+.cityPoints {
+  /*transform-origin: 1100px 100px 1000px;*/
   position: fixed;
-  background-size: cover; }
+  height: 100%;
+  width: 100%;
+  /*margin: 0 auto;*/ }
 
-.circles {
-  fill: black; }
+.PointsActual {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /*    fill: blue;*/ }
+
+#bgIMG {
+  background-size: cover;
+  background-color: blue; }
 
 .modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content2 {
   height: auto; }
@@ -137,6 +148,8 @@ html {
     html body .wrapper .port-wrapper .skills-name {
       margin-top: 8%; } }
 @media (min-width: 525px) and (max-width: 1000px) {
+  html body .wrapper .main-column {
+    z-index: 999 !important; }
   html body .wrapper .port-wrapper .skills-text {
     display: none; }
   html body .wrapper .port-wrapper .skills-name {
