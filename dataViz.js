@@ -4,7 +4,7 @@ var playData = [[5, 6], [6, 8], [9, 8]];
 
 // var height = 600;
 // var width = 800;
-var w = 800;
+var w =(h/6)*8;
 var h = 600;
 var margin = {
 	top: 60,
@@ -15,40 +15,83 @@ var margin = {
 
 var cityData = []
 
+var projection = d3.geo.mercator()
+				.scale([100]);
 
 
-var width = w - margin.left - margin.right;
-var height = h - margin.top - margin.bottom;
-var svg = d3.select("body").style("background", "url(svgs/bg2-01.svg) no-repeat center center fixed")
-var path = d3.geo.path();
+// create path variable
+var path = d3.geo.path()
+    .projection(projection);
 
 
-d3.json("http://matsteele.com/CityData.json", function(error, data) {
-    cityData = data.features;
-     console.log(cityData);
+var bg = d3.select("body")
+			.style("background", "url(svgs/bg2-01.svg) no-repeat center center fixed")
+			.style("background-size", "cover");
+			
 
 
+console.log(bg[0][0].clientHeight)
 
 
 var svg = d3.select("body")
 			.append("svg")
-			.attr("id", "chart")
-			.attr("width", w)
-			.attr("height", h)
-			.style("background", "grey");
+			.style("background-size", "cover")
+			.classed("cityPoints", true)
+			//.style("background-color", "green")
+			.attr("viewBox", "0 0 800 600" )
+            .attr("preserveAspectRatio", "xMidYMid slice")
+           // .attr("transform", "translate (190,380)");
+
+			
 
 
-// var points = svg.selectALL("circle")
-// 	     	.data(playData)
-// 	     	.enter()
-// 	     		.append("circle")
-	     		
+d3.json("http://matsteele.com/CityData2.json", function(error, data) {
+    cityData = data.features;
+     //console.log(cityData);
 
 
 
 
+ var points = svg.selectAll("circle")
+ 	     	.data(cityData)
+ 	     	.enter()
+ 	     	.append("circle")
+ 	     	.attr("class", "PointsActual")
+ 	     	.attr("cx", function (d) {
+ 	     		return d.properties.cx2;
+ 	     	})
+ 	     	.attr("cy", function (d) {
+ 	     		return d.properties.cy2;
+ 	     	})
+ 	     	.on("mouseover", function() {
+			        d3.select(this)
+			          .attr("stroke", "blue")
+			          .attr("stroke-width", ".5")
+			          .attr("fill-opacity", "0.05")
+			          .attr("r", function(d){
+			          	return d.properties.Urbpop2010 / 1000000 * 5
+			          })
+			})
+			.on("mouseout", function() {
+			        d3.select(this)
+					.attr("r", 2)
+ 	     			.attr("fill", "orange")
+ 	     			.attr("stroke-width", "0")
+			        .attr("fill-opacity", "1.0");
+ 	     		})
+ 	     	.attr("r", 2)
+ 	     	.attr("fill", "rgb(254,193,13)");
+
+ 	     
 
 
+sources
+
+
+var bg = d3.select("sources")
+			.style("background", "url(svgs/bg2-01.svg) no-repeat center center fixed")
+			.style("background-size", "cover");
+			
 
 
 

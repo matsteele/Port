@@ -153,8 +153,30 @@ html {
 }
 
 
+.cityPoints {
+   /*transform-origin: 1100px 100px 1000px;*/
+    position: fixed;
+  	height: 100%;
+    width: 100%;
+    /*margin: 0 auto;*/
+
+}
+
+.PointsActual {
+
+	position: fixed;
+  	height: 100%;
+    width: 100%;
+/*    fill: blue;*/
 
 
+}
+
+
+#bgIMG{
+	background-size: cover;
+	background-color: blue;
+}
 
 
 
