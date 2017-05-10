@@ -88,19 +88,6 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
 sources
 
 
-var bg = d3.select("sources")
-			.style("background", "url(svgs/bg2-01.svg) no-repeat center center fixed")
-			.style("background-size", "cover");
-			
-
-
-
-
-
-
-
-
-
 
 
 
