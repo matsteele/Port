@@ -181,11 +181,11 @@ $( "#findInput" ).change(function() {
 
 var input = document.getElementById("findInput");
 
-input.oninput = function() {
+input.onInput = function() {
 
   $('#findBut').prop('disabled', false);
 
-  };
+};
 
 
 // Event fired on submission
