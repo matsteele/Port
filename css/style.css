@@ -123,6 +123,14 @@ html {
   background-size: cover;
   background-color: blue; }
 
+.sources {
+  width: 20%;
+  z-index: 2; }
+  .sources object {
+    opacity: 0.4; }
+    .sources object:hover {
+      opacity: 1; }
+
 .modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content2 {
   height: auto; }
   .modal .modal-dialog .modal-content .buttonDiv, .modal .modal-dialog .modal-content2 .buttonDiv {
