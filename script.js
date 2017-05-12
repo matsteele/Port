@@ -29,7 +29,6 @@ $(document).ready(function(){
 		$('.siteSample').toggle("slow", function() {});
 		$('.modal-body').toggle("slow", function() {});
 		$('.modal-content').toggleClass("modal-content2");
-
 		$(this).text(function(i, text){
           return text === "DISPLAY SAMPLE" ? "DISPLAY DESCRIPTION" : "DISPLAY SAMPLE";
       })
