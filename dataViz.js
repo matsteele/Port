@@ -8,10 +8,13 @@ var margin = {
 };
 
 
-var primaryColor = "rgb(254,193,13)"
-var secondaryColor = "rgb(254,193,13)"
+var Yellow1 = "rgb(254,193,13)"
+var Blue1 = "rgb(121,181,221)"
+var Blue2 = "rgb(216,239,255)"
+var Blue3 = "rgb(216,239,255)"
 
 var cityData = []
+var circlex = []
 
 var projection = d3.geo.mercator()
 				.scale([100]);
@@ -22,9 +25,14 @@ var path = d3.geo.path()
 
 
 
+
 	var tCx 	=  [];
 	var tCy 	=  [];
 	var tR  	=  [];
+
+
+
+var data4Circle = []
 
 var bg = d3.select("body")
 			.style("background", "url(svgs/bg2-01.svg) no-repeat center center fixed")
@@ -33,22 +41,16 @@ var bg = d3.select("body")
 
 
 var newCircles = d3.select("body")
-			.append("svg")
-			.style("background-size", "cover")
-			.classed("cityPoints", true)
-			//.style("background-color", "green")
-			.attr("viewBox", "0 0 800 600" )
-            .attr("preserveAspectRatio", "xMidYMid slice")
+					.append("svg")
+					.style("background-size", "cover")
+					.classed("cityPoints", true)
+					//.style("background-color", "green")
+					.attr("viewBox", "0 0 800 600" )
+					.attr("preserveAspectRatio", "xMidYMid slice");
+
+
 	     	 	
  
-
-
-
-			
-
-
-console.log(bg[0][0].clientHeight)
-
 
 var svg = d3.select("body")
 			.append("svg")
@@ -71,105 +73,78 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
 
 
 
-// var points2 = newCircles.selectAll("circle")
-// 	     	 	.data(cityData)
-// 	 	     	.enter()
-// 	 	     	.append("circle")
-// 	 	     	.attr("class", "PointsActual2")
-// 	 	     	.attr("cx", function (d) {
-// 	 	     		return d.properties.cx2;
-// 	 	     	})
-// 	 	     	.attr("cy", function (d) {
-// 	 	     		return d.properties.cy2;
-// 	 	     	})
-// 	          	.attr("stroke", "green")
-// 				.attr("stroke-width", ".5")
-// 				          .attr("fill-opacity", "0.05")
-// 				          .attr("r", function(d){
-// 				          	return d.properties.Urbpop2000 / 1000000 * 5
-// 				          	console.log(d.properties.Urbpop2000)
-// 				          })
-// 	 	     	.attr("fill", "rgba(254,193,13, 0.75)")
-// 	     		.style("visibility", "visible");	   
+
+var overText = d3.select("body")
+	.append("div")
+	.style("position", "absolute")
+	.style("z-index", "10")
+	.style("visibility", "hidden")
+	.text("a simple tooltip");
 
 
 
 
 
 
+///DRAW INITIAL DOTS 
 
- var points = svg.selectAll("circle")
+ 	var points = svg.selectAll("circle")
  	     	.data(cityData)
  	     	.enter()
  	     	.append("circle")
- 	     	.attr("class", "PointsActual1")
+
  	     	.attr("cx", function (d) {
  	     		return d.properties.cx2;
  	     	})
  	     	.attr("cy", function (d) {
  	     		return d.properties.cy2;
  	     	})
+ 	     	.attr("r", 2)
+ 	     	.attr("z-index", "5")
+ 	     	.attr("fill", "rgba(254,193,13, 0.75)")
  	     	.on("mouseover", function() {
-			        var newCircle = d3.select(this)
-			        	.transition()
-			        	.duration(200) 
-			        	.attr("stroke", "red")
-			          .attr("stroke-width", "0.5")
-			          .attr("fill-opacity", "0.05")
-		          	.attr("r", function(d){
+			       //INCREASE RADIUS FOR MOUSEOVER FOR 2000
 
-		         	 tCx = d.properties.cx2;
-		          	 tCy = d.properties.cy2;
-		          	 tR = d.properties.Urbpop2000 / 1000000 * 5;
+			        
+			        d3.select(this)
+			        .transition()
+			        .duration(200) 
+			        .attr("stroke", Blue1)
+			        .attr("stroke-width", "0.5")
+			        .attr("fill-opacity", "0.05")
+					.attr("r", function(d){
 
-		          	//console.log(d.properties.Urbpop2010);
+			         	 tCx = d.properties.cx2;
+			          	 tCy = d.properties.cy2;
+			          	 tR = d.properties.Urbpop2000 / 1000000 * 5
+			          	 data4Circle = [tCx, tCy, tR];
+			          	//console.log(d.properties.Urbpop2010);
+			          	return d.properties.Urbpop2010 / 1000000 * 5;
 
-
-		          	return d.properties.Urbpop2010 / 1000000 * 5;
-		    
 		          	});     
 
-		          	console.log(tCx, tCy, tR)
+		          	//INCREASE RADIUS FOR MOUSEOVER FOR 2010
 
-
-
-		          	newCircles.selectAll("circle")
-			     	 	.data(cityData)
+		          	circlex = newCircles.selectAll("circle")
+			     	 	.data(data4Circle)
 			 	     	.enter()
-			 	     	.append("circle")
-			 	     	.attr("class", "PointsActual2")
-			 	     	.attr("cx", tCx)
-			 	     	.attr("cy", tCy)
-			          	.attr("stroke", "green")
+			 	     	.append("circle");
+
+			 	     circlex.attr("id", "PointsActual2")
+			 	     	.attr("cx", data4Circle[0])
+			 	     	.attr("cy", data4Circle[1])
+			          	.attr("stroke", Blue3)
 						.attr("stroke-width", ".5")
 				          .attr("fill-opacity", "0.05")
-				          .attr("r", tR)
-			 	     	.attr("fill", "rgba(0,193,13, 0.75)");
+				          .attr("r", data4Circle[2])
+			 	     	.attr("fill", Yellow1);
 			     		// .style("visibility", "visible");	   
 
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-		          	  
-
+			     		     		
 			
 
 			 })	  
-
+			//EXIT
 			.on("mouseout", function() {
 			        d3.select(this)
 			        .transition()
@@ -185,18 +160,19 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
 			        .attr("fill-opacity", "1.0");
 
 
- 	     		})
- 	     	.attr("r", 2)
- 	     	.attr("z-index", "5")
- 	     	.attr("fill", "rgba(254,193,13, 0.75)");
+			       circlex.remove();
+
+			       overText.style("visibility", "hidden");
+
+
+
+		          
+
+ 	     		});
+
  	     
 
 });
-
-
-
-
-
 
 
 
