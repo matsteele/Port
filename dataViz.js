@@ -13,8 +13,9 @@ var Blue1 = "rgb(121,181,221)"
 var Blue2 = "rgb(216,239,255)"
 var Blue3 = "rgb(216,239,255)"
 
-var cityData = []
-var circlex = []
+var cityData = [];
+var circlex = [];
+var Pop2000 = [];
 
 var projection = d3.geo.mercator()
 				.scale([100]);
@@ -49,7 +50,12 @@ var newCircles = d3.select("body")
 					.attr("preserveAspectRatio", "xMidYMid slice");
 
 
-	     	 	
+var textOver = d3.select("body")
+	.append("div")
+	.style("position", "absolute")
+	.style("z-index", "10")
+	.style("visibility", "hidden")
+	// .text("2000 Pop: "+ Pop2000);	     	 	
  
 
 var svg = d3.select("body")
@@ -79,7 +85,7 @@ var overText = d3.select("body")
 	.style("position", "absolute")
 	.style("z-index", "10")
 	.style("visibility", "hidden")
-	.text("a simple tooltip");
+	.html("a simple tooltip");
 
 
 
@@ -110,18 +116,28 @@ var overText = d3.select("body")
 			        .transition()
 			        .duration(200) 
 			        .attr("stroke", Blue1)
-			        .attr("stroke-width", "0.5")
+			        .attr("stroke-width", "1")
 			        .attr("fill-opacity", "0.05")
 					.attr("r", function(d){
 
 			         	 tCx = d.properties.cx2;
 			          	 tCy = d.properties.cy2;
+			          	 pop2000 = d.properties.Urbpop2000
+			          	 pop2010 = d.properties.Urbpop2010
+			          	 cityName = d.properties.CityName
+			          	 cityDensity10 = Math.round(d.properties.dens210)
+			          	 yrGrowthRate = d.properties.AvgYrInc
+
+
+
+
 			          	 tR = d.properties.Urbpop2000 / 1000000 * 5
 			          	 data4Circle = [tCx, tCy, tR];
 			          	//console.log(d.properties.Urbpop2010);
 			          	return d.properties.Urbpop2010 / 1000000 * 5;
 
-		          	});     
+		          	});
+		             
 
 		          	//INCREASE RADIUS FOR MOUSEOVER FOR 2010
 
@@ -133,18 +149,50 @@ var overText = d3.select("body")
 			 	     circlex.attr("id", "PointsActual2")
 			 	     	.attr("cx", data4Circle[0])
 			 	     	.attr("cy", data4Circle[1])
-			          	.attr("stroke", Blue3)
-						.attr("stroke-width", ".5")
+			          	.attr("stroke", Yellow1)
+						.attr("stroke-width", "1")
 				          .attr("fill-opacity", "0.05")
 				          .attr("r", data4Circle[2])
 			 	     	.attr("fill", Yellow1);
-			     		// .style("visibility", "visible");	   
 
-			     		     		
-			
+
+
+			 	     if (cityDensity10 == 0) { 
+
+			 	     	 cityDensity10 = "N/A"
+
+			 	     }
+
+
+
+			     	//place text markers 
+
+
+			     	textOver.style("visibility", "visible")
+			     		.html( 	"<p> <strong>"+ cityName + " </strong> </p> "+ 
+
+			     		"<p> <span id='pop2000'> 2000 Pop: </span>"+ pop2000 + "</p>" +
+
+			     		"<p> <span id='pop2010'> 2010 Pop: </span>"+ pop2010 + "</p>" +
+
+			     		"<p> <span id='pop2010'> 2010 Density: </span>"+ cityDensity10 + "</p>" 
+
+
+
+
+
+
+			     		);
+
+			     	
+
 
 			 })	  
 			//EXIT
+			.on("mousemove", function(){
+			 	     		return textOver.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+			     		
+
 			.on("mouseout", function() {
 			        d3.select(this)
 			        .transition()
@@ -162,7 +210,7 @@ var overText = d3.select("body")
 
 			       circlex.remove();
 
-			       overText.style("visibility", "hidden");
+			       textOver.style("visibility", "hidden");
 
 
 
