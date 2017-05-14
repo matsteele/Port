@@ -44,17 +44,21 @@ html {
             border-radius: 50%;
             margin: 0 auto;
             margin-bottom: -10px; }
-        html body .wrapper .main-column .about-content, html body .wrapper .main-column .about1 {
+        html body .wrapper .main-column .about-content {
           background: rgba(0, 0, 0, 0.6);
           margin: 0 auto;
           padding: 20px;
-          max-width: 300px;
-          height: auto;
+          width: 300px;
+          height: 250px;
           display: none; }
-          html body .wrapper .main-column .about-content .name, html body .wrapper .main-column .about1 .name {
+          html body .wrapper .main-column .about-content .name {
             font-size: 30px;
             font-weight: bold;
             margin: 0; }
+          html body .wrapper .main-column .about-content p {
+            display: none; }
+          html body .wrapper .main-column .about-content .main-summary p {
+            display: inline-block; }
         html body .wrapper .main-column .eIcons {
           margin: 0 auto; }
           html body .wrapper .main-column .eIcons ul {
@@ -82,28 +86,28 @@ html {
         background: transparent;
         margin: 0;
         margin-top: -5%; }
-        html body .wrapper .port-wrapper .skills-text {
+        html body .wrapper .port-wrapper .samples-text {
           flex: 3; }
-          html body .wrapper .port-wrapper .skills-text .skill-text {
+          html body .wrapper .port-wrapper .samples-text .sample-text {
             /*						height: 14em;*/
             padding: 5px;
             padding-left: 10px;
             z-index: 999; }
-            html body .wrapper .port-wrapper .skills-text .skill-text p {
+            html body .wrapper .port-wrapper .samples-text .sample-text p {
               display: none; }
-        html body .wrapper .port-wrapper .skills-name {
+        html body .wrapper .port-wrapper .samples-name {
           flex: 1;
           text-align: center;
           font-weight: 1000;
           z-index: 999; }
-          html body .wrapper .port-wrapper .skills-name .skill-name {
+          html body .wrapper .port-wrapper .samples-name .sample-name {
             margin-top: -10%; }
-            html body .wrapper .port-wrapper .skills-name .skill-name a {
+            html body .wrapper .port-wrapper .samples-name .sample-name a {
               cursor: pointer; }
-              html body .wrapper .port-wrapper .skills-name .skill-name a img {
+              html body .wrapper .port-wrapper .samples-name .sample-name a img {
                 width: 300px;
                 height: auto; }
-                html body .wrapper .port-wrapper .skills-name .skill-name a img:hover {
+                html body .wrapper .port-wrapper .samples-name .sample-name a img:hover {
                   cursor: pointer; }
 
 .cityPoints {
@@ -162,18 +166,18 @@ html {
 @media screen and (max-width: 524px) {
   html body .wrapper {
     display: block; }
-    html body .wrapper .port-wrapper .skills-text {
+    html body .wrapper .port-wrapper .samples-text {
       display: none; }
-    html body .wrapper .port-wrapper .skills-name {
+    html body .wrapper .port-wrapper .samples-name {
       margin-top: 8%; }
   html body .sources {
     position: static; } }
 @media (min-width: 525px) and (max-width: 1000px) {
   html body .wrapper .main-column {
     z-index: 999 !important; }
-  html body .wrapper .port-wrapper .skills-text {
+  html body .wrapper .port-wrapper .samples-text {
     display: none; }
-  html body .wrapper .port-wrapper .skills-name {
+  html body .wrapper .port-wrapper .samples-name {
     margin-left: -10%;
     margin-top: 10%; } }
 @media screen and (max-width: 550px) {
