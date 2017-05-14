@@ -1,6 +1,11 @@
 $primary-color: #9D9C9E;
 $font: 'Open Sans Condensed', sans-serif;
 
+$yellowOne:rgb(254,193,13);
+$blueOne: rgb(121,181,221);
+$blueTwo: rgb(216,239,255);
+$blueThree: rgb(216,239,255);
+
 html {
 	height: 100%;
 	body {
@@ -121,7 +126,7 @@ html {
 				.skills-text {
 					flex: 3;
 					.skill-text {
-						height: 14em;
+/*						height: 14em;*/
 						padding: 5px;
 						padding-left: 10px;
 						z-index: 999;
@@ -172,7 +177,6 @@ html {
 
 /*    fill: blue;*/
 
-
 }
 
 
@@ -197,6 +201,16 @@ html {
 	}
 }
 
+
+#pop2010 {
+	color: $blueOne;
+
+}
+
+#pop2000 {
+	color: $yellowOne;
+	
+}
 
 
 .modal {

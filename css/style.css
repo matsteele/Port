@@ -85,7 +85,7 @@ html {
         html body .wrapper .port-wrapper .skills-text {
           flex: 3; }
           html body .wrapper .port-wrapper .skills-text .skill-text {
-            height: 14em;
+            /*						height: 14em;*/
             padding: 5px;
             padding-left: 10px;
             z-index: 999; }
@@ -135,6 +135,12 @@ html {
     opacity: 0.4; }
     .sources object:hover {
       opacity: 1; }
+
+#pop2010 {
+  color: #79b5dd; }
+
+#pop2000 {
+  color: #fec10d; }
 
 .modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content2 {
   height: auto; }
