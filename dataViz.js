@@ -24,8 +24,6 @@ var path = d3.geo.path()
     .projection(projection);
 
 
-
-
 	var tCx 	=  [];
 	var tCy 	=  [];
 	var tR  	=  [];
@@ -48,8 +46,10 @@ var newCircles = d3.select("body")
 					.attr("viewBox", "0 0 800 600" )
 					.attr("preserveAspectRatio", "xMidYMid slice");
 
+// var sources = d3.select("body")
+// 					.append("div")
+					
 
-	     	 	
  
 
 var svg = d3.select("body")
@@ -71,18 +71,12 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
 
 
 
-
-
-
 var overText = d3.select("body")
 	.append("div")
 	.style("position", "absolute")
 	.style("z-index", "10")
 	.style("visibility", "hidden")
 	.text("a simple tooltip");
-
-
-
 
 
 
@@ -139,9 +133,6 @@ var overText = d3.select("body")
 				          .attr("r", data4Circle[2])
 			 	     	.attr("fill", Yellow1);
 			     		// .style("visibility", "visible");	   
-
-			     		     		
-			
 
 			 })	  
 			//EXIT

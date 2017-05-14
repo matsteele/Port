@@ -124,8 +124,13 @@ html {
   background-color: blue; }
 
 .sources {
-  width: 20%;
-  z-index: 2; }
+  width: 193px;
+  height: 145px;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  flex: 1;
+  position: fixed; }
   .sources object {
     opacity: 0.4; }
     .sources object:hover {
@@ -154,7 +159,9 @@ html {
     html body .wrapper .port-wrapper .skills-text {
       display: none; }
     html body .wrapper .port-wrapper .skills-name {
-      margin-top: 8%; } }
+      margin-top: 8%; }
+  html body .sources {
+    position: static; } }
 @media (min-width: 525px) and (max-width: 1000px) {
   html body .wrapper .main-column {
     z-index: 999 !important; }
