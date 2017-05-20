@@ -44,21 +44,52 @@ html {
             border-radius: 50%;
             margin: 0 auto;
             margin-bottom: -10px; }
-        html body .wrapper .main-column .about-content {
-          background: rgba(0, 0, 0, 0.6);
+        html body .wrapper .main-column .showInfo {
           margin: 0 auto;
-          padding: 20px;
-          width: 300px;
-          height: 250px;
-          display: none; }
-          html body .wrapper .main-column .about-content .name {
-            font-size: 30px;
-            font-weight: bold;
-            margin: 0; }
-          html body .wrapper .main-column .about-content p {
+          width: 325px;
+          height: 325px;
+          display: flex;
+          display: none;
+          flex-direction: row; }
+          html body .wrapper .main-column .showInfo .awards ul {
+            width: 30px;
             display: none; }
-          html body .wrapper .main-column .about-content .main-summary p {
-            display: inline-block; }
+            html body .wrapper .main-column .showInfo .awards ul li:first-of-type {
+              padding-top: 3px; }
+            html body .wrapper .main-column .showInfo .awards ul li {
+              background-color: rgba(0, 0, 0, 0.4);
+              padding: 0px 5px; }
+              html body .wrapper .main-column .showInfo .awards ul li p {
+                display: none; }
+              html body .wrapper .main-column .showInfo .awards ul li img {
+                display: none; }
+          html body .wrapper .main-column .showInfo .about-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            display: block; }
+            html body .wrapper .main-column .showInfo .about-content .name {
+              font-size: 30px;
+              font-weight: bold;
+              margin: 0;
+              display: inline-block;
+              margin-top: -10px; }
+            html body .wrapper .main-column .showInfo .about-content p {
+              display: none; }
+            html body .wrapper .main-column .showInfo .about-content .main-summary p {
+              display: inline-block; }
+          html body .wrapper .main-column .showInfo .sideTitle {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.4);
+            writing-mode: vertical-rl;
+            text-orientation: sideways-right;
+            justify-content: center; }
+            html body .wrapper .main-column .showInfo .sideTitle h3 {
+              text-align: center;
+              font-size: 16px;
+              letter-spacing: 2px;
+              padding: 6.5px;
+              margin: 0px;
+              display: none; }
         html body .wrapper .main-column .eIcons {
           margin: 0 auto; }
           html body .wrapper .main-column .eIcons ul {
@@ -69,17 +100,18 @@ html {
             html body .wrapper .main-column .eIcons ul li {
               font-size: 20px;
               padding: 2px 5px 2px 5px; }
+              html body .wrapper .main-column .eIcons ul li:hover {
+                background-color: rgba(103, 164, 204, 0.6);
+                cursor: pointer; }
               html body .wrapper .main-column .eIcons ul li .fa {
                 color: white; }
                 html body .wrapper .main-column .eIcons ul li .fa:hover {
-                  color: #67a4cc; }
-          html body .wrapper .main-column .eIcons .edu .e1 .edu-button {
+                  color: white;
+                  cursor: pointer; }
+          html body .wrapper .main-column .eIcons .edu .edu-button {
             width: 25px;
             height: 25px;
-            margin-bottom: -7px;
             display: inline; }
-            html body .wrapper .main-column .eIcons .edu .e1 .edu-button:hover {
-              cursor: pointer; }
       html body .wrapper .port-wrapper {
         flex: 8;
         flex-direction: row;
@@ -140,11 +172,22 @@ html {
     .sources object:hover {
       opacity: 1; }
 
-#pop2010 {
-  color: #79b5dd; }
+.popName {
+  background-color: rgba(255, 255, 255, 0.5); }
 
-#pop2000 {
-  color: #fec10d; }
+.pop2010 {
+  color: white;
+  background-color: #79b5dd; }
+
+.pop2000 {
+  color: white;
+  background-color: #fec10d; }
+
+.textOver {
+  padding: 5px;
+  position: absolute;
+  z-index: 10;
+  visibility: hidden; }
 
 .modal .modal-dialog .modal-content, .modal .modal-dialog .modal-content2 {
   height: auto; }

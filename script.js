@@ -19,33 +19,100 @@ $(document).ready(function(){
 	});
 
 	// Show default summary
-	$('.main-image, .about-content, .list-inline').hover(function() {
-		$('.about-content').css("display", "inline");
+	$('.main-image, .showInfo, .edu, .exp').hover(function() {
+		$('.showInfo').css("display", "flex");
 		$('.edu, .exp').css("margin", "0 0");
 	}, function () {
-		$('.about-content').css("display", "none");
+		$('.showInfo').css("display", "none");
 		$('.edu, .exp').css("margin", "0 auto");
 	});
 
 	// Show only main-summary
-	$('.main-image, .about-content').hover(function() {
-		$('.main-summary').css("display", "inline");
+	$('.main-image, .showInfo, .edu, .exp').hover(function() {
+		$('.main-summary').show();
 	}, function () {
-		$('.main-summary').css("display", "none");
+		$('.main-summary').hide();
 	});
 
-	var numb = ['1', '2', '3', '4', '5','6']
+	var numb = ['1', '2', '3', '4', '5','6', '7'];
+
 
 	// Show different icon summaries
 	$('.icon-name').each(function(i, value) {
-		$(this).hover(function (e) {
-			$('.icoText' + numb[i]).css("display", "inline");
-			$('.main-summary').css("display", "none");
-		}, function () {
-			$('.icoText' + numb[i]).css("display", "none");
-			$('.main-summary').css("display", "inline");
+		$(this).click(function (e) {
+			e.preventDefault();
+
+			var icoText = $('.icoText' + numb[i]);
+			var icoName = $('.icoName' + numb[i]);
+			var awards = $('.awards' + numb[i]);
+
+			$(".about-content p").not(icoText).hide();
+			$(".sideTitle h3").not(icoName).hide();
+			$(".awards ul").not(awards).hide();
+
+			icoText.toggle();
+			icoName.toggle();
+			awards.toggle();
+
+			// Show main-summary when clicking icon again
+			if ( icoText.is(':visible') ) {
+				$('.name, .bio').hide();
+			} else {
+				$('.name, .bio').show();
+			}
+
 		})
 	});
+
+	var txt = ['1', '2', '3', '4', '5', '6', '7'];
+	var awd = ['a', 'b'];
+
+	$('.awards ul li a').each(function (i, value) {
+		$(this).click(function (e) {
+			// e.preventDefault();
+
+
+			var aTxt = $('.icoText7a');
+			// var aTxt = $('.icoText' + txt[i] + awd[i]);
+			// console.log(aTxt);
+
+			var mTxt = $('.icoText7');
+			// var mTxt = $('.icoText' + txt[i]);
+
+			var aPic = $('.icoPic7a')
+			// var aPic = $('.icoPic' + txt[i] + awd[i]);
+			var mPic = $('.proPic');
+
+
+			aTxt.appendTo('.about-content');
+			aTxt.toggle();
+			mTxt.hide();
+
+			
+			aPic.toggle();
+			aPic.appendTo('.main-image');
+			mPic.hide();
+
+			if ( aTxt.is(':visible') ) {
+				// $('.icoText7').hide();
+			} else {
+				mTxt.show();
+			}
+
+			if ( aPic.is(':visible') ) {
+				aPic.show();
+			} else {
+				mPic.show();
+			}
+		})
+		// $(this).click(function (e) {
+			
+	});
+
+	
+
+
+
 
 	// Show iframe
 	$('.showIframe').click("slow", function() {

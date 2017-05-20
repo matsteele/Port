@@ -36,7 +36,6 @@ html {
 					background: rgba(0, 0, 0, 0.4);
 					text-align: center;
 					margin: 0 auto;
-					// list-style: none;
 					li {
 						font-size: 20px;
 						margin: 0 auto;
@@ -61,25 +60,78 @@ html {
 						margin-bottom: -10px;
 					}
 				}
-				.about-content {
-					background: rgba(0, 0, 0, 0.6);
+				.showInfo {
 					margin: 0 auto;
-					padding: 20px;
-					width: 300px;
-					height: 250px;
+					width: 325px;
+					height: 325px;
+					display: flex;
 					display: none;
-					.name {
-						font-size: 30px;
-						font-weight: bold;
-						margin: 0;
+					flex-direction: row;
+					.awards {
+						ul {
+							width: 30px;
+							display: none;
+							li:first-of-type {
+								padding-top: 3px;
+							}
+							li {
+								background-color: rgba(0, 0, 0, 0.4);
+								padding: 0px 5px;
+								p {
+									display: none;
+								}
+								img {
+									display: none;
+								}
+							}
+						}
 					}
-					p {
-						display: none;
-					}
-					.main-summary {
-						// display: none;
-						p {
+					.about-content {
+						background: rgba(0, 0, 0, 0.6);
+						padding: 20px;
+						display: block;
+						// flex: 8;
+						.name {
+							font-size: 30px;
+							font-weight: bold;
+							margin: 0;
 							display: inline-block;
+							margin-top: -10px;
+							// padding-bottom: 14px;
+						}
+						p {
+							display: none;
+							// margin-top: -20px;
+							// span {
+							// 	display: flex;
+							// 	// align-self: center;
+							// 	// align-items: center;
+							// 	margin-left: 300px;
+							// 	padding: 20px;
+							// }
+						}
+						.main-summary {
+							// display: none;
+							p {
+								display: inline-block;
+							}
+						}
+					}
+					.sideTitle {
+						display: flex;
+						background-color: rgba(0, 0, 0, 0.4);
+						writing-mode: vertical-rl;
+  						text-orientation: sideways-right;
+						justify-content: center;
+						// width: 30px;
+						// display: none;
+						h3 {
+							text-align: center;
+							font-size: 16px;
+							letter-spacing: 2px;
+							padding: 6.5px;
+							margin: 0px;
+							display: none;
 						}
 					}
 				}
@@ -93,31 +145,27 @@ html {
 						li {
 							font-size: 20px;
 							padding: 2px 5px 2px 5px;
+							&:hover {
+								background-color: rgba(103,164,204,0.6);
+								cursor: pointer;
+							}
 							.fa{
 								color: white;
 								&:hover {
-									color: #67a4cc;
+									color: white;
+									cursor: pointer;
 								}
 							}
 						}
 					}
 					.edu {
-						.e1 {
-							// margin-top: 10px;
-							.edu-button {
-								width: 25px;
-								height: 25px;
-								margin-bottom: -7px;
-								// background: url(../svgs/UPenn_Logo.svg) no-repeat;
-								display: inline;
-								&:hover {
-									cursor: pointer;
-								}
-
-							}
+						.edu-button {
+							width: 25px;
+							height: 25px;
+							// margin-bottom: -7px;
+							// background: url(../svgs/UPenn_Logo.svg) no-repeat;
+							display: inline;
 						}
-					}
-					.exp {
 					}
 				}
 			}
@@ -210,15 +258,27 @@ html {
 	}
 }
 
-
-#pop2010 {
-	color: $blueOne;
+.popName {
+	background-color: rgba(255,255,255, .5);
 
 }
 
-#pop2000 {
-	color: $yellowOne;
-	
+.pop2010 {
+	color: white;
+	background-color: $blueOne;
+
+}
+
+.pop2000 {
+	color: white;
+	background-color: $yellowOne;
+}
+
+.textOver {
+	padding: 5px;
+	position: absolute;
+	z-index: 10;
+	visibility: hidden;
 }
 
 

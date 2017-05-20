@@ -53,9 +53,7 @@ var newCircles = d3.select("body")
 
 var textOver = d3.select("body")
 	.append("div")
-	.style("position", "absolute")
-	.style("z-index", "10")
-	.style("visibility", "hidden")
+	.classed("textOver", true);
 	// .text("2000 Pop: "+ Pop2000);	     	 	
  
 
@@ -75,15 +73,6 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
      //console.log(cityData);
 
 
-
-
-
-var overText = d3.select("body")
-	.append("div")
-	.style("position", "absolute")
-	.style("z-index", "10")
-	.style("visibility", "hidden")
-	.html("a simple tooltip");
 
 
 
@@ -164,13 +153,13 @@ var overText = d3.select("body")
 
 
 			     	textOver.style("visibility", "visible")
-			     		.html( 	"<p> <strong>"+ cityName + " </strong> </p> "+ 
+			     		.html( 	"<p class='popName'> <strong>"+ cityName + " </strong> </p> "+ 
 
-			     		"<p> <span id='pop2000'> 2000 Pop: </span>"+ pop2000 + "</p>" +
+			     		"<p class='popName'> <span class='pop2000'> 2000 Pop:</span> "+ pop2000 + "</p>" +
 
-			     		"<p> <span id='pop2010'> 2010 Pop: </span>"+ pop2010 + "</p>" +
+			     		"<p class='popName'> <span class='pop2010'> 2010 Pop:</span> "+ pop2010 + "</p>" +
 
-			     		"<p> <span id='pop2010'> 2010 Density: </span>"+ cityDensity10 + "</p>" 
+			     		"<p class='popName'> <span class='pop2010'> 2010 Density:</span> "+ cityDensity10 + "</p>" 
 
 
 
