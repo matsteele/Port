@@ -51,7 +51,7 @@ $(document).ready(function(){
 			$(this).toggleClass('active').siblings().removeClass('active');
 
 
-			e.preventDefault();
+			// e.preventDefault();
 
 			var icoText = $('.icoText' + numb[i]);
 			var icoName = $('.icoName' + numb[i]);
@@ -78,7 +78,7 @@ $(document).ready(function(){
 	$('.awards li .award-name').click(function () {
 
 		var x = $(this).attr('data');
-		$('.award-name').toggleClass('active').siblings().removeClass('active');
+		$('.award-name').toggleClass('active').siblings().removeClass('active'); // not working
 
 
 		// Txt
