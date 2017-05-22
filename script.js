@@ -23,7 +23,7 @@ $(document).ready(function(){
 		$('.showInfo').css("display", "flex");
 		$('.edu, .exp').css("margin", "0 0");
 	}, function () {
-		$('.showInfo').css("display", "none");
+		$('.showInfo').hide(3000);
 		$('.edu, .exp').css("margin", "0 auto");
 	});
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
 	$('.main-image, .showInfo, .edu, .exp').hover(function() {
 		$('.main-summary').show();
 	}, function () {
-		$('.main-summary').hide();
+		$('.main-summary').hide(3000);
 
 		// Find a way to return to the beginning of main-summary when hovering back to proPic
 		// $('.icon-name').removeClass('active');
