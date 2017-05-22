@@ -62,7 +62,11 @@ html {
               cursor: pointer; }
               html body .wrapper .main-column .showInfo .awards ul li p {
                 display: none; }
+                html body .wrapper .main-column .showInfo .awards ul li p span {
+                  display: block !important; }
               html body .wrapper .main-column .showInfo .awards ul li img {
+                display: none; }
+              html body .wrapper .main-column .showInfo .awards ul li h3 {
                 display: none; }
           html body .wrapper .main-column .showInfo .about-content {
             background: rgba(0, 0, 0, 0.6);

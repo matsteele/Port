@@ -74,152 +74,50 @@ $(document).ready(function(){
 		})
 	});
 
+	// Show award text & picture
+	$('.awards li .award-name').click(function () {
 
-	var awd = ['a', 'b'];
-
-
-// var i = 0;
-// function changeClass(){
-//     $("#rabbit").removeClass("rabbit" + i)
-//         i = (i==7)?1:i+1;    
-//     $("#rabbit").addClass("rabbit" + (i));
-    
-// }
-
-	$('.award-name7a').click(function () {
-			// e.preventDefault();
-
-			var aTxt = $('.icoText7a');
-			
-			// var aTxt = $('.icoText' + txt[i] + awd[i]);
-			// console.log(aTxt);
-
-			var mTxt = $('.icoText7');
-			// var mTxt = $('.icoText' + txt[i]);
-
-			var aPic = $('.icoPic7a')
-			// var aPic = $('.icoPic' + txt[i] + awd[i]);
-			var mPic = $('.proPic');
+		var x = $(this).attr('data');
+		$('.award-name').toggleClass('active').siblings().removeClass('active');
 
 
-			// Add award text and hide main text
-			aTxt.appendTo('.about-content');
-			aTxt.toggle();
-			mTxt.hide();
+		// Txt
+		var aTxt = $('p[data="' + x + '"]')[0];
+		$(aTxt).toggle();
+		$(aTxt).appendTo('.about-content');
+		var mTxt = $('.about-content p').not(aTxt);
+		$(mTxt).hide();
 
-			// Add award pic and hide main pic
-			aPic.toggle();
-			aPic.appendTo('.main-image');
-			mPic.hide();
+		// Title
+		var aTit = $('h3[data="' + x + '"]')[0];
+		$(aTit).toggle();
+		$(aTit).appendTo('.sideTitle');
+		var mTit = $('.sideTitle h3').not(aTit);
+		$(mTit).hide();
 
-			if ( aTxt.is(':visible') && aPic.is(':visible') ) {
-				aPic.show();
-			} else {
-				mTxt.show();
-				mPic.show();
-			}
-	});
+		// Pic
+		var aPic = $('img[data="' + x + '"]')[0];
+		$(aPic).toggle();
+		$(aPic).appendTo('.main-image');
+		var mPic = $('.main-image img').not(aPic);
+		$(mPic).hide();
 
-	$('.award-name7b').click(function () {
-			// e.preventDefault();
+		var bioTxt = $('.bio');
+		var bioPic = $('.proPic');
+		if ( $(aTxt).is(':visible') && $(aPic).is(':visible') ) {
+			// $(aPic).show();
+			$(bioTxt).hide();
+			$(bioPic).hide();
+		} else {
 
-			var aTxt = $('.icoText7b');
-			
-			// var aTxt = $('.icoText' + txt[i] + awd[i]);
-			// console.log(aTxt);
-
-			var mTxt = $('.icoText7');
-			// var mTxt = $('.icoText' + txt[i]);
-
-			var aPic = $('.icoPic7b')
-			// var aPic = $('.icoPic' + txt[i] + awd[i]);
-			var mPic = $('.proPic');
-
-
-			// Add award text and hide main text
-			aTxt.appendTo('.about-content');
-			aTxt.toggle();
-			mTxt.hide();
-
-			// Add award pic and hide main pic
-			aPic.toggle();
-			aPic.appendTo('.main-image');
-			mPic.hide();
-
-			if ( aTxt.is(':visible') && aPic.is(':visible') ) {
-				aPic.show();
-			} else {
-				mTxt.show();
-				mPic.show();
-			}
-	});
-
-// Click on award icon
-// Display award text and hide main text
-// Display award pic and hide main pic
-// var txt = ['1', '2', '3', '4', '5', '6', '7'];
-// var awd = ['a', 'b'];
-
-// $('.awards ul li i').each(function (i, value) {
-// 	var mTxt = '.icoText' + txt[i];
-// 	// console.log($(mTxt));
-
-// 	$(mTxt).each(function (i, value) {
-// 		$('.awards ul li i').click(function (e) {
-// 			aTxt = mTxt + awd[i];
-// 			aTxt = $(aTxt);
-// 			mTxt = $(mTxt);
-// 			console.log(mTxt);
-
-// 			// Add award text and hide main text
-// 			aTxt.appendTo('.about-content');
-// 			aTxt.toggle();
-// 			mTxt.hide();
-// 		})
-// 	})
-// })
-// var awd = ['a', 'b'];
-
-// $('.awards ul li i').each(function (i, value) {
-// 	$(this).click(function (e) {
-// 		var aTxt = $('.icoText7' + awd[i]);
-// 		console.log(aTxt);
-// 		var mTxt = $('.about-content p');
-
-// 		aTxt.appendTo('.about-content');
-// 		aTxt.toggle();
-// 		mTxt.hide();
-
-// 	})
-// })
-
-// var awd = [2,3,4,5];
-
-// $('.about-content div p:nth-of-type(n+1)').each(function (i, value) {
-// 	$('.awards ul li i').click(function (e) {
-// 		aTxt = $('.about-content div p:nth-of-type('+ i +')');
-// 		console.log(aTxt);
-// 		aTxt.appendTo('.about-content');
-// 		aTxt.toggle();
-// 	})
-// })
-
-// Target each div icoText(i) and any li below it list them in html
-
-
-
-// $(document).ready(function(){
-// 	$('.roomSVGs').click(function(){
-// 		var id = $(this).attr('class');
-
-// 		IDArray = id.split(" ");
-
-// 		var link = 'index.html#' + IDArray[0];
-
-// 		$(location).attr('href', link);
-// 	});
-// });
-
+			//Figure out a way to show default sideTitlte, pic, and mtxt when clicking again
+			// $('.proPic').show();
+			// var bioTxt = $('.bio');
+			// var bioPic = $('.proPic');
+			$(bioTxt).show();
+			$(bioPic).show();
+		}
+	})
 
 
 

@@ -80,8 +80,14 @@ html {
 								cursor: pointer;
 								p {
 									display: none;
+									span {
+										display: block !important;
+									}
 								}
 								img {
+									display: none;
+								}
+								h3 {
 									display: none;
 								}
 							}
