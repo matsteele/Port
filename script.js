@@ -32,6 +32,12 @@ $(document).ready(function(){
 		$('.main-summary').show();
 	}, function () {
 		$('.main-summary').hide();
+
+		// Find a way to return to the beginning of main-summary when hovering back to proPic
+		// $('.icon-name').removeClass('active');
+		// $('.name, .bio').show();
+		// $('.icoText' + numb[i]).hide();
+		
 	});
 
 	var numb = ['1', '2', '3', '4', '5','6', '7'];
@@ -40,6 +46,11 @@ $(document).ready(function(){
 	// Show different icon summaries
 	$('.icon-name').each(function(i, value) {
 		$(this).click(function (e) {
+
+			// Toggle click background
+			$(this).toggleClass('active').siblings().removeClass('active');
+
+
 			e.preventDefault();
 
 			var icoText = $('.icoText' + numb[i]);
@@ -60,19 +71,26 @@ $(document).ready(function(){
 			} else {
 				$('.name, .bio').show();
 			}
-
 		})
 	});
 
-	var txt = ['1', '2', '3', '4', '5', '6', '7'];
+
 	var awd = ['a', 'b'];
 
-	$('.awards ul li a').each(function (i, value) {
-		$(this).click(function (e) {
+
+// var i = 0;
+// function changeClass(){
+//     $("#rabbit").removeClass("rabbit" + i)
+//         i = (i==7)?1:i+1;    
+//     $("#rabbit").addClass("rabbit" + (i));
+    
+// }
+
+	$('.award-name7a').click(function () {
 			// e.preventDefault();
 
-
 			var aTxt = $('.icoText7a');
+			
 			// var aTxt = $('.icoText' + txt[i] + awd[i]);
 			// console.log(aTxt);
 
@@ -84,32 +102,123 @@ $(document).ready(function(){
 			var mPic = $('.proPic');
 
 
+			// Add award text and hide main text
 			aTxt.appendTo('.about-content');
 			aTxt.toggle();
 			mTxt.hide();
 
-			
+			// Add award pic and hide main pic
 			aPic.toggle();
 			aPic.appendTo('.main-image');
 			mPic.hide();
 
-			if ( aTxt.is(':visible') ) {
-				// $('.icoText7').hide();
-			} else {
-				mTxt.show();
-			}
-
-			if ( aPic.is(':visible') ) {
+			if ( aTxt.is(':visible') && aPic.is(':visible') ) {
 				aPic.show();
 			} else {
+				mTxt.show();
 				mPic.show();
 			}
-		})
-		// $(this).click(function (e) {
-			
 	});
 
-	
+	$('.award-name7b').click(function () {
+			// e.preventDefault();
+
+			var aTxt = $('.icoText7b');
+			
+			// var aTxt = $('.icoText' + txt[i] + awd[i]);
+			// console.log(aTxt);
+
+			var mTxt = $('.icoText7');
+			// var mTxt = $('.icoText' + txt[i]);
+
+			var aPic = $('.icoPic7b')
+			// var aPic = $('.icoPic' + txt[i] + awd[i]);
+			var mPic = $('.proPic');
+
+
+			// Add award text and hide main text
+			aTxt.appendTo('.about-content');
+			aTxt.toggle();
+			mTxt.hide();
+
+			// Add award pic and hide main pic
+			aPic.toggle();
+			aPic.appendTo('.main-image');
+			mPic.hide();
+
+			if ( aTxt.is(':visible') && aPic.is(':visible') ) {
+				aPic.show();
+			} else {
+				mTxt.show();
+				mPic.show();
+			}
+	});
+
+// Click on award icon
+// Display award text and hide main text
+// Display award pic and hide main pic
+// var txt = ['1', '2', '3', '4', '5', '6', '7'];
+// var awd = ['a', 'b'];
+
+// $('.awards ul li i').each(function (i, value) {
+// 	var mTxt = '.icoText' + txt[i];
+// 	// console.log($(mTxt));
+
+// 	$(mTxt).each(function (i, value) {
+// 		$('.awards ul li i').click(function (e) {
+// 			aTxt = mTxt + awd[i];
+// 			aTxt = $(aTxt);
+// 			mTxt = $(mTxt);
+// 			console.log(mTxt);
+
+// 			// Add award text and hide main text
+// 			aTxt.appendTo('.about-content');
+// 			aTxt.toggle();
+// 			mTxt.hide();
+// 		})
+// 	})
+// })
+// var awd = ['a', 'b'];
+
+// $('.awards ul li i').each(function (i, value) {
+// 	$(this).click(function (e) {
+// 		var aTxt = $('.icoText7' + awd[i]);
+// 		console.log(aTxt);
+// 		var mTxt = $('.about-content p');
+
+// 		aTxt.appendTo('.about-content');
+// 		aTxt.toggle();
+// 		mTxt.hide();
+
+// 	})
+// })
+
+// var awd = [2,3,4,5];
+
+// $('.about-content div p:nth-of-type(n+1)').each(function (i, value) {
+// 	$('.awards ul li i').click(function (e) {
+// 		aTxt = $('.about-content div p:nth-of-type('+ i +')');
+// 		console.log(aTxt);
+// 		aTxt.appendTo('.about-content');
+// 		aTxt.toggle();
+// 	})
+// })
+
+// Target each div icoText(i) and any li below it list them in html
+
+
+
+// $(document).ready(function(){
+// 	$('.roomSVGs').click(function(){
+// 		var id = $(this).attr('class');
+
+// 		IDArray = id.split(" ");
+
+// 		var link = 'index.html#' + IDArray[0];
+
+// 		$(location).attr('href', link);
+// 	});
+// });
 
 
 

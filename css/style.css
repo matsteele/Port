@@ -58,7 +58,8 @@ html {
               padding-top: 3px; }
             html body .wrapper .main-column .showInfo .awards ul li {
               background-color: rgba(0, 0, 0, 0.4);
-              padding: 0px 5px; }
+              padding: 0px 5px;
+              cursor: pointer; }
               html body .wrapper .main-column .showInfo .awards ul li p {
                 display: none; }
               html body .wrapper .main-column .showInfo .awards ul li img {
@@ -74,6 +75,8 @@ html {
               display: inline-block;
               margin-top: -10px; }
             html body .wrapper .main-column .showInfo .about-content p {
+              display: none; }
+            html body .wrapper .main-column .showInfo .about-content img {
               display: none; }
             html body .wrapper .main-column .showInfo .about-content .main-summary p {
               display: inline-block; }
@@ -108,10 +111,14 @@ html {
                 html body .wrapper .main-column .eIcons ul li .fa:hover {
                   color: white;
                   cursor: pointer; }
-          html body .wrapper .main-column .eIcons .edu .edu-button {
-            width: 25px;
-            height: 25px;
-            display: inline; }
+            html body .wrapper .main-column .eIcons ul .active {
+              background-color: rgba(103, 164, 204, 0.6); }
+          html body .wrapper .main-column .eIcons .edu {
+            width: 120px; }
+            html body .wrapper .main-column .eIcons .edu .edu-button {
+              width: 25px;
+              height: 25px;
+              display: inline; }
       html body .wrapper .port-wrapper {
         flex: 8;
         flex-direction: row;
