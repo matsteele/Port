@@ -254,8 +254,11 @@ html {
       display: none; }
     html body .wrapper .port-wrapper .samples-name {
       margin-top: 8%; }
-  html body .sources {
-    position: static; } }
+  html body .bottomContainer .legend {
+    position: static; }
+  html body .bottomContainer .sources {
+    position: static;
+    margin-left: 0px; } }
 @media (min-width: 525px) and (max-width: 1000px) {
   html body .wrapper .main-column {
     z-index: 999 !important; }

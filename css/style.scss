@@ -381,9 +381,14 @@ html {
 						margin-top: 8%;
 					}
 				}
-			}
-			.sources {
-				position: static;
+			}.bottomContainer {
+				.legend {
+					position: static;
+				}
+				.sources {
+					position: static;
+					margin-left: 0px;
+				}
 			}
 		}
 	}

@@ -10,10 +10,15 @@
     a { 
     	cursor: pointer; 
     }
-    a:hover {
-        stroke: grey;
-        font-weight: 100;
-    }
+
+    a:hover > text tspan {
+        fill: black;
+        font-weight: bold;
+     }
+     a:hover > text {
+        fill: black;
+        font-weight: bold;
+     }
     ]]>  
 </style> 
 

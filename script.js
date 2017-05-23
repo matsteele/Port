@@ -47,9 +47,6 @@ $(document).ready(function(){
 		$('.showInfo').css("animation", "fade 10s");
 		$('.edu, .exp').css("margin", "0 0");
 
-
-		
-
 		// $('.showInfo').css("transition", "all 1s ease");
 	}, function () {
 		$('.showInfo').css("opacity", "1");
@@ -153,6 +150,7 @@ $(document).ready(function(){
 
 		// Txt
 		var aTxt = $('p[data="' + x + '"]')[0];
+		debugger;
 		$(aTxt).toggle();
 		$(aTxt).appendTo('.about-content');
 		var mTxt = $('.about-content p').not(aTxt);
