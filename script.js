@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 	// Show sample preview
-	var num = ['1', '2', '3', '4', '5']
+	var num = ['1', '2', '3', '4', '5', '6', "bg"]
 
 	$('.sample-name').each(function(i, value) {
 		$(this).hover(function (e) {
@@ -18,28 +18,7 @@ $(document).ready(function(){
 		})
 	});
 
-	// // Show default summary
-	// $('.main-image, .showInfo, .eIcons').hover(function() {
-	// 	$('.showInfo').css("display", "flex");
-	// 	$('.eIcons').css("margin", "0 0");
-	// 	$('.main-summary').show();
-	// }, function () {
-	// 	$('.showInfo').slideUp(2000).mouseover(function () {
-	// 		$(this).stop();
-	// 	});
-	// 	$('.eIcons').css("margin", "0 auto");
-	// 	$('.main-summary').slideUp(3000).mouseover(function () {
-	// 		$(this).stop();
-	// 	});
-	// });
-
-	// Show only main-summary
-	// $('.main-image, .showInfo, .eIcons').hover(function() {
-	// 	$('.main-summary').show();
-	// }, function () {
-	// 	$('.main-summary').slideUp(3000).mouseover(function () {
-	// 		$(this).stop();
-	// 	});
+	// Show default summary
 	$('.main-image, .mantainHover, .showInfo, .edu, .exp').hover(function() {
 		$('.showInfo, .mantainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
@@ -102,14 +81,17 @@ $(document).ready(function(){
 			// e.preventDefault();
 
 			var icoText = $('.icoText' + numb[i]);
+			var icoImg = $('.icoImg' + numb[i]);
 			var icoName = $('.icoName' + numb[i]);
 			var awards = $('.awards' + numb[i]);
-
+			
+			//----hide sidebars----
 			$(".about-content p").not(icoText).hide();
 			$(".sideTitle h3").not(icoName).hide();
 			$(".awards ul").not(awards).hide();
 
 			icoText.toggle();
+			icoImg.toggle(); // inputted to adapt images, have yet to
 			icoName.toggle();
 			awards.toggle();
 
@@ -145,6 +127,7 @@ $(document).ready(function(){
 	$('.awards li .award-name').click(function () {
 
 		var x = $(this).attr('data');
+		
 		$('.award-name').toggleClass('active').siblings().removeClass('active'); // not working
 
 
@@ -153,22 +136,25 @@ $(document).ready(function(){
 		debugger;
 		$(aTxt).toggle();
 		$(aTxt).appendTo('.about-content');
-		var mTxt = $('.about-content p').not(aTxt);
-		$(mTxt).hide();
+			//remove 
+			var mTxt = $('.about-content p').not(aTxt);
+			$(mTxt).hide();
 
 		// Title
 		var aTit = $('h3[data="' + x + '"]')[0];
 		$(aTit).toggle();
 		$(aTit).appendTo('.sideTitle');
-		var mTit = $('.sideTitle h3').not(aTit);
-		$(mTit).hide();
+			//remove 
+			var mTit = $('.sideTitle h3').not(aTit);
+			$(mTit).hide();
 
 		// Pic
 		var aPic = $('img[data="' + x + '"]')[0];
 		$(aPic).toggle();
 		$(aPic).appendTo('.main-image');
-		var mPic = $('.main-image img').not(aPic);
-		$(mPic).hide();
+			//remove 
+			var mPic = $('.main-image img').not(aPic);
+			$(mPic).hide();
 
 		var bioTxt = $('.bio');
 		var bioPic = $('.proPic');
