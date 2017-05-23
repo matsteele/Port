@@ -19,26 +19,56 @@ $(document).ready(function(){
 	});
 
 	// Show default summary
-	$('.main-image, .showInfo, .edu, .exp').hover(function() {
-		$('.showInfo').css("display", "flex");
+	$('.main-image, .mantainHover, .showInfo, .edu, .exp').hover(function() {
+		$('.showInfo, .mantainHover').css("display", "flex");
+		$('.showInfo').css("visibility", "visible");
+		$('.showInfo').css("opacity", "1");
+		$('.showInfo').css("animation", "fade 10s");
 		$('.edu, .exp').css("margin", "0 0");
+
+
+		
+
+		// $('.showInfo').css("transition", "all 1s ease");
 	}, function () {
-		$('.showInfo').hide(3000);
+		$('.showInfo').css("opacity", "1");
+		$('.showInfo').css("display", "none")
+		$('.mantainHover').css("display", "none")
+		$('.showInfo').css("-webkit-transition", "opacity 600ms, visibility 600ms");
+		$('.showInfo').css("transition", "opacity 600ms, visibility 600ms"); //these transitions do nothing 
+		$('.showInfo').css("animation", "fade 10s");
+		$('.showInfo').css("visibility", "hidden");
 		$('.edu, .exp').css("margin", "0 auto");
 	});
 
-	// Show only main-summary
-	$('.main-image, .showInfo, .edu, .exp').hover(function() {
-		$('.main-summary').show();
-	}, function () {
-		$('.main-summary').hide(3000);
 
-		// Find a way to return to the beginning of main-summary when hovering back to proPic
-		// $('.icon-name').removeClass('active');
-		// $('.name, .bio').show();
-		// $('.icoText' + numb[i]).hide();
+// //use mouseover?
+// $('.main-image, .showInfo, .edu, .exp').on("mouseover", function() {
+// 		$('.showInfo').css("display", "flex");
+// 		$('.edu, .exp').css("margin", "0 0");
+// 		$('.showInfo').show(100);
+// 	})
+
+
+
+// 	$('.main-image, .showInfo, .edu, .exp').on("mouseout", function () {
+// 		$('.showInfo').css("opacioty", "0");
+// 		$('.showInfo').css("transition", "box-shadow 2s ease-in-out, left 5s ease-in-out 2s");
+// 		$('.showInfo').hide();
+// 		$('.edu, .exp').css("margin", "0 auto");
+// 	});
+	// Show only main-summary
+	// $('.main-image, .showInfo, .edu, .exp').hover(function() {
+	// 	$('.main-summary').show();
+	// }, function () {
+	// 	$('.main-summary').hide(3000);
+
+	// 	// Find a way to return to the beginning of main-summary when hovering back to proPic
+	// 	// $('.icon-name').removeClass('active');
+	// 	// $('.name, .bio').show();
+	// 	// $('.icoText' + numb[i]).hide();
 		
-	});
+	// });
 
 	var numb = ['1', '2', '3', '4', '5','6', '7'];
 
@@ -71,6 +101,25 @@ $(document).ready(function(){
 			} else {
 				$('.name, .bio').show();
 			}
+			
+
+			if ( icoText.attr("class") == "icoText1") {
+				$('.proPic').attr("src", "images/MUP.png")
+			} 
+
+
+			if ( icoText.attr("class") == "icoText2") {
+				$('.proPic').attr("src", "images/award-pics/CEP.jpg")
+			} 
+
+
+			if ( icoText.attr("class") == "icoText3") {
+				$('.proPic').attr("src", "images/award-pics/CEP.jpg")
+			} 
+
+
+
+
 		})
 	});
 

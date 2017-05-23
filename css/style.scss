@@ -60,12 +60,25 @@ html {
 						margin-bottom: -10px;
 					}
 				}
+				.mantainHover {
+					margin: 0 auto;
+					width: 600px;
+					height: 700px;
+					display: flex;
+					display: none;
+					position: absolute;
+					background-color: blue;
+					opacity: 0;
+					z-index: -100;
+
+				}
 				.showInfo {
 					margin: 0 auto;
 					width: 325px;
 					height: 325px;
 					display: flex;
 					display: none;
+
 					flex-direction: row;
 					.awards {
 						ul {
@@ -163,16 +176,15 @@ html {
 							background-color: rgba(103,164,204,0.6);
 						}
 					}
-					.edu {
-						width: 120px;
-						.edu-button {
+					.exp {
+						width: 140px;
+						.exp-button {
 							width: 25px;
 							height: 25px;
-							// margin-bottom: -7px;
-							// background: url(../svgs/UPenn_Logo.svg) no-repeat;
 							display: inline;
 						}
 					}
+
 				}
 			}
 			.port-wrapper {
@@ -228,8 +240,8 @@ html {
     position: fixed;
   	height: 100%;
     width: 100%;
-    // background-color: pink;
-    opacity: 0.5;
+    /*background-color: pink;*/
+   /*opacity: 0.5;*/
     /*margin: 0 auto;*/
 
 }
@@ -241,7 +253,6 @@ html {
     width: 100%;
 
 /*    fill: blue;*/
-
 }
 
 
@@ -262,7 +273,7 @@ html {
 		flex: 1;
 		position: fixed;
 		object {
-			opacity: 0.6;
+			opacity: 0.3;
 			&:hover {
 				opacity: 1;
 			}
@@ -278,14 +289,13 @@ html {
 		flex: 1;
 		position: fixed;
 		object {
-			opacity: 0.4;
+			opacity: 0.3;
 			&:hover {
 				opacity: 1;
 			}
 		}
 	}
 }
-
 
 
 
