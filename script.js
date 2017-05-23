@@ -19,26 +19,34 @@ $(document).ready(function(){
 	});
 
 	// Show default summary
-	$('.main-image, .showInfo, .edu, .exp').hover(function() {
+	$('.main-image, .showInfo, .eIcons').hover(function() {
 		$('.showInfo').css("display", "flex");
-		$('.edu, .exp').css("margin", "0 0");
+		$('.eIcons').css("margin", "0 0");
+		$('.main-summary').show();
 	}, function () {
-		$('.showInfo').hide(3000);
-		$('.edu, .exp').css("margin", "0 auto");
+		$('.showInfo').slideUp(2000).mouseover(function () {
+			$(this).stop();
+		});
+		$('.eIcons').css("margin", "0 auto");
+		$('.main-summary').slideUp(3000).mouseover(function () {
+			$(this).stop();
+		});
 	});
 
 	// Show only main-summary
-	$('.main-image, .showInfo, .edu, .exp').hover(function() {
-		$('.main-summary').show();
-	}, function () {
-		$('.main-summary').hide(3000);
+	// $('.main-image, .showInfo, .eIcons').hover(function() {
+	// 	$('.main-summary').show();
+	// }, function () {
+	// 	$('.main-summary').slideUp(3000).mouseover(function () {
+	// 		$(this).stop();
+	// 	});
 
-		// Find a way to return to the beginning of main-summary when hovering back to proPic
-		// $('.icon-name').removeClass('active');
-		// $('.name, .bio').show();
-		// $('.icoText' + numb[i]).hide();
+	// 	// Find a way to return to the beginning of main-summary when hovering back to proPic
+	// 	// $('.icon-name').removeClass('active');
+	// 	// $('.name, .bio').show();
+	// 	// $('.icoText' + numb[i]).hide();
 		
-	});
+	// });
 
 	var numb = ['1', '2', '3', '4', '5','6', '7'];
 
