@@ -64,11 +64,9 @@ html {
 					margin: 0 auto;
 					width: 600px;
 					height: 700px;
-					display: flex;
 					display: none;
 					position: absolute;
-					background-color: blue;
-					opacity: 0;
+					// background-color: blue;
 					z-index: -100;
 
 				}
@@ -82,7 +80,7 @@ html {
 					flex-direction: row;
 					.mainPoints {
 						ul {
-							width: 30px;
+							width: 40px;
 							display: none;
 							li:first-of-type {
 								padding-top: 3px;
@@ -90,17 +88,15 @@ html {
 							li {
 								background-color: rgba(0, 0, 0, 0.4);
 								padding: 0px 5px;
+								margin: 0px 5px;
 								cursor: pointer;
-								p {
-									display: none;
-									span {
-										display: block !important;
-									}
-								}
+
+
+
+
+
+
 								img {
-									display: none;
-								}
-								h3 {
 									display: none;
 								}
 							}
@@ -110,7 +106,7 @@ html {
 						background: rgba(0, 0, 0, 0.6);
 						padding: 20px;
 						display: block;
-						// flex: 8;
+						/* flex: 8;*/
 						.name {
 							font-size: 30px;
 							font-weight: bold;
@@ -151,8 +147,14 @@ html {
 				}
 				.eIcons {
 					margin: 0 auto;
-					ul {
+					
+					.lowerIcons{
 						background: rgba(0, 0, 0, 0.4);
+
+					}
+
+					ul {
+						
 						margin: 0 auto;
 						list-style: none;
 						max-width: 300px;
@@ -165,15 +167,11 @@ html {
 							}
 							.fa{
 								color: white;
-								&:hover {
-									color: white;
-									cursor: pointer;
-								}
 							}
 						}
 						.active {
-							background-color: rgba(103,164,204,0.6);
-						}
+							background-color: rgba(103,164,204,0.6) !important;
+												}
 					}
 					.exp {
 						width: 150px;

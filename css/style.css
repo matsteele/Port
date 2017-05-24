@@ -48,11 +48,8 @@ html {
           margin: 0 auto;
           width: 600px;
           height: 700px;
-          display: flex;
           display: none;
           position: absolute;
-          background-color: blue;
-          opacity: 0;
           z-index: -100; }
         html body .wrapper .main-column .showInfo {
           margin: 0 auto;
@@ -62,26 +59,22 @@ html {
           display: none;
           flex-direction: row; }
           html body .wrapper .main-column .showInfo .mainPoints ul {
-            width: 30px;
+            width: 40px;
             display: none; }
             html body .wrapper .main-column .showInfo .mainPoints ul li:first-of-type {
               padding-top: 3px; }
             html body .wrapper .main-column .showInfo .mainPoints ul li {
               background-color: rgba(0, 0, 0, 0.4);
               padding: 0px 5px;
+              margin: 0px 5px;
               cursor: pointer; }
-              html body .wrapper .main-column .showInfo .mainPoints ul li p {
-                display: none; }
-                html body .wrapper .main-column .showInfo .mainPoints ul li p span {
-                  display: block !important; }
               html body .wrapper .main-column .showInfo .mainPoints ul li img {
-                display: none; }
-              html body .wrapper .main-column .showInfo .mainPoints ul li h3 {
                 display: none; }
           html body .wrapper .main-column .showInfo .about-content {
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            display: block; }
+            display: block;
+            /* flex: 8;*/ }
             html body .wrapper .main-column .showInfo .about-content .name {
               font-size: 30px;
               font-weight: bold;
@@ -110,8 +103,9 @@ html {
               display: none; }
         html body .wrapper .main-column .eIcons {
           margin: 0 auto; }
+          html body .wrapper .main-column .eIcons .lowerIcons {
+            background: rgba(0, 0, 0, 0.4); }
           html body .wrapper .main-column .eIcons ul {
-            background: rgba(0, 0, 0, 0.4);
             margin: 0 auto;
             list-style: none;
             max-width: 300px; }
@@ -123,11 +117,8 @@ html {
                 cursor: pointer; }
               html body .wrapper .main-column .eIcons ul li .fa {
                 color: white; }
-                html body .wrapper .main-column .eIcons ul li .fa:hover {
-                  color: white;
-                  cursor: pointer; }
             html body .wrapper .main-column .eIcons ul .active {
-              background-color: rgba(103, 164, 204, 0.6); }
+              background-color: rgba(103, 164, 204, 0.6) !important; }
           html body .wrapper .main-column .eIcons .exp {
             width: 150px; }
             html body .wrapper .main-column .eIcons .exp .exp-button {

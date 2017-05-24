@@ -28,30 +28,53 @@ $(document).ready(function(){
 	});
 
 	// Show default summary
-	$('.main-image, .mantainHover, .showInfo, .edu, .exp').hover(function() {
+	$('.main-image, li, ul, .mainPoints, .eIcons, .pointIcons, .showInfo, .edu, .exp').hover(function() {
 		$('.sample-name').css("opacity", "0.5");
 		$('.showInfo, .mantainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
 		$('.showInfo').css("opacity", "1");
 
 	}, function () {
-		$('.sample-name').css("opacity", "1");
-		$('.showInfo').css("opacity", "1");
-		$('.showInfo').css("display", "none")
-		$('.mantainHover').css("display", "none")
-		$('.showInfo').css("-webkit-transition", "opacity 600ms, visibility 600ms");
-		//these transitions do nothing 
-		$('.showInfo').css("animation", "fade 10s");
-		$('.showInfo').css("visibility", "hidden");
-		$('.edu, .exp').css("margin", "0 auto");
+
 	});
+
+
+$('.mantainHover').mouseleave( function(){
+	
+	$('.bio').text(resumePoints["mainProfile"][0]["text"])
+	$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"])
+	$(".sideTitle h3").hide();
+	$('.active').removeClass('active');
+	if (titleVar) {titleVar.insertBefore($(".bio"))};
+	if($(".point-button")) {
+		$(".point-button").remove()
+	}
+
+	$('.sample-name').css("opacity", "1");
+	$('.showInfo').css("opacity", "1");
+	$('.showInfo').css("display", "none")
+	$('.mantainHover').css("display", "none")
+	$('.showInfo').css("-webkit-transition", "opacity 600ms, visibility 600ms");
+	//these transitions do nothing 
+	$('.showInfo').css("animation", "fade 10s");
+	$('.showInfo').css("visibility", "hidden");
+	$('.edu, .exp').css("margin", "0 auto");
+
+
+
+});
+
 
 
 
 	var numb = ['1', '2', '3', '4', '5','6', '7'];
 
 
-	// Show different icon summaries
+	var iconInfo
+	var titleVar
+
+
+// Show different experience summaries
 	$('.icon-name').each(function(i, value) {
 		$(this).click(function (e) {
 
@@ -59,32 +82,70 @@ $(document).ready(function(){
 			$(this).toggleClass('active').siblings().removeClass('active');
 
 
-			var iconInfo = $(this).attr('id');
-		
+			iconInfo = $(this).attr('id');
+
+			if($(".point-button")) {
+				$(".point-button").detach()
+			}
 
 			var iconHeader = resumePoints[iconInfo][0]["sideHeader"]
 			var iconText = resumePoints[iconInfo][0]["text"]
 			var iconImg = resumePoints[iconInfo][0]["imgSrc"]
 			var iconAwards = resumePoints[iconInfo][0]["pointSrc"]
 
+			titleVar = $('.name');
+			$('.name').remove();
+			$('.bio').text(iconText)
+			$('.proPic').attr("src", iconImg)
+			$(".sideTitle h3").text(iconHeader)
+
+
+			if (iconAwards) {		
+				$(".mainPoints ul").show();
+				$(".mainPoints ul li img").show();
+				for (a = 1; a <= iconAwards; a++){
+
+					var pointIconSrc =	resumePoints[iconInfo][a]["pointSrc"] 
+					$("#point" + a).append("<img class='point-button exp-button' src=" + pointIconSrc + ">");		
+				}
+			};	
+
+			//----show sidebars----
+			$(".about-content p").show();
+			$(".sideTitle sideHeaderTxt").css("display", "block");
+			$(".sideTitle h3").css("display", "flex");
+			$(".sideTitle").css("display", "flex");
+			$(".awards ul").show();
+	
+	
+		})
+	});
+
+
+// Show different experience summaries
+	$('.pointIcons').each(function(i, value) {
+		$(this).click(function (e) {
+
+			// Toggle click background
+			$(this).toggleClass('active').siblings().removeClass('active');
+
+			console.log($(this).attr("class"))
+
+
+			var iconID = $(this).attr('id');
+			var pointNumb = iconID.charAt(5);
+
+			console.log(pointNumb, iconID);
+		
+
+			var iconHeader = resumePoints[iconInfo][pointNumb]["sideHeader"]
+			var iconText = resumePoints[iconInfo][pointNumb]["text"]
+			var iconImg = resumePoints[iconInfo][pointNumb]["imgSrc"]
+
 
 			$('.about-content').text(iconText)
 			$('.proPic').attr("src", iconImg)
 			$(".sideTitle h3").text(iconHeader)
-
-			if (iconAwards) {
-				for (i = 1; i < iconAwards; i++){
-
-					var pointIconSrc =	resumePoints[iconInfo][i]["pointSrc"] 
-
-					$(".point" + i).attr("src", pointIconSrc); 
-
-
-				}
-			};
-
-			
-
 
 
 			//----show sidebars----
@@ -94,80 +155,9 @@ $(document).ready(function(){
 			$(".sideTitle").css("display", "flex");
 			$(".awards ul").show();
 
-			// $(".about-content p").not(iconHeader).hide();
-			// $(".sideTitle h3").not(iconHeader).hide();
-			// $(".awards ul").not(iconHeader).hide();
-
-			
-			//----hide sidebars----
-			// $(".about-content p").not(icoText).hide();
-			// $(".sideTitle h3").not(icoName).hide();
-			// $(".awards ul").not(awards).hide();
-
-			// icoText.toggle();
-			// icoImg.toggle(); // inputted to adapt images, have yet to
-			// icoName.toggle();
-			// awards.toggle();
-
-			// Show main-summary when clicking icon again
-			// if ( icoText.is(':visible') ) {
-			// 	$('.name, .bio').hide();
-			// } else {
-			// 	$('.name, .bio').show();
-			// }
-			
+	
 		})
 	});
-
-	// Show award text & picture
-	$('.awards li .award-name main-image').click(function () {
-
-		var x = $(this).attr('data');
-		
-		$('.award-name').toggleClass('active').siblings().removeClass('active'); // not working
-
-
-		// Txt
-		var aTxt = $('p[data="' + x + '"]')[0];
-		debugger;
-		$(aTxt).toggle();
-		$(aTxt).appendTo('.about-content');
-			//remove 
-			var mTxt = $('.about-content p').not(aTxt);
-			$(mTxt).hide();
-
-		// Title
-		var aTit = $('h3[data="' + x + '"]')[0];
-		$(aTit).toggle();
-		$(aTit).appendTo('.sideTitle');
-			//remove 
-			var mTit = $('.sideTitle h3').not(aTit);
-			$(mTit).hide();
-
-		// Pic
-		var aPic = $('img[data="' + x + '"]')[0];
-		$(aPic).toggle();
-		$(aPic).appendTo('.main-image');
-			//remove 
-			var mPic = $('.main-image img').not(aPic);
-			$(mPic).hide();
-
-		var bioTxt = $('.bio');
-		var bioPic = $('.proPic');
-		if ( $(aTxt).is(':visible') && $(aPic).is(':visible') ) {
-			// $(aPic).show();
-			$(bioTxt).hide();
-			$(bioPic).hide();
-		} else {
-
-			//Figure out a way to show default sideTitlte, pic, and mtxt when clicking again
-			// $('.proPic').show();
-			// var bioTxt = $('.bio');
-			// var bioPic = $('.proPic');
-			$(bioTxt).show();
-			$(bioPic).show();
-		}
-	})
 
 
 
