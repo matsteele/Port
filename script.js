@@ -32,10 +32,8 @@ $(document).ready(function(){
 		$('.sample-name').css("opacity", "0.5");
 		$('.showInfo, .mantainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
-		$('.showInfo').css("opacity", "1");
 
 	}, function () {
-
 	});
 
 
@@ -51,12 +49,8 @@ $('.mantainHover').mouseleave( function(){
 	}
 
 	$('.sample-name').css("opacity", "1");
-	$('.showInfo').css("opacity", "1");
 	$('.showInfo').css("display", "none")
 	$('.mantainHover').css("display", "none")
-	$('.showInfo').css("-webkit-transition", "opacity 600ms, visibility 600ms");
-	//these transitions do nothing 
-	$('.showInfo').css("animation", "fade 10s");
 	$('.showInfo').css("visibility", "hidden");
 	$('.edu, .exp').css("margin", "0 auto");
 

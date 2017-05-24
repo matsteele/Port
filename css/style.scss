@@ -20,6 +20,7 @@ html {
 		flex-direction: column;
 		.wrapper {
 			display: flex;
+			flex: 1;
 			margin-top: 10%;
 			.column {
 				flex: 1;
@@ -29,9 +30,7 @@ html {
 				margin: 10px;
 			}
 			.main-column {
-				flex: 5;
 				height: 50%;
-				z-index: 999;
 				.social {
 					background: rgba(0, 0, 0, 0.4);
 					text-align: center;
@@ -68,15 +67,12 @@ html {
 					position: absolute;
 					// background-color: blue;
 					z-index: -100;
-
 				}
 				.showInfo {
 					margin: 0 auto;
 					width: 325px;
 					height: 325px;
-					display: flex;
 					display: none;
-
 					flex-direction: row;
 					.mainPoints {
 						ul {
@@ -90,11 +86,6 @@ html {
 								padding: 0px 5px;
 								margin: 0px 5px;
 								cursor: pointer;
-
-
-
-
-
 
 								img {
 									display: none;
@@ -147,15 +138,13 @@ html {
 				}
 				.eIcons {
 					margin: 0 auto;
-					
 					.lowerIcons{
 						background: rgba(0, 0, 0, 0.4);
-
 					}
-
+					// margin: 0 auto;
 					ul {
-						
-						margin: 0 auto;
+						background: rgba(0, 0, 0, 0.4);
+						margin: 0 auto !important;
 						list-style: none;
 						max-width: 300px;
 						li {
@@ -185,7 +174,7 @@ html {
 				}
 			}
 			.port-wrapper {
-				flex: 8;
+				// flex: 8;
 				flex-direction: row;
 				background: transparent;
 				margin: 0;
@@ -267,7 +256,7 @@ html {
 		z-index: 2;
 		bottom: 0;
 		left: 0;
-		flex: 1;
+		// flex: 1;
 		position: fixed;
 		object {
 			opacity: 0.3;
@@ -283,7 +272,7 @@ html {
 		z-index: 2;
 		bottom: 0;
 		left: 0;
-		flex: 1;
+		// flex: 1;
 		position: fixed;
 		object {
 			opacity: 0.3;
@@ -366,11 +355,26 @@ html {
 	html {
 		body {
 			.wrapper {
-				display: block;
+				flex-direction: column;
+				// flex: 20;
+				// display: block;
+				// .column {
+				// 	display: flex;
+				// 	// flex: 1;
+				// }
 				.main-column {
 					z-index: 999 !important;
+					margin: 0 auto;
+					// flex: 3;
+					.social {
+						width: 125px;
+					}
+
 				}
 				.port-wrapper {
+					// flex: 10;
+					// margin-top: -180px !important;
+					margin-top: -30px !important;
 					.samples-text {
 						display: none;
 					}
@@ -378,13 +382,12 @@ html {
 						margin-top: 8%;
 					}
 				}
-			}.bottomContainer {
+			}
+			.bottomContainer {
 				.legend {
-					position: static;
 				}
 				.sources {
-					position: static;
-					margin-left: 0px;
+					// margin-left: 0px;
 				}
 			}
 		}
