@@ -26,6 +26,9 @@ $(document).ready(function(){
 		$('.showInfo').css("animation", "fade 10s");
 		$('.edu, .exp').css("margin", "0 0");
 
+		// Extend main-column to allow for .showInfo
+		// $('.main-column').css("flex", "3");
+
 		// $('.showInfo').css("transition", "all 1s ease");
 	}, function () {
 		$('.showInfo').css("opacity", "1");
@@ -36,6 +39,17 @@ $(document).ready(function(){
 		$('.showInfo').css("animation", "fade 10s");
 		$('.showInfo').css("visibility", "hidden");
 		$('.edu, .exp').css("margin", "0 auto");
+
+
+		// Close main-column to allow for .showInfo
+		// $('.main-column').css("flex", "1");
+
+
+	});
+
+	// Remove .active class when leaving the main column
+	$('.mantainHover').mouseout(function () {
+		$('.icon-name').removeClass('active');
 	});
 
 

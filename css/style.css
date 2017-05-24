@@ -12,6 +12,7 @@ html {
     flex-direction: column; }
     html body .wrapper {
       display: flex;
+      flex: 1;
       margin-top: 10%; }
       html body .wrapper .column {
         flex: 1;
@@ -20,9 +21,7 @@ html {
         color: white;
         margin: 10px; }
       html body .wrapper .main-column {
-        flex: 5;
-        height: 50%;
-        z-index: 999; }
+        height: 50%; }
         html body .wrapper .main-column .social {
           background: rgba(0, 0, 0, 0.4);
           text-align: center;
@@ -58,7 +57,6 @@ html {
           margin: 0 auto;
           width: 325px;
           height: 325px;
-          display: flex;
           display: none;
           flex-direction: row; }
           html body .wrapper .main-column .showInfo .awards ul {
@@ -107,34 +105,31 @@ html {
               padding: 6.5px;
               margin: 0px;
               display: none; }
-        html body .wrapper .main-column .eIcons {
-          margin: 0 auto; }
-          html body .wrapper .main-column .eIcons ul {
-            background: rgba(0, 0, 0, 0.4);
-            margin: 0 auto;
-            list-style: none;
-            max-width: 300px; }
-            html body .wrapper .main-column .eIcons ul li {
-              font-size: 20px;
-              padding: 2px 5px 2px 5px; }
-              html body .wrapper .main-column .eIcons ul li:hover {
-                background-color: rgba(103, 164, 204, 0.6);
+        html body .wrapper .main-column .eIcons ul {
+          background: rgba(0, 0, 0, 0.4);
+          margin: 0 auto !important;
+          list-style: none;
+          max-width: 300px; }
+          html body .wrapper .main-column .eIcons ul li {
+            font-size: 20px;
+            padding: 2px 5px 2px 5px; }
+            html body .wrapper .main-column .eIcons ul li:hover {
+              background-color: rgba(103, 164, 204, 0.6);
+              cursor: pointer; }
+            html body .wrapper .main-column .eIcons ul li .fa {
+              color: white; }
+              html body .wrapper .main-column .eIcons ul li .fa:hover {
+                color: white;
                 cursor: pointer; }
-              html body .wrapper .main-column .eIcons ul li .fa {
-                color: white; }
-                html body .wrapper .main-column .eIcons ul li .fa:hover {
-                  color: white;
-                  cursor: pointer; }
-            html body .wrapper .main-column .eIcons ul .active {
-              background-color: rgba(103, 164, 204, 0.6); }
-          html body .wrapper .main-column .eIcons .exp {
-            width: 150px; }
-            html body .wrapper .main-column .eIcons .exp .exp-button {
-              width: 25px;
-              height: 25px;
-              display: inline; }
+          html body .wrapper .main-column .eIcons ul .active {
+            background-color: rgba(103, 164, 204, 0.6); }
+        html body .wrapper .main-column .eIcons .exp {
+          width: 150px; }
+          html body .wrapper .main-column .eIcons .exp .exp-button {
+            width: 25px;
+            height: 25px;
+            display: inline; }
       html body .wrapper .port-wrapper {
-        flex: 8;
         flex-direction: row;
         background: transparent;
         margin: 0;
@@ -191,7 +186,6 @@ html {
     z-index: 2;
     bottom: 0;
     left: 0;
-    flex: 1;
     position: fixed; }
     .bottomContainer .legend object {
       opacity: 0.3; }
@@ -204,7 +198,6 @@ html {
     z-index: 2;
     bottom: 0;
     left: 0;
-    flex: 1;
     position: fixed; }
     .bottomContainer .sources object {
       opacity: 0.3; }
@@ -247,18 +240,18 @@ html {
 
 @media screen and (max-width: 524px) {
   html body .wrapper {
-    display: block; }
+    flex-direction: column; }
     html body .wrapper .main-column {
-      z-index: 999 !important; }
-    html body .wrapper .port-wrapper .samples-text {
-      display: none; }
-    html body .wrapper .port-wrapper .samples-name {
-      margin-top: 8%; }
-  html body .bottomContainer .legend {
-    position: static; }
-  html body .bottomContainer .sources {
-    position: static;
-    margin-left: 0px; } }
+      z-index: 999 !important;
+      margin: 0 auto; }
+      html body .wrapper .main-column .social {
+        width: 125px; }
+    html body .wrapper .port-wrapper {
+      margin-top: -30px !important; }
+      html body .wrapper .port-wrapper .samples-text {
+        display: none; }
+      html body .wrapper .port-wrapper .samples-name {
+        margin-top: 8%; } }
 @media (min-width: 525px) and (max-width: 1000px) {
   html body .wrapper .main-column {
     z-index: 999 !important; }
