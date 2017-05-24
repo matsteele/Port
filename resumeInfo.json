@@ -41,7 +41,7 @@ var resumePoints = {
 	],
 	"PennMUSA": [
 		 {
-		   "sideHeader": "UPenn - Masters in Urban Spatial Analytics",
+		   "sideHeader": "UPenn - Masters in Data Science",
 		   "text": "I was also admitted into a data science masters program at Penn. My data modeling and web development courses were my favorites. I became a wiz at R and Python and learned how to use every aspect of ArcGIS. My coursework involved advanced statistics and spatial statistics as well as design coursework for data visualizations.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "more",
