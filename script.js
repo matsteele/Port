@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$('.showInfo, .mantainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
 		$('.showInfo').css("opacity", "1");
-		$('.edu, .exp').css("margin", "0 0");	
+
 	}, function () {
 		$('.sample-name').css("opacity", "1");
 		$('.showInfo').css("opacity", "1");
@@ -129,6 +129,7 @@ $(document).ready(function(){
 
 		// Txt
 		var aTxt = $('p[data="' + x + '"]')[0];
+		debugger;
 		$(aTxt).toggle();
 		$(aTxt).appendTo('.about-content');
 			//remove 
