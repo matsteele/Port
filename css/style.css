@@ -61,22 +61,22 @@ html {
           display: flex;
           display: none;
           flex-direction: row; }
-          html body .wrapper .main-column .showInfo .awards ul {
+          html body .wrapper .main-column .showInfo .mainPoints ul {
             width: 30px;
             display: none; }
-            html body .wrapper .main-column .showInfo .awards ul li:first-of-type {
+            html body .wrapper .main-column .showInfo .mainPoints ul li:first-of-type {
               padding-top: 3px; }
-            html body .wrapper .main-column .showInfo .awards ul li {
+            html body .wrapper .main-column .showInfo .mainPoints ul li {
               background-color: rgba(0, 0, 0, 0.4);
               padding: 0px 5px;
               cursor: pointer; }
-              html body .wrapper .main-column .showInfo .awards ul li p {
+              html body .wrapper .main-column .showInfo .mainPoints ul li p {
                 display: none; }
-                html body .wrapper .main-column .showInfo .awards ul li p span {
+                html body .wrapper .main-column .showInfo .mainPoints ul li p span {
                   display: block !important; }
-              html body .wrapper .main-column .showInfo .awards ul li img {
+              html body .wrapper .main-column .showInfo .mainPoints ul li img {
                 display: none; }
-              html body .wrapper .main-column .showInfo .awards ul li h3 {
+              html body .wrapper .main-column .showInfo .mainPoints ul li h3 {
                 display: none; }
           html body .wrapper .main-column .showInfo .about-content {
             background: rgba(0, 0, 0, 0.6);
@@ -95,11 +95,12 @@ html {
             html body .wrapper .main-column .showInfo .about-content .main-summary p {
               display: inline-block; }
           html body .wrapper .main-column .showInfo .sideTitle {
-            display: flex;
             background-color: rgba(0, 0, 0, 0.4);
             writing-mode: vertical-rl;
             text-orientation: sideways-right;
-            justify-content: center; }
+            justify-content: center;
+            width: 30px;
+            display: none; }
             html body .wrapper .main-column .showInfo .sideTitle h3 {
               text-align: center;
               font-size: 16px;
