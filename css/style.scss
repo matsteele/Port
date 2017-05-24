@@ -76,8 +76,7 @@ html {
 					height: 325px;
 					display: none;
 					flex-direction: row;
-
-					.awards {
+					.mainPoints {
 						ul {
 							width: 30px;
 							display: none;
@@ -130,13 +129,12 @@ html {
 						}
 					}
 					.sideTitle {
-						display: flex;
 						background-color: rgba(0, 0, 0, 0.4);
 						writing-mode: vertical-rl;
   						text-orientation: sideways-right;
 						justify-content: center;
-						// width: 30px;
-						// display: none;
+						width: 30px;
+						display: none;
 						h3 {
 							text-align: center;
 							font-size: 16px;
