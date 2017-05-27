@@ -62,15 +62,16 @@ html {
 				}
 				.mantainHover {
 					margin: 0 auto;
-					margin-left: 8%;
+					// margin-left: 8%;
 					width: 600px;
 					height: 700px;
-					display: flex;
 					display: none;
 					position: absolute;
 					background-color: blue;
 					opacity: 0;
 					// z-index: -100;
+					// background-color: blue;
+					z-index: -100;
 				}
 				.showInfo {
 					margin: 0 auto;
@@ -81,25 +82,19 @@ html {
 					// flex: 2;
 					.mainPoints {
 						ul {
-							width: 30px;
+							width: 35px;
 							display: none;
+							height: 325px;
 							li:first-of-type {
 								padding-top: 3px;
 							}
 							li {
-								background-color: rgba(0, 0, 0, 0.4);
-								padding: 0px 5px;
+								// background-color: rgba(0, 0, 0, 0.4);
+								// padding: 0px 5px;
+								// margin: 0px 5px;
 								cursor: pointer;
-								p {
-									display: none;
-									span {
-										display: block !important;
-									}
-								}
+
 								img {
-									display: none;
-								}
-								h3 {
 									display: none;
 								}
 							}
@@ -109,7 +104,9 @@ html {
 						background: rgba(0, 0, 0, 0.6);
 						padding: 20px;
 						display: block;
-						// flex: 8;
+						min-width: 255px;
+						margin: 0 auto;
+						/* flex: 8;*/
 						.name {
 							font-size: 30px;
 							font-weight: bold;
@@ -120,6 +117,7 @@ html {
 						}
 						p {
 							display: none;
+							margin: 0 auto;
 						}
 						img {
 							display: none;
@@ -136,19 +134,25 @@ html {
 						writing-mode: vertical-rl;
   						text-orientation: sideways-right;
 						justify-content: center;
-						width: 30px;
+						// width: 35px;
 						display: none;
 						h3 {
 							text-align: center;
 							font-size: 16px;
+							width: 35px;
 							letter-spacing: 2px;
-							padding: 6.5px;
+							// padding: 6.5px;
+							padding-right: 8px;
 							margin: 0px;
 							display: none;
 						}
 					}
 				}
 				.eIcons {
+					margin: 0 auto;
+					.lowerIcons{
+						background: rgba(0, 0, 0, 0.4);
+					}
 					// margin: 0 auto;
 					ul {
 						background: rgba(0, 0, 0, 0.4);
@@ -164,15 +168,11 @@ html {
 							}
 							.fa{
 								color: white;
-								&:hover {
-									color: white;
-									cursor: pointer;
-								}
 							}
 						}
 						.active {
-							background-color: rgba(103,164,204,0.6);
-						}
+							background-color: rgba(103,164,204,0.6) !important;
+												}
 					}
 					.exp {
 						width: 150px;
@@ -450,6 +450,7 @@ html {
 				margin-top: 10%;
 				.main-column {
 					z-index: 999 !important;
+					margin-top: -2%;
 				}
 
 				.port-wrapper {

@@ -2,7 +2,7 @@
 var resumePoints = {
 	"mainProfile": [
 		 {
-		   "sideHeader": "Main Profile",
+		   "sideHeader": "Short Bio",
 		   "text": "An urban economist focused on public-private real estate finance and development. He has four years of experience in project management, community development  finance, and economic consulting and is adept in using a wide range of quantitative tools and analytical methods, especially involving spatial analysis.",
 		   "imgSrc": "images/mainProfile.jpg",
 		 }
@@ -12,31 +12,37 @@ var resumePoints = {
 		   "sideHeader": "UPenn - Masters in Urban Planning",
 		   "text": "I went to graduate school to pursue my interest in real estate development finance, and urban economics. I developed skills in financial and economic modeling. These skills gave me insights into understanding and visualizing how markets shift and change in response to movements in demand, innovation and planning. My academic track was public private development, which means I learned how to employ strategies and techniques that leverage private investment for infrastructure development and city building.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "5",
 		 },
 		 {
 		   "sideHeader": "Real Estate Finance Certificate",
 		   "text": "While at Penn I completed Penn's Real Estate Finance certificate program.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "svgs/MainPoints/Certificate.svg",
 		 },
 		 {
 		   "sideHeader": "Wharton Social Impact Fellow",
 		   "text": "I was awarded a Wharton Social impact fellowship and was placed at the Reinvestment Fund, where I worked for a year while in school.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
 		 {
 		   "sideHeader": "Planning Department Scholarship",
 		   "text": "I was awarded the Planning department scholarship with the expectation that I maintain a high GPA.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
 		 {
 		   "sideHeader": "Public Policy Competition Winner",
 		   "text": "My two colleagues and I won the city wide public policy competition of the Mayor's office. The policy issue was how to retain millennials in the city. We proposed integrating housing coops making use of the recent land bank instrument to help build stronger bridges between campus and it's surrounding neighborhood communities. A link to the article can be found <a href='http://philadelphia.cbslocal.com/2014/04/04/winners-of-competition-to-make-philadelphia-more-millennial-friendly-announced/'>here</a>.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
 		 {
 		   "sideHeader": "Real Estate Finance Certificate",
 		   "text": "My studio team worked with AECOM to inform an inclusive development strategy focused on social housing in inner-city Sao Paulo.",
 		   "imgSrc": "images/mainProfile.jpg",
+		   "pointSrc": "svgs/MainPoints/Report.svg",
 		 }
 	],
 	"PennMUSA": [
@@ -44,66 +50,75 @@ var resumePoints = {
 		   "sideHeader": "UPenn - Masters in Data Science",
 		   "text": "I was also admitted into a data science masters program at Penn. My data modeling and web development courses were my favorites. I became a wiz at R and Python and learned how to use every aspect of ArcGIS. My coursework involved advanced statistics and spatial statistics as well as design coursework for data visualizations.",
 		   "imgSrc": "images/mainProfile.jpg",
-		   "pointSrc": "more",
+		   "pointSrc": "2",
 		 },
 		 {
 		   "sideHeader": "MUSA Capstone",
 		   "text": "My capstone was a model for providing granular population projections for infrastructure planning in Indonesia, where data below the city-level is scarce by using remote sensing and dasymetric mapping.",
 		   "imgSrc": "images/mainProfile.jpg",
-		   "pointSrc": "svgs/MainPoints/Award.jpg",
+		   "pointSrc": "svgs/MainPoints/Report.svg",
 		 },
 		 {
 		   "sideHeader": "Lax Scholar",
 		   "text": "Jonathan Lax set up a fund to support aspiring students who are community advocates. He established a scholarship fund at in 1994 to encourage young gay men to pursue higher education and to be role models for other young gay men.",
 		   "imgSrc": "images/mainProfile.jpg",
-		   "pointSrc": "svgs/MainPoints/Award.jpg",
+		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 }
 	],
 	"UW": [
 		 {
 		   "sideHeader": "University of Washington",
 		   "text": "While graduate school built my technical skills, my undergraduate studies honed my abstract skills. It was as an economics major that I was first exposed to corporate finance and broad economic theory. I was also accepted into an interdisciplinary program for intrinsically motivated students called Community and Environmental Planning (CEP). Every aspect of CEP was devised for and by students. The open-dialogue format of our classes cultivated my ability to think critically and argue compassionately. We built strong connections with our professors, who supported us to take on ambitious projects and engage meaningfully with city and university institutions.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/Award-pics/CEP.jpg",
+		   "pointSrc": "8",
 		 },
 		 {
 		   "sideHeader": "ASUW Senator",
 		   "text": "Served as senator for student government, serving as the Vice Chair for Office Campus Affairs.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "WashPIRG",
 		   "text": "Was a campaign coordinator and eventually held the state board chair position.",
-		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "City Council Comissioner",
 		   "text": "I joined the Seattle City Council LGBT Commission to inform city policy and worked with the City Council on matters of concern to the LGBT community. I was assigned to inform councilwoman Sally Clark.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Bend-It",
 		   "text": "Starting in high school i enveloped myself in community organizing. Most notably, I co-ran a queer youth artist/activist collective for 3 years (The Bend-It Collective), putting on events and workshops, including a yearly arts festival. We intentionally structured the organization to politicize and equip youth to become leaders within Seattle. I also volunteered for an organization called Allyship that engaged the broader community on queer issues through a lens of intersectionality. I organized a series of talks called 'queerly classed,' which covered issues surrounding immigrant rights for queer folk, complexities of the fight for marriage rights in the queer community, and the displacement associated with gentrification within queer neighborhoods. These talks were hosted in conjunction with community organizers and academics.",
-		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Student Activity Fee Committee",
 		   "text": "Was appointed to a team of 8, who reviewed applications and allocated a multi-million dollar budget for student activities.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "University District Planning board",
 		   "text": "Was appointed to be the student rep for the City Planning Board for the University District.",
-		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "UW Student Food Co-op",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Scholarships",
 		   "text": "TOBEFILLED",
-		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 }
 	],
 	"WB": [
@@ -132,7 +147,32 @@ var resumePoints = {
 		   "sideHeader": "CoFED",
 		   "text": "I partnered with the National Cooperative Business Association (NCBA) to research the prospects of a capital fund for cooperative development. To explore prospects for the fund, I conducted economic research on the risk/return profile of potential business investments. I also drafted a policy brief on the legal parameters of the Employee Retirement Income Security Act (ERISA). My final project was to conduct a portfolio review, analyzing Calvert’s current holdings in cooperative ventures.",
 		   "imgSrc": "images/mainProfile.jpg",
-		 }
+		   "pointSrc": "2",
+		 },
+		 {
+		   "sideHeader": "CoFED Board of Director",
+		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 },
+		 {
+		   "sideHeader": "Mid-Atlantic Food Co-op Alliance Steering Committee",
+		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 },
+		 {
+		   "sideHeader": "Kensington Food Co-op Board of Director",
+		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 },
+		 {
+		   "sideHeader": "Kensington Food Co-op Board of Director",
+		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 }	
 	]
 }
 
