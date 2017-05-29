@@ -57,7 +57,7 @@ $('.main-column').mouseleave( function(){
 	$('.edu, .exp').css("margin", "0 auto");
 
 	//Add 'Mat Steele' back to bio
-	titleVar.insertBefore($(".bio"));
+	if (titleVar) {titleVar.insertBefore($(".bio"))};
 
 	//Hide main points
 	if($(".point-button")) {
@@ -115,7 +115,12 @@ $('.main-column').mouseleave( function(){
 					var pointIconSrc =	resumePoints[iconInfo][a]["pointSrc"] 
 					$("#point" + a).append("<img class='point-button exp-button' src=" + pointIconSrc + ">");		
 				}
-			};	
+			};
+
+			//Remove .active when going to a new exp icon
+			if ($(this)) {
+				$('.pointIcons').removeClass('active');
+			}
 
 			//----show sidebars----
 			$(".about-content p").show();

@@ -89,6 +89,7 @@ html {
           writing-mode: vertical-rl;
           text-orientation: sideways-right;
           justify-content: center;
+          width: 35px;
           display: none; }
           html body .main-column .showInfo .sideTitle h3 {
             text-align: center;
