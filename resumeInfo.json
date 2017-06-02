@@ -34,7 +34,7 @@ var resumePoints = {
 		 },
 		 {
 		   "sideHeader": "Public Policy Competition Winner",
-		   "text": "My two colleagues and I won the city wide public policy competition of the Mayor's office. The policy issue was how to retain millennials in the city. We proposed integrating housing coops making use of the recent land bank instrument to help build stronger bridges between campus and it's surrounding neighborhood communities. A link to the article can be found <a href='http://philadelphia.cbslocal.com/2014/04/04/winners-of-competition-to-make-philadelphia-more-millennial-friendly-announced/'>here</a>.",
+		   "text": "My two colleagues and I won the city wide public policy competition of the Mayor's office. The policy issue was how to retain millennials in the city. We proposed integrating housing coops making use of the recent land bank instrument to help build stronger bridges between campus and it's surrounding neighborhood communities.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
@@ -156,7 +156,7 @@ var resumePoints = {
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
-		   "sideHeader": "Mid-Atlantic Food Co-op Alliance Steering Committee",
+		   "sideHeader": "MAFCA Steering Committee",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
 		   "imgSrc": "images/Award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",

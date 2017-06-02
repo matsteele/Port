@@ -27,13 +27,22 @@ $(document).ready(function(){
 		);
 	});
 
+	//show default summary on image click
+	$('.main-image').click(function () {
+		$('.about-content').text(resumePoints["mainProfile"][0]["text"]);
+		$('.name').insertBefore(".about-content");
+		$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"]);
+		$('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
+		$('.mainPoints').hide();
+	})
+
 	// Show default summary
 	$('.main-image, li, ul, .mainPoints, .eIcons, .pointIcons, .showInfo, .edu, .exp').hover(function() {
 		$('.sample-name').css("opacity", "0.5");
 		$('.showInfo, .mantainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
-		// $('.sideTitle').appendTo('.main-column');
-		// $('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
+		$('.sideTitle').show();
+		$('.sideHeaderTxt').show();
 
 	}, function () {
 		// $('.sample-name').css("opacity", "1");
@@ -44,9 +53,9 @@ $(document).ready(function(){
 // Leaving main-column section, return to default bio
 $('.main-column').mouseleave( function(){
 	
-	$('.bio').text(resumePoints["mainProfile"][0]["text"]);
+	$('.about-content').text(resumePoints["mainProfile"][0]["text"]);
 	$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"]);
-	$('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
+	// $('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
 	// $(".sideTitle h3").hide();
 	$('.active').removeClass('active');
 
@@ -57,13 +66,17 @@ $('.main-column').mouseleave( function(){
 	$('.edu, .exp').css("margin", "0 auto");
 
 	//Add 'Mat Steele' back to bio
-	if (titleVar) {titleVar.insertBefore($(".bio"))};
+	$('.about-content').add(".name");
 
 	//Hide main points
 	if($(".point-button")) {
 		$(".point-button").remove();
 		$(".mainPoints").hide();
 	}
+
+		$('.sideTitle').show();
+		$('.sideHeaderTxt').show();
+		$('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
 
 
 });
@@ -88,6 +101,10 @@ $('.main-column').mouseleave( function(){
 
 			iconInfo = $(this).attr('id');
 
+			var iconID = $('.pointIcons').attr('id');
+			var pointNumb = iconID.charAt(5);
+
+
 			if($(".point-button")) {
 				$(".point-button").detach()
 			}
@@ -96,12 +113,18 @@ $('.main-column').mouseleave( function(){
 			var iconText = resumePoints[iconInfo][0]["text"]
 			var iconImg = resumePoints[iconInfo][0]["imgSrc"]
 			var iconAwards = resumePoints[iconInfo][0]["pointSrc"]
+			var iconPointText = resumePoints[iconInfo][pointNumb]["text"]
+			
+			// change .about-content upon clicking eIcons
+			if (iconPointText) {
+				$('.about-content').text(iconText);
+			}
 
 			titleVar = $('.name');
 			$('.name').remove();
-			$('.bio').text(iconText)
-			$('.proPic').attr("src", iconImg)
-			$(".sideTitle h3").text(iconHeader)
+			$('.bio').text(iconText);
+			$('.proPic').attr("src", iconImg);
+			$(".sideTitle h3").text(iconHeader);
 
 			//Show mainpoints when clicking eIcons
 			$(".mainPoints").show();
