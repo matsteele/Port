@@ -296,11 +296,17 @@ html {
 
 .cityPoints {
    /*transform-origin: 1100px 100px 1000px;*/
-    position: fixed;
+    position: absolute;
   	height: 100%;
     width: 100%;
     // background-color: pink;
     // opacity: 0.5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	top: 0;
+	left: 0;
     // z-index: -1;
     /*background-color: pink;*/
    /*opacity: 0.5;*/
@@ -309,11 +315,9 @@ html {
 }
 
 .PointsActual {
-
-	position: fixed;
+	position: absolute;
   	height: 100%;
     width: 100%;
-
 
 /*    fill: blue;*/
 }

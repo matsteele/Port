@@ -59,7 +59,6 @@ var textOver = d3.select("body")
 
 var svg = d3.select("body")
 			.append("svg")
-			.style("background-size", "cover")
 			.classed("cityPoints", true)
 			.attr("viewBox", "0 0 800 600" )
             .attr("preserveAspectRatio", "xMidYMid slice")

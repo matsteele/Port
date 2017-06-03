@@ -7,7 +7,6 @@ $(document).ready(function(){
 		$(this).css('color', 'white');
 		$(this).css('border', '1px solid white');
 	}, function () {
-		$(this).css('font-size', '14px');
 		$(this).css('background-color', 'white');
 		$(this).css('color', 'rgb(95, 167, 215)');
 		$(this).css('border', '1px solid rgb(95, 167, 215)');
@@ -19,11 +18,11 @@ $(document).ready(function(){
 		if ($(this).css('opacity') == 1){
 			$(this).animate({opacity:0.5}, 200);
 			$(this).animate({marginTop: '-20px'}, 200)
-			$('.sample-name').slideDown(1000);
+			$('.sample-name').slideDown(800);
 		} else {
 			$(this).animate({opacity:1}, 200);
 			$(this).animate({marginTop: '0px'}, 200)
-			$('.sample-name').slideUp(1000);
+			$('.sample-name').slideUp(800);
 		}
 	})
 
