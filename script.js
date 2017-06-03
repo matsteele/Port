@@ -1,6 +1,32 @@
 $(document).ready(function(){
 
 
+	// Show samples
+	$('.open-samples').hover(function () {
+		$(this).css('background-color', 'rgb(95, 167, 215)');
+		$(this).css('color', 'white');
+		$(this).css('border', '1px solid white');
+	}, function () {
+		$(this).css('font-size', '14px');
+		$(this).css('background-color', 'white');
+		$(this).css('color', 'rgb(95, 167, 215)');
+		$(this).css('border', '1px solid rgb(95, 167, 215)');
+	})
+
+	$('.open-samples').click(function () {
+		$(this).fadeTo(200, 1);
+		
+		if ($(this).css('opacity') == 1){
+			$(this).animate({opacity:0.5}, 200);
+			$(this).animate({marginTop: '-20px'}, 200)
+			$('.sample-name').slideDown(1000);
+		} else {
+			$(this).animate({opacity:1}, 200);
+			$(this).animate({marginTop: '0px'}, 200)
+			$('.sample-name').slideUp(1000);
+		}
+	})
+
 	// Show sample preview
 	var num = ['1', '2', '3', '4', '5', '6', "bg"]
 

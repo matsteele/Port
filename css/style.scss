@@ -219,7 +219,23 @@ html {
 					text-align: center;
 					font-weight: 1000;
 					z-index: 999;
+					.open-samples {
+						background-color: white;
+						color: rgb(95, 167, 215);
+						height: 50px;
+						width: 180px;
+						text-align: center;
+						margin: 0 auto;
+						margin-bottom: 30px;
+						cursor: pointer;
+						border: 1px solid rgb(95, 167, 215);
+						div {
+							vertical-align: middle;
+							line-height: 50px; 
+						}
+					}
 					.sample-name {
+						display: none;
 						margin-top: -10%;
 						a {
 
@@ -241,6 +257,7 @@ html {
 			// flex: 1;
 			bottom: 0;
 			left: 0;
+			position: absolute;
 			z-index: 2;
 			vertical-align: bottom;
 			max-width: 400px;
@@ -396,10 +413,13 @@ html {
 				}
 				.samples-name {
 					margin-top: 8%;
+					.open-sample {
+						margin-top: 20px;
+					}
 				}
 			}
 			.bottomContainer {
-				
+				position: static;
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.6);
 				}
