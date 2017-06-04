@@ -90,6 +90,7 @@ html {
           text-orientation: sideways-right;
           justify-content: center;
           width: 35px;
+          height: 325px;
           display: none; }
           html body .main-column .showInfo .sideTitle h3 {
             text-align: center;
@@ -208,7 +209,7 @@ html {
   /*margin: 0 auto;*/ }
 
 .PointsActual {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   /*    fill: blue;*/ }
@@ -255,6 +256,8 @@ html {
   html body .main-column {
     z-index: 999 !important;
     margin: 20px 0px; }
+    html body .main-column .mantainHover {
+      width: 100%; }
     html body .main-column .eIcons {
       margin-bottom: 30px; }
   html body .port-wrapper {

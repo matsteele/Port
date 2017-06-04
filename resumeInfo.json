@@ -2,7 +2,7 @@
 var resumePoints = {
 	"mainProfile": [
 		 {
-		   "sideHeader": "Short Bio",
+		   "sideHeader": "Main Summary",
 		   "text": "An urban economist focused on public-private real estate finance and development. He has four years of experience in project management, community development  finance, and economic consulting and is adept in using a wide range of quantitative tools and analytical methods, especially involving spatial analysis.",
 		   "imgSrc": "images/mainProfile.jpg",
 		 }

@@ -135,6 +135,7 @@ html {
   						text-orientation: sideways-right;
 						justify-content: center;
 						width: 35px;
+						height: 325px;
 						display: none;
 						h3 {
 							text-align: center;
@@ -315,7 +316,7 @@ html {
 }
 
 .PointsActual {
-	position: absolute;
+	position: fixed;
   	height: 100%;
     width: 100%;
 
@@ -405,6 +406,9 @@ html {
 			.main-column {
 				z-index: 999 !important;
 				margin: 20px 0px;
+				.mantainHover {
+					width: 100%;
+				}
 				.eIcons {
 					margin-bottom: 30px;
 				}

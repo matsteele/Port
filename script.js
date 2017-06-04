@@ -19,10 +19,14 @@ $(document).ready(function(){
 			$(this).animate({opacity:0.5}, 200);
 			$(this).animate({marginTop: '-20px'}, 200)
 			$('.sample-name').slideDown(800);
+			$('.cityPoints').css('opacity', '0.5');
+			$('.main-column').css('opacity', '0.5');
 		} else {
 			$(this).animate({opacity:1}, 200);
 			$(this).animate({marginTop: '0px'}, 200)
 			$('.sample-name').slideUp(800);
+			$('.cityPoints').css('opacity', '1');
+			$('.main-column').css('opacity', '1');
 		}
 	})
 
@@ -59,6 +63,7 @@ $(document).ready(function(){
 		$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"]);
 		$('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
 		$('.mainPoints').hide();
+		$('<p class="name">MAT STEELE</p><br>').prependTo(".about-content");
 	})
 
 	// Show default summary
@@ -68,8 +73,10 @@ $(document).ready(function(){
 		$('.showInfo').css("visibility", "visible");
 		$('.sideTitle').show();
 		$('.sideHeaderTxt').show();
+		$('.cityPoints').css('opacity', '0.5');
 
 	}, function () {
+		
 		// $('.sample-name').css("opacity", "1");
 		// $('.showInfo, .mantainHover').hide();
 	});
@@ -90,8 +97,10 @@ $('.main-column').mouseleave( function(){
 	$('.showInfo').css("visibility", "hidden");
 	$('.edu, .exp').css("margin", "0 auto");
 
+	$('.cityPoints').css('opacity', '1');
+
 	//Add 'Mat Steele' back to bio
-	$('.about-content').add(".name");
+	$('<p class="name">MAT STEELE</p><br>').prependTo(".about-content");
 
 	//Hide main points
 	if($(".point-button")) {
