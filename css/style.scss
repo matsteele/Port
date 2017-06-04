@@ -258,9 +258,8 @@ html {
 			// flex: 1;
 			bottom: 0;
 			left: 0;
-			position: absolute;
+			position: fixed;
 			z-index: 2;
-			vertical-align: bottom;
 			max-width: 400px;
 			// position: fixed;
 			
@@ -297,7 +296,7 @@ html {
 
 .cityPoints {
    /*transform-origin: 1100px 100px 1000px;*/
-    position: absolute;
+    position: fixed;
   	height: 100%;
     width: 100%;
     // background-color: pink;
@@ -416,6 +415,7 @@ html {
 
 			.port-wrapper {
 				z-index: 1;
+				margin-bottom: 125px;
 				.samples-text {
 					display: none;
 				}
@@ -427,7 +427,7 @@ html {
 				}
 			}
 			.bottomContainer {
-				position: static;
+				position: fixed;
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.6);
 				}
