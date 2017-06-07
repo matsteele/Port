@@ -88,7 +88,7 @@ d3.json("http://matsteele.com/CityData2.json", function(error, data) {
  	     	.attr("cy", function (d) {
  	     		return d.properties.cy2;
  	     	})
- 	     	.attr("r", 2.5)
+ 	     	.attr("r", 2)
  	     	// .attr("z-indx", "5")
  	     	.attr("fill", "rgba(254,193,13, 0.75)")
  	     	.on("mouseover", function() {

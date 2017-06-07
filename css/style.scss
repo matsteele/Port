@@ -64,7 +64,7 @@ html {
 					margin: 0 auto;
 					// margin-left: 8%;
 					width: 600px;
-					height: 700px;
+					height: 500px;
 					display: none;
 					position: absolute;
 					background-color: blue;
@@ -173,7 +173,7 @@ html {
 						}
 						.active {
 							background-color: rgba(103,164,204,0.6) !important;
-												}
+						}
 					}
 					.exp {
 						width: 150px;
@@ -183,7 +183,14 @@ html {
 							display: inline;
 						}
 					}
-
+				}
+				.resume-label {
+					background-color: rgba(103,164,204,0.6);
+					margin: 0 auto;
+					text-align: center;
+					width: 150px;
+					text-transform: uppercase;
+					letter-spacing: 0.5px;
 				}
 			}
 			.port-wrapper {
@@ -202,7 +209,8 @@ html {
 					// z-index: -1;
 					// flex: 3;
 					z-index: 1;
-					height: 100px;
+					height: 1px;
+					margin: 0;
 
 					.sample-text {
 /*						height: 14em;*/
@@ -220,6 +228,7 @@ html {
 					text-align: center;
 					font-weight: 1000;
 					z-index: 999;
+					height: 1px;
 					.open-samples {
 						background-color: white;
 						color: rgb(95, 167, 215);
@@ -311,6 +320,9 @@ html {
     /*background-color: pink;*/
    /*opacity: 0.5;*/
     /*margin: 0 auto;*/
+    // circle {
+    // 	r: 1px;
+    // }
 
 }
 
@@ -409,6 +421,9 @@ html {
 					width: 100%;
 				}
 				.eIcons {
+					
+				}
+				.resume-label {
 					margin-bottom: 30px;
 				}
 			}
@@ -491,33 +506,10 @@ html {
 				.legend {
 				}
 				.sources {
-
-					// margin-left: 0px;
 				}
 			}
 		}
 	}
 }
-
-
-
-// Under Construction Header //
-
-@media screen and (max-width: 550px) {
-	html {
-		body {
-			.wrapper {
-				header {
-					margin-left: 10% !important;
-				}
-			}
-		}
-	}
-}
-
-
-
-
-
 
 

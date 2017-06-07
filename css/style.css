@@ -42,7 +42,7 @@ html {
       html body .main-column .mantainHover {
         margin: 0 auto;
         width: 600px;
-        height: 700px;
+        height: 500px;
         display: none;
         position: absolute;
         background-color: blue;
@@ -125,6 +125,13 @@ html {
             width: 25px;
             height: 25px;
             display: inline; }
+      html body .main-column .resume-label {
+        background-color: rgba(103, 164, 204, 0.6);
+        margin: 0 auto;
+        text-align: center;
+        width: 150px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px; }
     html body .port-wrapper {
       display: flex;
       flex: 1;
@@ -134,7 +141,8 @@ html {
       margin-top: -5%; }
       html body .port-wrapper .samples-text {
         z-index: 1;
-        height: 100px; }
+        height: 1px;
+        margin: 0; }
         html body .port-wrapper .samples-text .sample-text {
           /*						height: 14em;*/
           padding: 5px;
@@ -145,7 +153,8 @@ html {
         flex: 1;
         text-align: center;
         font-weight: 1000;
-        z-index: 999; }
+        z-index: 999;
+        height: 1px; }
         html body .port-wrapper .samples-name .open-samples {
           background-color: white;
           color: #5fa7d7;
@@ -257,7 +266,7 @@ html {
     margin: 20px 0px; }
     html body .main-column .mantainHover {
       width: 100%; }
-    html body .main-column .eIcons {
+    html body .main-column .resume-label {
       margin-bottom: 30px; }
   html body .port-wrapper {
     z-index: 1;
@@ -292,8 +301,5 @@ html {
     html body .wrapper .main-column {
       z-index: 999 !important;
       margin-top: -2%; } }
-@media screen and (max-width: 550px) {
-  html body .wrapper header {
-    margin-left: 10% !important; } }
 
 /*# sourceMappingURL=style.css.map */
