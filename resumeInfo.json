@@ -75,49 +75,49 @@ var resumePoints = {
 		 {
 		   "sideHeader": "ASUW Senator",
 		   "text": "Served as senator for student government, serving as the Vice Chair for Office Campus Affairs.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "WashPIRG",
 		   "text": "Was a campaign coordinator and eventually held the state board chair position.",
-		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "City Council Comissioner",
 		   "text": "I joined the Seattle City Council LGBT Commission to inform city policy and worked with the City Council on matters of concern to the LGBT community. I was assigned to inform councilwoman Sally Clark.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Bend-It",
-		   "text": "Starting in high school i enveloped myself in community organizing. Most notably, I co-ran a queer youth artist/activist collective for 3 years (The Bend-It Collective), putting on events and workshops, including a yearly arts festival. We intentionally structured the organization to politicize and equip youth to become leaders within Seattle. I also volunteered for an organization called Allyship that engaged the broader community on queer issues through a lens of intersectionality. I organized a series of talks called 'queerly classed,' which covered issues surrounding immigrant rights for queer folk, complexities of the fight for marriage rights in the queer community, and the displacement associated with gentrification within queer neighborhoods. These talks were hosted in conjunction with community organizers and academics.",
-		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "text": "Starting in high school I enveloped myself in community organizing. Most notably, I co-ran a queer youth artist/activist collective for 3 years (The Bend-It Collective), putting on events and workshops, including a yearly arts festival. We intentionally structured the organization to politicize and equip youth to become leaders within Seattle. I also volunteered for an organization called Allyship that engaged the broader community on queer issues through a lens of intersectionality. I organized a series of talks called 'queerly classed,' which covered issues surrounding immigrant rights for queer folk, complexities of the fight for marriage rights in the queer community, and the displacement associated with gentrification within queer neighborhoods. These talks were hosted in conjunction with community organizers and academics.",
+		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Student Activity Fee Committee",
 		   "text": "Was appointed to a team of 8, who reviewed applications and allocated a multi-million dollar budget for student activities.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "University District Planning board",
 		   "text": "Was appointed to be the student rep for the City Planning Board for the University District.",
-		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "UW Student Food Co-op",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Scholarships",
 		   "text": "TOBEFILLED",
-		   "imgSrc": "images/Award-pics/WashPirg.jpg",
+		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 }
 	],
@@ -152,25 +152,25 @@ var resumePoints = {
 		 {
 		   "sideHeader": "CoFED Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "MAFCA Steering Committee",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Kensington Food Co-op Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Kensington Food Co-op Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/Award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 }	
 	]

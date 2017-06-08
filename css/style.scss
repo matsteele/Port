@@ -442,7 +442,8 @@ html {
 				}
 			}
 			.bottomContainer {
-				position: static;
+				display: none;
+				// position: static;
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.6);
 				}

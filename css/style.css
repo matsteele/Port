@@ -278,7 +278,7 @@ html {
       html body .port-wrapper .samples-name .open-sample {
         margin-top: 20px; }
   html body .bottomContainer {
-    position: static; }
+    display: none; }
     html body .bottomContainer:hover {
       background-color: rgba(255, 255, 255, 0.6); }
   html body .cityPoints {
