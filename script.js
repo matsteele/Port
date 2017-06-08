@@ -21,12 +21,14 @@ $(document).ready(function(){
 			$('.sample-name').slideDown(800);
 			$('.cityPoints').css('opacity', '0.5');
 			$('.main-column').css('opacity', '0.5');
+			$('.bottomContainer').css('opacity', '0');
 		} else {
 			$(this).animate({opacity:1}, 200);
 			$(this).animate({marginTop: '0px'}, 200)
 			$('.sample-name').slideUp(800);
 			$('.cityPoints').css('opacity', '1');
 			$('.main-column').css('opacity', '1');
+			$('.bottomContainer').css('opacity', '1');
 		}
 	})
 
