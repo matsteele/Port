@@ -14,7 +14,6 @@ $(document).ready(function(){
 
 	$('.open-samples').click(function () {
 		$(this).fadeTo(200, 1);
-		
 		if ($(this).css('opacity') == 1){
 			$(this).animate({opacity:0.5}, 200);
 			$(this).animate({marginTop: '-20px'}, 200)
@@ -22,9 +21,35 @@ $(document).ready(function(){
 			$('.cityPoints').css('opacity', '0.5');
 			$('.main-column').css('opacity', '0.5');
 			$('.bottomContainer').css('opacity', '0');
+
+			// Show sample preview
+			var num = ['1', '2', '3', '4', '5', '6', "bg"]
+
+			$('.sample-name').each(function(i, value) {
+				$(this).hover(
+					function (e) { 
+						$(this).fadeIn("fast", function() {
+							$("#portDiv").css("background", "rgba(0, 0, 0, 0.6)");
+							$('#text' + num[i]).css("display", "inline");
+							$('#button' + num[i]).attr("src", "svgs/on-buttons/button" + num[i] +".svg");
+							$(".main-column").css("opacity", "0.5");
+						});
+					}, 
+					function () {
+						$(this).fadeIn("fast", function() {
+							$("#portDiv").css("background", "transparent");
+							$('#text' + num[i]).css("display", "none");
+							$('#button' + num[i]).attr("src", "svgs/off-buttons/button" + num[i] +".svg");
+							$(".main-column").css("opacity", "1");
+						});
+					}
+				);
+			});
+
 		} else {
 			$(this).animate({opacity:1}, 200);
 			$(this).animate({marginTop: '0px'}, 200)
+			$('.sample-name').unbind('mouseenter mouseleave');
 			$('.sample-name').slideUp(800);
 			$('.cityPoints').css('opacity', '1');
 			$('.main-column').css('opacity', '1');
@@ -32,31 +57,26 @@ $(document).ready(function(){
 		}
 	})
 
-	// Show sample preview
-	var num = ['1', '2', '3', '4', '5', '6', "bg"]
 
-	$('.sample-name').each(function(i, value) {
-		$(this).hover(
-			function (e) { 
-				$(this).fadeIn("fast", function() {
-					$("#portDiv").css("background", "rgba(0, 0, 0, 0.6)");
-					$('#text' + num[i]).css("display", "inline");
-					$('#button' + num[i]).attr("src", "svgs/on-buttons/button" + num[i] +".svg");
-					$(".main-column").css("opacity", "0.5");
-				});
-				
-			}, 
-			function () {
-				$(this).fadeIn("fast", function() {
-					$("#portDiv").css("background", "transparent");
-					$('#text' + num[i]).css("display", "none");
-					$('#button' + num[i]).attr("src", "svgs/off-buttons/button" + num[i] +".svg");
-					$(".main-column").css("opacity", "1");
-				});
-				
-			}
-		);
+
+	// Show iframe
+	$('.showIframe').click("slow", function() {
+
+		$('.siteSample').toggle("slow", function() {});
+		$('.modal-body').toggle("slow", function() {});
+		$('.modal-content').toggleClass("modal-content2");
+		$(this).text(function(i, text){
+          return text === "DISPLAY SAMPLE" ? "DISPLAY DESCRIPTION" : "DISPLAY SAMPLE";
+      })
 	});
+
+	// Return summary upon leaving modal and displaying a new modal
+	$('.modal').on('hidden.bs.modal', function () {
+		$('.siteSample').hide();
+		$('.modal-body').show();
+		$('.modal-content').removeClass("modal-content2");
+	})
+
 
 	//show default summary on image click
 	$('.main-image').click(function () {
@@ -227,18 +247,6 @@ $('.main-column').mouseleave( function(){
 
 	
 		})
-	});
-
-
-
-	// Show iframe
-	$('.showIframe').click("slow", function() {
-		$('.siteSample').toggle("slow", function() {});
-		$('.modal-body').toggle("slow", function() {});
-		$('.modal-content').toggleClass("modal-content2");
-		$(this).text(function(i, text){
-          return text === "DISPLAY SAMPLE" ? "DISPLAY DESCRIPTION" : "DISPLAY SAMPLE";
-      })
 	});
 
 });
