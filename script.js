@@ -96,6 +96,7 @@ $(document).ready(function(){
 		$('.sideTitle').show();
 		$('.sideHeaderTxt').show();
 		$('.cityPoints').css('opacity', '0.5');
+		$('.bottomContainer').css('opacity', '0');
 
 	}, function () {
 		
@@ -110,7 +111,7 @@ $('.main-column').mouseleave( function(){
 	$('.about-content').text(resumePoints["mainProfile"][0]["text"]);
 	$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"]);
 	// $('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
-	// $(".sideTitle h3").hide();
+	$('.bottomContainer').css('opacity', '0.5');
 	$('.active').removeClass('active');
 
 	$('.sample-name').css("opacity", "1");
