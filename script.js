@@ -97,9 +97,7 @@ $(document).ready(function(){
 		$('.sideHeaderTxt').show();
 		$('.cityPoints').css('opacity', '0.5');
 		$('.bottomContainer').css('opacity', '0');
-
 	}, function () {
-		
 		// $('.sample-name').css("opacity", "1");
 		// $('.showInfo, .mantainHover').hide();
 	});

@@ -75,7 +75,7 @@ var resumePoints = {
 		 {
 		   "sideHeader": "ASUW Senator",
 		   "text": "Served as senator for student government, serving as the Vice Chair for Office Campus Affairs.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
@@ -87,7 +87,7 @@ var resumePoints = {
 		 {
 		   "sideHeader": "City Council Comissioner",
 		   "text": "I joined the Seattle City Council LGBT Commission to inform city policy and worked with the City Council on matters of concern to the LGBT community. I was assigned to inform councilwoman Sally Clark.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
@@ -99,7 +99,7 @@ var resumePoints = {
 		 {
 		   "sideHeader": "Student Activity Fee Committee",
 		   "text": "Was appointed to a team of 8, who reviewed applications and allocated a multi-million dollar budget for student activities.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
@@ -111,7 +111,7 @@ var resumePoints = {
 		 {
 		   "sideHeader": "UW Student Food Co-op",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
@@ -152,25 +152,25 @@ var resumePoints = {
 		 {
 		   "sideHeader": "CoFED Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "MAFCA Steering Committee",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Kensington Food Co-op Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Kensington Food Co-op Board of Director",
 		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpeg",
+		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 }	
 	]
