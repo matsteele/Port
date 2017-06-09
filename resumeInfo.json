@@ -163,7 +163,7 @@ var resumePoints = {
 	"WB": [
 		 {
 		   "sideHeader": "World Bank",
-		   "text": "I coordinated the World Bank’s technical assistance program for urban planning in Indonesia.  In this work I hired and managed three teams of international and local planning consultants, reflecting contracts worth $500,000 USD. I projected budgets, established KPIs, and drafted the terms of reference and work plans for 29 consultants.  I helped five cities implement data systems. I also worked closely with local planning officials to use what data was available to conduct analysis on urban expansion, land use/change, infrastructure accessibility, transit-oriented development, and slum upgrading strategies in order to guide infrastructure investments.",
+		   "text": "I coordinated the World Banks technical assistance program for urban planning in Indonesia.  In this work I hired and managed three teams of international and local planning consultants, reflecting contracts worth $500,000 USD. I projected budgets, established KPIs, and drafted the terms of reference and work plans for 29 consultants.  I helped five cities implement data systems. I also worked closely with local planning officials to use what data was available to conduct analysis on urban expansion, land use/change, infrastructure accessibility, transit-oriented development, and slum upgrading strategies in order to guide infrastructure investments.",
 		   "imgSrc": "images/award-pics/mainProfile.jpg",
 			"start": ["2014,09", 60],
 			"mid": ["2016,01", 15],
@@ -175,8 +175,8 @@ var resumePoints = {
 		   "sideHeader": "Bay Area Economics BAE",
 		   "text": "I conducted data mining, data visualization, and real estate economic analyses for large development projects in the Eastern United States. The largest market study I undertook was in support of a public/private transit oriented development (TOD) project for modeling housing and office space prospects in Hyattsville, Maryland.  I also provided an economic impact study for a retail strategy of downtown Bethesda, Maryland and  developed and managed  all analytical inputs for the 2014 Baltimore Regional Housing Plan.",
 		   "imgSrc": "images/award-pics/mainProfile.jpg",
-		"start": ["2014,05", 50],
-		"end": ["2014,09",  50],
+			"start": ["2014,05", 50],
+			"end": ["2014,09",  50],
 		 }
 	],
 	"TRF": [

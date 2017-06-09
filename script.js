@@ -89,7 +89,7 @@ $(document).ready(function(){
 	})
 
 	// Show default summary
-	$('.main-image, li, ul, .mainPoints, .eIcons, .pointIcons, .showInfo, .edu, .exp').hover(function() {
+	$('.main-column').hover(function() {
 		$('.sample-name').css("opacity", "0.5");
 		$('.showInfo, .maintainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
@@ -109,7 +109,7 @@ $('.main-column').mouseleave( function(){
 	$('.about-content').text(resumePoints["mainProfile"][0]["text"]);
 	$('.proPic').attr("src", resumePoints["mainProfile"][0]["imgSrc"]);
 	// $('.sideHeaderTxt').text(resumePoints["mainProfile"][0]["sideHeader"]);
-	$('.bottomContainer').css('opacity', '0.5');
+	$('.bottomContainer').css('opacity', '1');
 	$('.active').removeClass('active');
 
 	$('.sample-name').css("opacity", "1");
@@ -150,8 +150,11 @@ $('.main-column').mouseleave( function(){
 	$('.icon-name').each(function(i, value) {
 		$(this).click(function (e) {
 
+
 			// Toggle click background
 			$(this).toggleClass('active').siblings().removeClass('active');
+
+			$(".mainPoints ul").hide();
 
 
 			iconInfo = $(this).attr('id');
@@ -168,12 +171,11 @@ $('.main-column').mouseleave( function(){
 			var iconText = resumePoints[iconInfo][0]["text"]
 			var iconImg = resumePoints[iconInfo][0]["imgSrc"]
 			var iconAwards = resumePoints[iconInfo][0]["pointSrc"]
-			var iconPointText = resumePoints[iconInfo][pointNumb]["text"]
 			
-			// change .about-content upon clicking eIcons
-			if (iconPointText) {
-				$('.about-content').text(iconText);
-			}
+
+			// Show eIcon text for the icons without mainPoints
+			$('.about-content').text(iconText);
+			
 
 			titleVar = $('.name');
 			$('.name').remove();
@@ -186,6 +188,8 @@ $('.main-column').mouseleave( function(){
 
 
 			if (iconAwards) {		
+				var iconPointText = resumePoints[iconInfo][pointNumb]["text"]
+				$('.about-content').text(iconText);
 				$(".mainPoints ul").show();
 				$(".mainPoints ul li img").show();
 				for (a = 1; a <= iconAwards; a++){
@@ -219,13 +223,13 @@ $('.main-column').mouseleave( function(){
 			// Toggle click background
 			$(this).toggleClass('active').siblings().removeClass('active');
 
-			console.log($(this).attr("class"))
+			// console.log($(this).attr("class"))
 
 
 			var iconID = $(this).attr('id');
 			var pointNumb = iconID.charAt(5);
 
-			console.log(pointNumb, iconID);
+			// console.log(pointNumb, iconID);
 		
 
 			var iconHeader = resumePoints[iconInfo][pointNumb]["sideHeader"]

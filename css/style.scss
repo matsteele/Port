@@ -212,11 +212,14 @@ html {
 					height: 1px;
 					margin: 0;
 
+
 					.sample-text {
 /*						height: 14em;*/
 
 						padding: 5px;
 						padding-left: 10px;
+						position: fixed;
+						width: 23%;
 
 						p{
 							display: none;
@@ -236,7 +239,7 @@ html {
 						width: 180px;
 						text-align: center;
 						margin: 0 auto;
-						margin-bottom: 30px;
+						margin-bottom: 12%;
 						cursor: pointer;
 						border: 1px solid rgb(95, 167, 215);
 						div {
@@ -246,7 +249,7 @@ html {
 					}
 					.sample-name {
 						display: none;
-						margin-top: -10%;
+						margin-top: -20%;
 						a {
 
 							cursor: pointer;
@@ -271,6 +274,10 @@ html {
 			z-index: 2;
 			max-width: 400px;
 			// position: fixed;
+			&:hover {
+				background-color: rgba(255,255,255,0.5);
+
+			}
 			
 			.legend {
 				width: 193px;
@@ -478,12 +485,16 @@ html {
 					.samples-name {
 						margin-left: -10%;
 						margin-top: 10%;
+						.sample-name {
+							margin-top: -15%;
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
 
 //Greater than 1000px wide
 @media screen and (min-width: 1000px) {
@@ -498,6 +509,11 @@ html {
 				}
 
 				.port-wrapper {
+					.samples-name {
+						.sample-name {
+							margin-top: -15%;
+						}
+					}
 				}
 			}
 			.bottomContainer {
