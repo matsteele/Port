@@ -1,28 +1,31 @@
-
 var resumePoints = {
 	"mainProfile": [
 		 {
-		   "sideHeader": "Main Summary",
-		   "text": "An urban economist focused on public-private real estate finance and development. He has four years of experience in project management, community development  finance, and economic consulting and is adept in using a wide range of quantitative tools and analytical methods, especially involving spatial analysis.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "sideHeader": "Main Profile",
+		   "text": "I am an urban economist with 4 years of experience in project management, development finance, and economic consulting. I am adept in the use of a wide range of quantitative tools and analytical methods, especially involving spatial analysis.",
+		   "imgSrc": "images/mainProfile.jpg",		
 		 }
 	],
 	"PennMUP": [
 		 {
 		   "sideHeader": "UPenn - Masters in Urban Planning",
-		   "text": "I went to graduate school to pursue my interest in real estate development finance, and urban economics. I developed skills in financial and economic modeling. These skills gave me insights into understanding and visualizing how markets shift and change in response to movements in demand, innovation and planning. My academic track was public private development, which means I learned how to employ strategies and techniques that leverage private investment for infrastructure development and city building.",
+		   "text": "I went to graduate school to pursue my interest in real estate development finance and urban economics. I developed skills in financial and economic modeling. These skills gave me insights into understanding and visualizing how markets shift and change in response to movements in demand, innovation, and planning. My academic track was public private development, which means I learned how to employ strategies and techniques that leverage private investment for infrastructure development and city building.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "5",
+			"start": ["2012, 09", 50],
+			"end": ["2014,05",  50],
 		 },
 		 {
 		   "sideHeader": "Real Estate Finance Certificate",
-		   "text": "While at Penn I completed Penn's Real Estate Finance certificate program.",
+		   "text": "While at Penn I completed enough credits in Real Estate Finance to earn a certificate in Real Estate program.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Certificate.svg",
+			"start": ["2012,09", 10],
+			"end": ["2014,05",  10],
 		 },
 		 {
 		   "sideHeader": "Wharton Social Impact Fellow",
-		   "text": "I was awarded a Wharton Social impact fellowship and was placed at the Reinvestment Fund, where I worked for a year while in school.",
+		   "text": "I was awarded a Wharton Social Impact Fellowship in my first few months at Penn. I was placed at the Reinvestment Fund, where I worked for a year while in school. The fellowship is awarded to high-achieving students who have a demonstrated interest in social impact investing and entrepreneurship.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
@@ -39,9 +42,9 @@ var resumePoints = {
 		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 },
 		 {
-		   "sideHeader": "Real Estate Finance Certificate",
-		   "text": "My studio team worked with AECOM to inform an inclusive development strategy focused on social housing in inner-city Sao Paulo.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "sideHeader": "Social Housing Final Planning Studio",
+		   "text": "My studio team worked with AECOM to inform an inclusive development strategy focused on social housing in inner-city Sao Paulo. Our final report is embedded in the portfolio examples to right of this webpage",
+		   "imgSrc": "images/award-pics/SaoPauloStudio.jpg",
 		   "pointSrc": "svgs/MainPoints/Report.svg",
 		 }
 	],
@@ -51,17 +54,19 @@ var resumePoints = {
 		   "text": "I was also admitted into a data science masters program at Penn. My data modeling and web development courses were my favorites. I became a wiz at R and Python and learned how to use every aspect of ArcGIS. My coursework involved advanced statistics and spatial statistics as well as design coursework for data visualizations.",
 		   "imgSrc": "images/mainProfile.jpg",
 		   "pointSrc": "2",
+			"start": ["2016,01", 50],
+			"end": ["2016,08",  50],
 		 },
 		 {
 		   "sideHeader": "MUSA Capstone",
-		   "text": "My capstone was a model for providing granular population projections for infrastructure planning in Indonesia, where data below the city-level is scarce by using remote sensing and dasymetric mapping.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "text": "My capstone was a model for providing granular population projections for infrastructure planning in Indonesia, where data below the city-level is scarce by using remote sensing and dasymetric mapping methods.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Report.svg",
 		 },
 		 {
 		   "sideHeader": "Lax Scholar",
-		   "text": "Jonathan Lax set up a fund to support aspiring students who are community advocates. He established a scholarship fund at in 1994 to encourage young gay men to pursue higher education and to be role models for other young gay men.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "text": "Jonathan Lax set up a fund to support aspiring students who are community advocates. He established a scholarship fund at in 1994 to encourage young gay men to pursue higher education and to be role models for other young gay men. I applied for funding to support my ambition to complete a second masters. I was honored to be chosen among a group of highly energetic and motivated students.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Award.svg",
 		 }
 	],
@@ -70,88 +75,142 @@ var resumePoints = {
 		   "sideHeader": "University of Washington",
 		   "text": "While graduate school built my technical skills, my undergraduate studies honed my abstract skills. It was as an economics major that I was first exposed to corporate finance and broad economic theory. I was also accepted into an interdisciplinary program for intrinsically motivated students called Community and Environmental Planning (CEP). Every aspect of CEP was devised for and by students. The open-dialogue format of our classes cultivated my ability to think critically and argue compassionately. We built strong connections with our professors, who supported us to take on ambitious projects and engage meaningfully with city and university institutions.",
 		   "imgSrc": "images/award-pics/CEP.jpg",
-		   "pointSrc": "8",
+		   "pointSrc": "9",
+			"start": ["2005,09", 45],
+			"end": ["2010,08",  45],
 		 },
 		 {
 		   "sideHeader": "ASUW Senator",
-		   "text": "Served as senator for student government, serving as the Vice Chair for Office Campus Affairs.",
+		   "text": "Served as senator for student government, serving as the Vice Chair for Office Campus Affairs. I co-sponsored a number of successful bills, including one in support of programs that registered students to vote and another to create financing strategies for student-driven businesses.",
 		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "WashPIRG",
-		   "text": "Was a campaign coordinator and eventually held the state board chair position.",
+		   "text": "Was a campaign coordinator and eventually held the state board chair position. I coordinated campaigns on campus relating to the election, sustainable development goals for the campus, and lobbied the state legislature regarding cuts to public university funding.",
 		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 },
+		 {
+		   "sideHeader": "WashPIRG",
+		   "text": "Was a campaign coordinator and eventually held the state board chair position. I coordinated campaigns on campus relating to the election, sustainable development goals for the campus, and lobbied the state legislature regarding cuts to public university funding.",
+		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "pointSrc": "svgs/MainPoints/Position.svg",
+		 },
+		 {
+		   "sideHeader": "Intern at the Seattle Good Business Network",
+		   "text": "Helped the founders develop the initial framework to the organization.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "City Council Comissioner",
-		   "text": "I joined the Seattle City Council LGBT Commission to inform city policy and worked with the City Council on matters of concern to the LGBT community. I was assigned to inform councilwoman Sally Clark.",
-		   "imgSrc": "images/award-pics/senator.jpg",
+		   "text": "I joined the Seattle City Council LGBT Commission to inform city policy being drafted by the City Council on matters of concern to the LGBT community. I was assigned to councilwoman Sally Clark.",
+		   "imgSrc": "images/award-pics/LBGTCommissioner.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Bend-It",
-		   "text": "Starting in high school I enveloped myself in community organizing. Most notably, I co-ran a queer youth artist/activist collective for 3 years (The Bend-It Collective), putting on events and workshops, including a yearly arts festival. We intentionally structured the organization to politicize and equip youth to become leaders within Seattle. I also volunteered for an organization called Allyship that engaged the broader community on queer issues through a lens of intersectionality. I organized a series of talks called 'queerly classed,' which covered issues surrounding immigrant rights for queer folk, complexities of the fight for marriage rights in the queer community, and the displacement associated with gentrification within queer neighborhoods. These talks were hosted in conjunction with community organizers and academics.",
-		   "imgSrc": "images/award-pics/WashPirg.jpg",
+		   "text": "I co-ran a queer youth artist/activist collective for three years (The Bend-It Collective), putting on events and workshops, including a yearly arts festival. We intentionally structured the organization to politicize and equip youth to become leaders within Seattle. I booked bands, managed our finances, and facilitated sponsorship and successfully received 4 grants. We integrated programming with Lifelong Aids Alliance and an organization called Allyship. For 2008 I was a lead coordinator for every queer youth event during Seattle’s Pride festivities.",
+		   "imgSrc": "images/award-pics/BendIt.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Student Activity Fee Committee",
-		   "text": "Was appointed to a team of 8, who reviewed applications and allocated a multi-million dollar budget for student activities.",
-		   "imgSrc": "images/award-pics/senator.jpg",
+		   "text": "I was appointed to a team of 8, who reviewed applications and allocated a multi-million dollar budget for student activities.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "University District Planning board",
-		   "text": "Was appointed to be the student rep for the City Planning Board for the University District.",
+		   "text": " I was appointed to be the student rep for the City Planning Board for the University District. In this role I reviewed proposed projects for the University District, eventually becoming an outspoken critic of the unchecked monopolistic in-house housing and food services development ambitions.",
 		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "UW Student Food Co-op",
-		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
-		   "imgSrc": "images/award-pics/senator.jpg",
+		   "text": "Started a food co-op as my senior project for CEP. It involved lobbying the university administration, fundraising and developing business plans.",
+		   "imgSrc": "images/award-pics/CoFEDDinner.jpeg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
 		   "sideHeader": "Scholarships",
-		   "text": "TOBEFILLED",
+		   "text": "2010-Pearson Education <br> 2009-Cole Family Scholar <br>2008-Mary Gates Leadership <br>2008-Pride Foundation Community <br>	2007-Scott Rodriguez Scholar <br>	2006-Athletic Excellence <br> 2006-GSBA Scholar <br> 2005-The Phil Sullivan Scholar <br> 2005-Thelma Fisher Dewitty Scholar 2005-Seattle Public Schools Scholar <br> ", 
 		   "imgSrc": "images/award-pics/WashPirg.jpg",
 		   "pointSrc": "svgs/MainPoints/Award.svg",
+		 }
+	],
+	"CurrentWork": [
+		 {
+		   "sideHeader": "Current Work",
+		   "text": "I am on an extended break actively managing a number of investment projects, after moving to New York City in order to reflect and strategize about my next steps. ",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+  			 "pointSrc": "2",
+  			"start": ["2014,09", 35],
+			"end": ["2016,06",  35],
+		 },
+		 {
+		   "sideHeader": "Hamilton Inn",
+		   "text": "I am on an extended break actively managing a number of investment projects, after moving to New York City in order to reflect and strategize about my next steps. ",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+		 },
+		 {
+		   "sideHeader": "Investment Management",
+		   "text": "I am on an extended break actively managing a number of investment projects, after moving to New York City in order to reflect and strategize about my next steps. ",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
 		 }
 	],
 	"WB": [
 		 {
 		   "sideHeader": "World Bank",
 		   "text": "I coordinated the World Bank’s technical assistance program for urban planning in Indonesia.  In this work I hired and managed three teams of international and local planning consultants, reflecting contracts worth $500,000 USD. I projected budgets, established KPIs, and drafted the terms of reference and work plans for 29 consultants.  I helped five cities implement data systems. I also worked closely with local planning officials to use what data was available to conduct analysis on urban expansion, land use/change, infrastructure accessibility, transit-oriented development, and slum upgrading strategies in order to guide infrastructure investments.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+			"start": ["2014,09", 60],
+			"mid": ["2016,01", 15],
+			"end": ["2016,06",  15]
 		 }
 	],
 	"BAE": [
 		 {
 		   "sideHeader": "Bay Area Economics BAE",
 		   "text": "I conducted data mining, data visualization, and real estate economic analyses for large development projects in the Eastern United States. The largest market study I undertook was in support of a public/private transit oriented development (TOD) project for modeling housing and office space prospects in Hyattsville, Maryland.  I also provided an economic impact study for a retail strategy of downtown Bethesda, Maryland and  developed and managed  all analytical inputs for the 2014 Baltimore Regional Housing Plan.",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+		"start": ["2014,05", 50],
+		"end": ["2014,09",  50],
 		 }
 	],
 	"TRF": [
 		 {
 		   "sideHeader": "The Reinvestment Fund",
-		   "text": "I was placed at TRF as a Wharton Social Impact Fellow. I worked broadly in the finance department, the lending department, and in our in-house think tank on various ad-hoc projects.  Most of my time was spent structuring analytical models to understand the quantifiable development impacts of our lending through the Fresh Food Financing Initiative and the New Market Tax Credit programs. For the finance department I built models for tracking and evaluating our various business lines. My primary role was as a quant, but I also assisted with developing applications and presentation materials. ",
-		   "imgSrc": "images/mainProfile.jpg",
+		   "text": "I was placed at TRF as a Wharton Social Impact Fellow. I worked broadly in the finance department, the lending department, and in our in-house think tank on various ad-hoc projects.  Most of my time was spent structuring analytical models to understand the quantifiable development impacts of our lending through the Fresh Food Financing Initiative and the New Market Tax Credit programs creating analytical frameworks for new loan programs. For the finance department I built models for tracking and evaluating our various business lines. My primary role was as a quant, but I also assisted with bond financing, securities registration, compliance systems and presentations.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+			"start": ["2012,09", 15],
+			"mid": ["2013,05", 45],
+			"end": ["2013,09",  45],
+		 }
+	],
+	"Calvert": [
+		 {
+		   "sideHeader": "The Calvert Foundation",
+		   "text": "I partnered with the National Cooperative Business Association (NCBA) to research the prospects of a capital fund for cooperative development. To explore prospects for the fund, I conducted economic research on the risk/return profile of potential business investments. I also drafted a policy brief on the legal parameters of the Employee Retirement Income Security Act (ERISA). My final project was to conduct a portfolio review, analyzing Calvert’s current holdings in cooperative ventures.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+			"start": ["2012,05", 15],
+			"end": ["2012,08",  45],
 		 }
 	],
 	"CoFED": [
 		 {
 		   "sideHeader": "CoFED",
-		   "text": "I partnered with the National Cooperative Business Association (NCBA) to research the prospects of a capital fund for cooperative development. To explore prospects for the fund, I conducted economic research on the risk/return profile of potential business investments. I also drafted a policy brief on the legal parameters of the Employee Retirement Income Security Act (ERISA). My final project was to conduct a portfolio review, analyzing Calvert’s current holdings in cooperative ventures.",
-		   "imgSrc": "images/mainProfile.jpg",
-		   "pointSrc": "2",
+		   "text": "CoFED is a food co-op incubator, whose strategy is to leverage university resources and student interest to build cooperative cafes that focus on providing healthy and sustainable food. I co-founded the organization, taking a lead on organizational and business development. I developed and taught a curriculum on marketing, management, business planning and finance for use in training through our conferences.  With my fellow CoFED board members, I secured tens of thousands in sponsorship and wrote CoFED’s strategic plan for expansion before leaving to graduate school.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+		   "pointSrc": "4",
+			"start": ["2010, 06", 20],
+			"mid": ["2011,01", 55],
+			"end": ["2012,05",  30],
 		 },
 		 {
 		   "sideHeader": "CoFED Board of Director",
-		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "text": "Was elected to the Board for CoFED to provide strategic direction and hire the organization’s incoming leadership.",
 		   "imgSrc": "images/award-pics/senator.jpg",
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
@@ -168,12 +227,24 @@ var resumePoints = {
 		   "pointSrc": "svgs/MainPoints/Position.svg",
 		 },
 		 {
-		   "sideHeader": "Kensington Food Co-op Board of Director",
-		   "text": "Started a food co-op project as my senior project for CEP. It involved lobbying the university, developing out extensive business plans and doing substantial fundraising.",
+		   "sideHeader": "Publications",
+		   "text": "Our organization was profiled by the Atlantic. An article I wrote was published in STIR magazine and one of my proposal templates was published in an English textbook for concise proposal writing. ",
 		   "imgSrc": "images/award-pics/senator.jpg",
-		   "pointSrc": "svgs/MainPoints/Position.svg",
+		   "pointSrc": "svgs/MainPoints/Report.svg",
 		 }	
+	],
+	"Ethno": [
+		 {
+		   "sideHeader": "Research Assistant - Ethnographer at University of Pennsylvania",
+		   "text": "I partnered with the National Cooperative Business Association (NCBA) to research the prospects of a capital fund for cooperative development. To explore prospects for the fund, I conducted economic research on the risk/return profile of potential business investments. I also drafted a policy brief on the legal parameters of the Employee Retirement Income Security Act (ERISA). My final project was to conduct a portfolio review, analyzing Calvert’s current holdings in cooperative ventures.",
+		   "imgSrc": "images/award-pics/mainProfile.jpg",
+			"start": ["2011, 01", 20],
+			"end": ["2012,01",  10],
+		 }
 	]
 }
-
-
+ 
+ 
+ 
+ 
+ 

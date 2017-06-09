@@ -91,7 +91,7 @@ $(document).ready(function(){
 	// Show default summary
 	$('.main-image, li, ul, .mainPoints, .eIcons, .pointIcons, .showInfo, .edu, .exp').hover(function() {
 		$('.sample-name').css("opacity", "0.5");
-		$('.showInfo, .mantainHover').css("display", "flex");
+		$('.showInfo, .maintainHover').css("display", "flex");
 		$('.showInfo').css("visibility", "visible");
 		$('.sideTitle').show();
 		$('.sideHeaderTxt').show();
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		$('.bottomContainer').css('opacity', '0');
 	}, function () {
 		// $('.sample-name').css("opacity", "1");
-		// $('.showInfo, .mantainHover').hide();
+		// $('.showInfo, .maintainHover').hide();
 	});
 
 
@@ -114,7 +114,7 @@ $('.main-column').mouseleave( function(){
 
 	$('.sample-name').css("opacity", "1");
 	$('.showInfo').hide();
-	$('.mantainHover').hide();
+	$('.maintainHover').hide();
 	$('.showInfo').css("visibility", "hidden");
 	$('.edu, .exp').css("margin", "0 auto");
 
