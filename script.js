@@ -175,7 +175,8 @@ $('.main-column').mouseleave( function(){
 
 			// Show eIcon text for the icons without mainPoints
 			$('.about-content').text(iconText);
-			
+
+
 
 			titleVar = $('.name');
 			$('.name').remove();
@@ -210,6 +211,11 @@ $('.main-column').mouseleave( function(){
 			$(".sideTitle h3").css("display", "flex");
 			$(".sideTitle").css("display", "flex");
 			$(".awards ul").show();
+
+			if ($(resumePoints["mainProfile"])) {
+				console.log(resumePoints[iconInfo][0])
+				$('<p class="name">MAT STEELE</p><br>').prependTo(".about-content");
+			}
 	
 	
 		})
