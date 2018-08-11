@@ -6,11 +6,12 @@ $blueOne: rgb(121,181,221);
 $blueTwo: rgb(216,239,255);
 $blueThree: rgb(216,239,255);
 
+
 html {
 	height: 100%;
 	body {
 		font-family: $font;
-		/*background: url(../svgs/bg2-01.svg) no-repeat center center fixed;*/ 
+		/*background: url(../svgs/bg2-01.svg) no-repeat center center fixed;*/
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -244,7 +245,7 @@ html {
 						border: 1px solid rgb(95, 167, 215);
 						div {
 							vertical-align: middle;
-							line-height: 50px; 
+							line-height: 50px;
 						}
 					}
 					.sample-name {
@@ -278,7 +279,7 @@ html {
 				background-color: rgba(255,255,255,0.5);
 
 			}
-			
+
 			.legend {
 				width: 193px;
 				height: 145px;
@@ -351,7 +352,6 @@ html {
 
 
 
-
 .popName {
 	background-color: rgba(255,255,255, .5);
 
@@ -377,7 +377,7 @@ html {
 
 
 .modal {
-	 
+
 	.modal-dialog {
 
 		.modal-content, .modal-content2 {
@@ -428,7 +428,7 @@ html {
 					width: 100%;
 				}
 				.eIcons {
-					
+
 				}
 				.resume-label {
 					margin-bottom: 30px;
@@ -517,7 +517,7 @@ html {
 				}
 			}
 			.bottomContainer {
-				
+
 				&:hover {
 				}
 				.legend {
@@ -528,5 +528,3 @@ html {
 		}
 	}
 }
-
-
