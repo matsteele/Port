@@ -1,0 +1,169 @@
+$font-stack: Helvetica, sans-serif;
+$promptHeight: 300px;
+$promptWidth: 300px;
+$textFontSize: 15px;
+$emphasisColor: rgb(62, 204, 203);
+$break-small: 420px;
+
+@font-face {
+  font-family: 'koz';
+  src: url('./fonts/Lato-Hairline.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url('./fonts/Lato-Light.ttf') format('truetype');
+}
+
+#root {
+  position: relative;
+  font-family: koz;
+  font-size: 20px;
+  height: 120%;
+  .app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    div {
+      .IntroText {
+        #headerText {
+          font-family: koz;
+          font-size: 20px;
+          color: grey;
+          font-weight: lighter;
+          margin: 0px;
+        }
+        #subheaderText {
+          font-family: koz;
+          color: rgba(128, 128, 128, 0.5);
+          font-size: $textFontSize;
+          opacity: 40%;
+          font-weight: lighter;
+          margin: 0;
+        }
+      }
+    }
+
+    .promptInputContainer {
+      display: grid;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .promptText {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: $promptWidth;
+        h3 {
+          font-family: koz;
+          font-size: $textFontSize;
+        }
+
+        @media screen and (max-width: $break-small) {
+          justify-content: center;
+          height: 100px;
+        }
+      }
+      .dividerContainer {
+        gridcolumnstart: 2;
+        width: 50px;
+        height: 100px;
+        @media screen and (max-width: $break-small) {
+          grid-column: auto;
+          width: 100%;
+          height: 15px;
+        }
+        .StyledSpine {
+          @media screen and (max-width: $break-small) {
+            display: none;
+            // x1: 25;
+            // x2: 300;
+            // y1: 25;
+            width: 100%;
+            height: 15;
+            stroke-dasharray: inherit;
+            stroke-dashoffset: inherit;
+          }
+        }
+        .imageProfiled{
+          transition: opacity 1.2s ease-in-out;
+        }
+
+      }
+      .inputContainer {
+        width: $promptWidth;
+        grid-auto-rows: 1fr;
+        grid-column: 3;
+        display: grid;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        @media screen and (max-width: $break-small) {
+          grid-column: auto;
+          float: none;
+        }
+        .formDivContainer {
+          display: grid;
+          .formDiv {
+            grid-column: 1;
+            display: flex;
+            vertical-align: middle;
+            position: relative;
+            height: 100%;
+            form {
+              display: flex;
+              align-items: flex-end;
+              // height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        .listDiv {
+          height: 1em;
+          ul {
+            list-style-type: none;
+            padding-inline-start: 0;
+            li {
+              margin: 0 0 15px 0;
+              list-style-type: none;
+              font-size: 12px;
+              font-family: koz;
+              color: rgba(128, 128, 128, 0.4);
+              &:first-child {
+                color: $emphasisColor;
+                font-weight: bold;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        input {
+          font-family: koz;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        input:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.boldOnHover {
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.opacityTransition {
+  transition: opacity 1.2s ease-in-out;
+}

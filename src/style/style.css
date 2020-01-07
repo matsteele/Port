@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "koz";
+  src: url("./fonts/Lato-Hairline.ttf") format("truetype"); }
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./fonts/Lato-Light.ttf") format("truetype"); }
+#root {
+  position: relative;
+  font-family: koz; }
+  #root .app {
+    margin-top: 5%;
+    text-align: center; }
+    #root .app div .IntroText #headerText {
+      font-family: koz;
+      font-size: 20px;
+      color: grey;
+      font-weight: lighter;
+      margin: 0px; }
+    #root .app div .IntroText #subheaderText {
+      font-family: koz;
+      color: rgba(128, 128, 128, 0.5);
+      font-size: 15;
+      opacity: 40%;
+      font-weight: lighter;
+      margin: 0; }
+    #root .app .promptInputContainer {
+      display: grid;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+      #root .app .promptInputContainer .promptText {
+        grid-column-start: 1;
+        height: 300px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        #root .app .promptInputContainer .promptText h3 {
+          font-family: koz;
+          font-size: 15; }
+      #root .app .promptInputContainer .dividerContainer {
+        grid-column-start: 2;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 300px; }
+        #root .app .promptInputContainer .dividerContainer .dividingLine {
+          stroke: grey;
+          stroke-width: 0.5px; }
+      #root .app .promptInputContainer .inputContainer {
+        width: 800px;
+        height: 300px;
+        grid-auto-rows: 1fr;
+        grid-column: 3;
+        display: grid;
+        align-items: center;
+        text-align: left;
+        position: relative; }
+        #root .app .promptInputContainer .inputContainer .formDivContainer {
+          display: grid;
+          grid-template-columns: repeat(6, 100px);
+          width: 100%;
+          align-self: flex-end; }
+          #root .app .promptInputContainer .inputContainer .formDivContainer .formDiv {
+            grid-column: 1;
+            display: flex;
+            vertical-align: middle;
+            position: relative;
+            height: 100%;
+            transform: translate(0, 1%); }
+            #root .app .promptInputContainer .inputContainer .formDivContainer .formDiv form {
+              display: flex;
+              align-items: flex-end;
+              height: 100%;
+              width: 100%; }
+              #root .app .promptInputContainer .inputContainer .formDivContainer .formDiv form ::placeholder {
+                opacity: 0.5; }
+              #root .app .promptInputContainer .inputContainer .formDivContainer .formDiv form #inputData {
+                caret-color: transparent;
+                height: 35px;
+                border: 10px rgba(34, 36, 38, 0.15);
+                font-size: 15;
+                color: #3ecccb;
+                font-family: koz;
+                transform: translate(0, 5%);
+                position: absolute; }
+              #root .app .promptInputContainer .inputContainer .formDivContainer .formDiv form #inputData input::selection {
+                background-color: #3ecccb;
+                color: #fff; }
+          #root .app .promptInputContainer .inputContainer .formDivContainer .autoCompDiv {
+            grid-column-start: 2;
+            grid-column-end: 6;
+            align-self: flex-end;
+            justify-self: flex-start;
+            z-index: 100; }
+            #root .app .promptInputContainer .inputContainer .formDivContainer .autoCompDiv .autoCompText {
+              font-size: 15;
+              font-family: koz;
+              color: rgba(128, 128, 128, 0.4); }
+          #root .app .promptInputContainer .inputContainer .formDivContainer .listDiv {
+            visibility: hidden;
+            width: 800px;
+            transform: translate(-6%, 10%); }
+            #root .app .promptInputContainer .inputContainer .formDivContainer .listDiv ul li {
+              margin: 0 0 15px 0;
+              list-style-type: none;
+              font-size: 15 -2;
+              font-family: koz;
+              color: rgba(128, 128, 128, 0.4); }
+        #root .app .promptInputContainer .inputContainer input:focus {
+          outline: none; }
+
+.hidden {
+  visibility: hidden; }
+
+/*# sourceMappingURL=style.css.map */
