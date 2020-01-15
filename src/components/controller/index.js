@@ -1,10 +1,10 @@
 import projects from "./projects";
-import organizations from "./organizations";
+import skills from "./skills";
 import contact from "./contact";
 
 const controller = {
   projects: [projects, 'projects I have built'],
-  skills: [organizations, 'places I have worked'],
+  skills: [skills, 'skills I have built'],
   contact: [
     contact,
     'ways to connect',

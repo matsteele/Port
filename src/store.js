@@ -9,7 +9,6 @@ const initialState = {
 export const store = React.createContext(initialState);
 
 export const reducer = (state, action) => {
-
   switch (action.type) {
     case 'SET_CONTEXT':
       return {

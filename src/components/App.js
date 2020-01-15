@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "./input";
 import TitleDisplay from "./title_display";
 import Prompt from "./prompt";

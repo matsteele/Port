@@ -6,7 +6,6 @@ import { keyframes } from "@emotion/core";
 export default function Prompt(props) {
   const { state } = useContext(store);
   let promptTextToDisplay = "";
-  console.log(state, "statePrompt");
 
   if(Array.isArray(state.context)){
     promptTextToDisplay = state.context[2]

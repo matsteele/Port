@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { store } from "../../store";
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";

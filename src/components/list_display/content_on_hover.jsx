@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { store } from '../../store';
 import controller from '../controller';
 import LibraryIcons from '../controller/library_icons';
@@ -9,10 +9,12 @@ export default function ContentOnHover(props) {
   const { state } = useContext(store);
   const options = controller[state.context][0];
   const option = options[props.optionKey];
+  const [iconName, setifIconHover] = useState('');
+
+  const teal = 'rgba(62, 204, 203, 0.9)';
 
   const ifMobile = window.innerWidth < 420 ? true : false;
-  const leftBufferFromCircle = ifMobile? 0 : props.circleSize * 1.25;
-
+  const leftBufferFromCircle = ifMobile ? 0 : props.circleSize * 1.6;
 
   const createDescription = () => {
     const wordsAsArray = option.descr.split(' ');
@@ -46,7 +48,6 @@ export default function ContentOnHover(props) {
 
   const ArrayOfLines = createDescription();
 
-
   return (
     <g key={props.optionKey}>
       {props.hovered[0] && props.hovered[1] === props.optionKey ? (
@@ -56,16 +57,12 @@ export default function ContentOnHover(props) {
             cy={props.base + props.circleBuffer * props.i}
             originx={ifMobile ? props.circleSize : 25}
             originy={props.base + props.circleBuffer * props.i}
-            r={ifMobile ? 40 : props.circleWidth}
+            r={ifMobile ? 40 : props.circleSize}
             opacity={!option.link && !option.code ? 0.5 : 0.9}
-            fill='rgba(62, 204, 203, 0.9)'
+            fill={teal}
             stroke='white'
-            originx={ifMobile ? props.circleSize : 25}
-            originy={props.base + props.circleBuffer * props.i}
             secs={1}
-            direction={props.hovered[0] ? 'initial' : 'reverse'}
           />
-
           <path
             d={`M0,${props.circleSize}  100 ,${props.circleSize} `}
             transform={`translate(${ifMobile ? 100 : -25}, ${props.base -
@@ -80,9 +77,6 @@ export default function ContentOnHover(props) {
               <text
                 x={ifMobile ? props.circleSize : 25}
                 y={props.base + props.circleBuffer * props.i - 15}
-                transformOrigin={`${
-                  ifMobile ? props.circleSize : 25
-                } ${props.base + props.circleBuffer * props.i - 15}px`}
                 textAnchor='middle'
                 stroke='white'
                 className='boldOnHover'
@@ -99,9 +93,6 @@ export default function ContentOnHover(props) {
               <text
                 x={ifMobile ? props.circleSize : 25}
                 y={props.base + props.circleBuffer * props.i + 25}
-                transformOrigin={`25px ${props.base +
-                  props.circleBuffer * props.i -
-                  15}px`}
                 textAnchor='middle'
                 stroke='white'
                 className='boldOnHover'
@@ -123,8 +114,22 @@ export default function ContentOnHover(props) {
           props.hovered[0] && props.hovered[1] === props.optionKey ? 1 : 0
         }
       >
+        <foreignObject
+          id='G'
+          width={window.innerWidth / 2}
+          height={'250' * ArrayOfLines.length}
+          x={leftBufferFromCircle - 50}
+          y={
+            props.base +
+            props.circleSize / 1.75 +
+            props.circleBuffer * props.i -
+            50
+          }
+        />
+        {/* <div height={props.circleSize * 2} width={props.circleSize * 2} color='red' /> */}
         {OrgIcons[option.sub_title] ? (
           <image
+            key={props.optionKey}
             height='50px'
             x={leftBufferFromCircle}
             y={
@@ -153,6 +158,13 @@ export default function ContentOnHover(props) {
           }
           fontWeight='bold'
         >
+          {option.sub_title ? (
+            <tspan fontSize='8' stroke='#9e9e9e75'>
+              built for --
+            </tspan>
+          ) : (
+            ''
+          )}
           {option.sub_title}
         </text>
         <text
@@ -183,22 +195,32 @@ export default function ContentOnHover(props) {
               }
               fontSize='15px'
             >
-              tools used
+              tools used: --
+              <tspan stroke={teal} fontWeight='bold'>
+                {iconName}
+              </tspan>
             </text>
-            {option.lower_icons.map((icon, j) => (
-              <image
-                height='25px'
-                x={leftBufferFromCircle + j * 50}
-                y={
-                  props.base +
-                  props.circleSize / 1.75 +
-                  props.circleBuffer * props.i +
-                  ArrayOfLines.length * 18.75 +
-                  75
-                }
-                href={LibraryIcons[icon]}
-              />
-            ))}
+            {option.lower_icons.map((icon, j) => {
+              let row = j % 6;
+              let col = Math.floor(j / 6);
+              return (
+                <image
+                  height='25px'
+                  x={leftBufferFromCircle + row * 50}
+                  y={
+                    props.base +
+                    props.circleSize / 1.75 +
+                    props.circleBuffer * props.i +
+                    ArrayOfLines.length * 18.75 +
+                    75 +
+                    col * 50
+                  }
+                  href={LibraryIcons[icon]}
+                  onMouseEnter={() => setifIconHover(icon)}
+                  onMouseLeave={() => setifIconHover('')}
+                />
+              );
+            })}
           </g>
         ) : (
           ''

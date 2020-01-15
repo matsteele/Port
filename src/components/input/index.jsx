@@ -48,22 +48,20 @@ const Input = props => {
               });
               setPlaceholder('.  .  .   tab to autocomplete');
             } else {
+              // dispatch({
+              //   type: 'SET_ANIM_DIR',
+              //   payload: 'reverse'
+              // });
+              setPlaceholder('');
               dispatch({
                 type: 'SET_ANIM_DIR',
-                payload: 'reverse'
+                payload: 'initial'
               });
-              setPlaceholder('');
-              setTimeout(() => {
-                dispatch({
-                  type: 'SET_ANIM_DIR',
-                  payload: 'initial'
-                });
-                dispatch({
-                  type: 'SET_CONTEXT',
-                  payload: key
-                });
-                setPlaceholder('.  .  .   tab to autocomplete');
-              }, 3200);
+              dispatch({
+                type: 'SET_CONTEXT',
+                payload: key
+              });
+              setPlaceholder('.  .  .   tab to autocomplete');
             }
             document.activeElement.blur();
             sethowleft(20);
@@ -108,7 +106,6 @@ const Input = props => {
                 howleft={howleft}
                 setclearList={setclearList}
                 placeholder={placeholder}
-                direction={state.animDir}
               />
             </form>
           </AnimatedDivContainer>
@@ -117,10 +114,9 @@ const Input = props => {
             height={heightofContainer / 3}
             className='listDiv'
             margin='50'
-            direction={state.animDir}
           >
             <ul className='userChoices'>
-              {state.context == "mat's li'l terminal" ||
+              {state.context === "mat's li'l terminal" ||
               !Array.isArray(state.context) ||
               clearList
                 ? arrayofListItems

@@ -14,7 +14,7 @@ export default function InputWithCaret(props) {
   const handleKeyDown = e => {
     if (e.key === "Tab") {
       e.preventDefault();
-      props.setChoice(props.firstOption.props.children);
+      if (props.firstOption) props.setChoice(props.firstOption.props.children)
     }
     if (e.key === "Escape") {
       e.preventDefault();

@@ -17,18 +17,18 @@ export default function Divider(props) {
   const circleBuffer = circleSize * 2.5;
   const base = 400;
 
-  const ifMobile = window.innerWidth < 400? true : false;
-
   // changed direction for animations but it isn't working
-
   useEffect(() => {
     if (state.context in controller) {
       const options = controller[state.context][0];
-      const lengthOfLine =
-        50 + Object.keys(options).length * circleBuffer;
+      const lengthOfLine = 50 + Object.keys(options).length * circleBuffer;
       setHeightOfSpine(lengthOfLine);
     }
-  }, [state.context]);
+    else{
+      setHeightOfSpine(100);
+    }
+
+  }, [state.context, circleBuffer]);
 
   return (
     <SpineContainer className='dividerContainer'>
@@ -43,7 +43,7 @@ export default function Divider(props) {
           opacity={hovered[0] ? 0.05 : 1}
           d={!(state.context in controller) ? 0 : 100}
           e={!(state.context in controller) ? 200 : 0}
-          direction={state.animDir}
+          // direction={state.animDir}
         />
         {!(state.context in controller) ? (
           ''

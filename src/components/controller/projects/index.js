@@ -4,6 +4,8 @@ import SemarangSample from "./semerang_school_catchments.png";
 import HousingAnalysis from "./housing_analysis.png";
 import HamInn from "./ham_inn.png";
 import BuildingTemp from './building_temp.png'
+import AccountManager from './account_manager.svg'
+
 
 const projects = {
   "urban housing analysis": {
@@ -54,6 +56,7 @@ const projects = {
     lower_icons: ["javascript", "sass", "html"]
   },
   "account manager": {
+    image: AccountManager,
     descr: `This program uses pythons cryptopgraphy libraries to securely manage account information, including passwords. It also utilizes a scrapper that logs an automated monthly cashflow analysis to google sheets`,
     code: "https://github.com/GenusDev/GenusAccountManagement",
     sub_title: "genus development partners",

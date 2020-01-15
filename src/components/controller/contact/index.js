@@ -16,7 +16,7 @@ const contactMethods = {
   },
   cell: {
     image: Cell,
-    descr: `Leave a voicemail and I might get back to you. I prefer WhatsApp or Telegram`,
+    descr: `I suggest you send a text, as voicemails are often backlogged. WhatsApp or Telegram would be even more effective`,
     sub_title: "206.920.4676"
   },
   github: {

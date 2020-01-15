@@ -22,26 +22,30 @@ export default function ItemDisplay(props) {
   }, []);
 
   const ifMobile = window.innerWidth < 420 ? true : false;
+
   const findscrollScale = i => {
-    return 1 -
-      ((props.circleBuffer * 2) / 3 +
-        windowLoc -
-        props.circleBuffer * i -
-        props.base) /
-        props.circleBuffer <
+    const scale =
+      1 -
+        ((props.circleBuffer * 2) / 3 +
+          windowLoc -
+          props.circleBuffer * i -
+          props.base) /
+          props.circleBuffer <
       1
-      ? 1 -
+        ? 1 -
           ((props.circleBuffer * 2) / 3 +
             windowLoc -
             props.circleBuffer * i -
             props.base) /
             props.circleBuffer
-      : 1 +
+        : 1 +
           ((props.circleBuffer * 2) / 3 +
             windowLoc -
             props.circleBuffer * i -
             props.base) /
             props.circleBuffer;
+
+    return scale > 0 ? scale: 0
   };
   //probably need to set scrollY based on context/store to have it always adapt
 
@@ -57,7 +61,7 @@ export default function ItemDisplay(props) {
             onMouseEnter={() => props.setHovered([true, optionKey])}
             onMouseLeave={() => props.setHovered([false, ''])}
             opacity={
-              props.hovered[0] && props.hovered[1] != optionKey ? 0.25 : 1
+              props.hovered[0] && props.hovered[1] !== optionKey ? 0.25 : 1
             }
           >
             <defs>
@@ -70,7 +74,11 @@ export default function ItemDisplay(props) {
                   cy={props.base + props.circleBuffer * i}
                   originx={ifMobile ? 150 : 25}
                   originy={props.base + props.circleBuffer * i}
-                  r={props.circleSize * scrollScale}
+                  r={
+                    props.circleSize * scrollScale < 0
+                      ? 0
+                      : props.circleSize * scrollScale
+                  }
                   direction={props.direction}
                 />
               </clipPath>
@@ -83,26 +91,15 @@ export default function ItemDisplay(props) {
               cy={props.base + props.circleBuffer * i}
               originx={ifMobile ? 150 : 25}
               originy={props.base + props.circleBuffer * i}
-              r={props.circleSize * scrollScale}
+              r={
+                props.circleSize * scrollScale < 0
+                  ? 0
+                  : props.circleSize * scrollScale
+              }
               delay={2}
-              fill='none'
+              fill='lightgrey'
               direction={props.direction}
             />
-            {console.log(
-              props.circleBuffer -
-                windowLoc -
-                props.circleBuffer * i -
-                props.base
-            )}
-            {console.log(
-              1 -
-                (props.circleBuffer -
-                  windowLoc -
-                  props.circleBuffer * i -
-                  props.base) /
-                  props.circleBuffer
-            )}
-
             <image
               className='imageProfiled'
               x={ifMobile ? 0 : -props.circleSize}
@@ -117,14 +114,17 @@ export default function ItemDisplay(props) {
               y={props.base / 2 + 20 + props.circleBuffer * i}
               secs={i + 2}
               scale={`scale(${scrollScale},${scrollScale})`}
+              opacity={scrollScale}
               textAnchor={ifMobile ? 'middle' : 'end'}
               origin={props.base / 2 + 20 + props.circleBuffer * i}
               direction={props.direction}
+              fontWeight='bold'
+              stroke={'rgb(62, 204, 203)'}
             >
               {optionKey}
             </AnimatedText>
             <ContentOnHover
-              circleSize={props.circleSize}
+              circleSize={props.circleSize * scrollScale}
               circleBuffer={props.circleBuffer}
               hovered={props.hovered}
               scrollScale={props.circleSize * scrollScale}
@@ -149,8 +149,14 @@ const draw_in = keyframes`
     10% {
     transform: scale(0.1,0.1);
     stroke-dashoffset: 300;
-    opacity: 0;
+    opacity: 0.3;
     stroke: rgb(62, 204, 203);
+    }
+    95% {
+    transform: scale(.5,.5);
+    stroke-dashoffset: 300;  
+    opacity: .7;
+    stroke: gray;
     }
     95% {
     transform: scale(1,1);
@@ -167,10 +173,8 @@ const draw_in = keyframes`
 
 const AnimatedText = styled.text(props => ({
   transform: props.scale,
-  animation: `${draw_in} ${props.secs}s ease`,
-  // animationDelay: '2s',
+  // animation: `${draw_in} ${props.secs}s ease`,
   transformOrigin: `25px ${props.origin}px`,
-  // textAnchor: 'end',
   fontSize: '25px',
   strokeWidth: '1',
   letterSpacing: '1.5px',
@@ -180,7 +184,6 @@ const AnimatedText = styled.text(props => ({
 export const AnimatedCircles = styled.circle(props => ({
   transform: 'scale(1,1)',
   animation: `${draw_in} ${props.secs}s ease`,
-  animationDelay: `${props.delay}`,
   transformOrigin: `${props.originx}px ${props.originy}px`,
   animationDirection: props.direction
 }));
