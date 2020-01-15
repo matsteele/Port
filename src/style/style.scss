@@ -89,10 +89,9 @@ $break-small: 420px;
             stroke-dashoffset: inherit;
           }
         }
-        .imageProfiled{
+        .imageProfiled {
           transition: opacity 1.2s ease-in-out;
         }
-
       }
       .inputContainer {
         width: $promptWidth;
@@ -132,8 +131,14 @@ $break-small: 420px;
               list-style-type: none;
               font-size: 12px;
               font-family: koz;
-              color: rgba(128, 128, 128, 0.4);
+              color: rgba(128, 128, 128, 0.9);
               &:first-child {
+                color: $emphasisColor;
+                font-weight: bold;
+                font-size: 15px;
+              }
+                &:hover {
+                transform: scale(1.1, 1.1);
                 color: $emphasisColor;
                 font-weight: bold;
                 font-size: 15px;
@@ -162,6 +167,10 @@ $break-small: 420px;
   &:hover {
     font-weight: bold;
   }
+}
+
+.bounceOnHover {
+
 }
 
 .opacityTransition {

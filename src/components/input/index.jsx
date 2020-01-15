@@ -22,53 +22,42 @@ const Input = props => {
     }
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    setChoice('');
+  const changeView = (_choice) => {
+    
     if (Array.isArray(state.context)) {
-      if (state.context[1] === choice) {
+      if (state.context[1] === _choice) {
         dispatch({ type: 'SET_CONTEXT', payload: state.context[0] });
         document.activeElement.blur();
+        setPlaceholder('.  .  .   tab to autocomplete');
         sethowleft(20);
       }
     } else {
       for (const key in controller) {
-        if (controller[key][1] === choice) {
+        if (controller[key][1] === _choice) {
           if (controller[key][2]) {
             dispatch({
               type: 'SET_CONTEXT',
               payload: [key, controller[key][2], controller[key][3]]
             });
-            setPlaceholder('type -' + controller[key][2]);
+            setPlaceholder('type "' + controller[key][2] + '"');
           } else {
-            if (!(state.context in controller)) {
-              dispatch({
-                type: 'SET_CONTEXT',
-                payload: key
-              });
-              setPlaceholder('.  .  .   tab to autocomplete');
-            } else {
-              // dispatch({
-              //   type: 'SET_ANIM_DIR',
-              //   payload: 'reverse'
-              // });
-              setPlaceholder('');
-              dispatch({
-                type: 'SET_ANIM_DIR',
-                payload: 'initial'
-              });
               dispatch({
                 type: 'SET_CONTEXT',
                 payload: key
               });
               setPlaceholder('.  .  .   tab to autocomplete');
             }
-            document.activeElement.blur();
-            sethowleft(20);
-          }
-        }
+          document.activeElement.blur();
+          sethowleft(20);
+        } else setPlaceholder('.  .  .   tab to autocomplete');
       }
     }
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setChoice('');
+    changeView(choice);
   };
 
   const createDropDown = () => {
@@ -76,7 +65,13 @@ const Input = props => {
     for (const key in controller) {
       if (controller[key][1].startsWith(choice) || choice.length === 0) {
         arrayofListItems.push(
-          <li value={key} id={key} key={key}>
+          <li
+            className='bounceOnHover'
+            value={key}
+            id={key}
+            key={key}
+            onClick={() => changeView(controller[key][1])}
+          >
             {controller[key][1]}
           </li>
         );

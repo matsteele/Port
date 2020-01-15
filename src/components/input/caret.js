@@ -83,7 +83,7 @@ const RelativeInput = styled.input({
   color: "rgb(62, 204, 203)",
   position: "absolute",
   "&::placeholder": {
-    opacity: 0.25,
+    opacity: 0.85,
     fontSize: "15px"
   }
 });
