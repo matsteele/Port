@@ -158,7 +158,7 @@ export default function ContentOnHover(props) {
           }
           fontWeight='bold'
         >
-          {option.sub_title ? (
+          {option.sub_title && state.context === 'projects' ? (
             <tspan fontSize='8' stroke='#9e9e9e75'>
               built for --
             </tspan>
