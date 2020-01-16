@@ -81,6 +81,7 @@ export default function ContentOnHover(props) {
                 stroke='white'
                 className='boldOnHover'
               >
+                
                 link
               </text>
             </a>
