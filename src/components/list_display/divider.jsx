@@ -17,22 +17,22 @@ export default function Divider(props) {
   const circleBuffer = circleSize * 2.5;
   const base = 400;
 
+  const ifMobile = window.innerWidth < 420 ? true : false;
+
   // changed direction for animations but it isn't working
   useEffect(() => {
     if (state.context in controller) {
       const options = controller[state.context][0];
       const lengthOfLine = 50 + Object.keys(options).length * circleBuffer;
       setHeightOfSpine(lengthOfLine);
-    }
-    else{
+    } else {
       setHeightOfSpine(100);
     }
-
   }, [state.context, circleBuffer]);
 
   return (
     <SpineContainer className='dividerContainer'>
-      <InfoSVG height={heightOfSpine*1.4} width='100%'>
+      <InfoSVG height={heightOfSpine * 1.4} width='100%'>
         <StyledSpine
           className='StyledSpine'
           x1={widthOfContainer / 2}
@@ -45,8 +45,11 @@ export default function Divider(props) {
           e={!(state.context in controller) ? 200 : 0}
           // direction={state.animDir}
         />
+
         {!(state.context in controller) ? (
           ''
+        ) : ifMobile ? (
+          <Disclaimer />
         ) : (
           <ItemDisplay
             circleSize={circleSize}
@@ -63,7 +66,7 @@ export default function Divider(props) {
 
 const SpineContainer = styled.div({
   alignItems: 'flex-start',
-  display: 'flex',
+  display: 'flex'
 });
 
 const InfoSVG = styled.svg({
@@ -92,5 +95,41 @@ const StyledSpine = styled.line(props => ({
   strokeDashoffset: props.h,
   animation: `${draw_in(props)} 3s ease forwards`,
   animationDirection: props.direction,
-  transition:'opacity 1.2s ease-in-out'
+  transition: 'opacity 1.2s ease-in-out'
 }));
+
+const Disclaimer = () => (
+  <g>
+    <rect
+      x='10'
+      y='400'
+      fill='rgb(62, 204, 203)'
+      width='300'
+      height='150'
+      rx='15'
+      stroke='none'
+    />
+    <text
+      // text-anchor='middle'
+      x='30'
+      y='460'
+      font-family='Verdana'
+      font-size='35'
+      fill='white'
+      stroke='none'
+    >
+      not optimized
+    </text>
+    <text
+      // text-anchor='middle'
+      x='30'
+      y='520'
+      font-family='Verdana'
+      font-size='35'
+      fill='white'
+      stroke='none'
+    >
+      for mobile (yet)
+    </text>
+  </g>
+);

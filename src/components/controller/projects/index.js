@@ -50,8 +50,8 @@ const projects = {
   'ham inn': {
     image: HamInn,
     descr: `This site provides information about Genus Development's first project, which was an inn in NY's Hamilton Heights neighborhood. `,
-    link: 'http://prgny.io/',
-    code: 'https://github.com/GenusDev/HamiltonInn',
+    link: 'https://matsteele.github.io/haminn/',
+    code: 'https://github.com/matsteele/haminn',
     sub_title: 'genus development partners',
     lower_icons: ['javascript', 'sass', 'html']
   },
