@@ -8,60 +8,46 @@ import AccountManager from './account_manager.svg'
 
 
 const projects = {
-  'urban housing analysis': {
+  'mutlifamily analysis': {
     image: HousingAnalysis,
     descr: `This housing analysis uses 'parallax scrolling' to feature key factors that do and do not explain why the urban housing market is broken. `,
-    link: 'http://prgny.io/',
-    code: 'https://github.com/matsteele/housing_economic_analysis',
-    sub_title: 'progeny',
+    link: 'https://matsteele.github.io/multifamily_analysis/',
+    code: 'https://github.com/matsteele/multifamily_analysis',
+    sub_title: 'genus development partners',
     lower_icons: ['react', 'emotion', 'svg', 'indesign', 'illustrator']
   },
-  'progeny placeholder': {
-    image: Prgny,
-    descr: `This placeholder is intended to showcase Progeny's planning documents and the economic analysis built from our slide deck. Further it provides a brief summary of our project and profiles of those involved. `,
-    link: 'http://prgny.io/',
-    code: 'https://github.com/prgny/progenyPlaceholder',
-    sub_title: 'progeny',
-    lower_icons: ['react', 'emotion', 'svg', 'indesign', 'illustrator']
-  },
-  'genie portal': {
-    image: GeniePortal,
-    descr: `This was built as a prototype of a blockchain portal for managing equity tailored to real estate developers. The portal consisted of a dashboard for tracking the performance of the token, as well as an interface for showcasing existing and proposed projects. Each project had detailed information available, including a 3d rendering, cashflows, and a spatial analysis.`,
-    link: 'http://www.genusdev.com/',
-    code: 'https://github.com/GenusDev/genie-portal',
-    sub_title: 'genus development partners',
-    lower_icons: [
-      'solidity',
-      'truffle',
-      'ganache',
-      'web3',
-      'react',
-      'redux',
-      'd3',
-      'node',
-      'infura',
-      'sass',
-      'webpack',
-      'jest',
-      'mocha',
-      'express'
-    ]
-  },
-  'ham inn': {
-    image: HamInn,
-    descr: `This site provides information about Genus Development's first project, which was an inn in NY's Hamilton Heights neighborhood. `,
-    link: 'https://matsteele.github.io/haminn/',
-    code: 'https://github.com/matsteele/haminn',
-    sub_title: 'genus development partners',
-    lower_icons: ['javascript', 'sass', 'html']
-  },
-  'account manager': {
-    image: AccountManager,
-    descr: `This program uses pythons cryptopgraphy libraries to securely manage account information, including passwords. It also utilizes a scrapper that logs an automated monthly cashflow analysis to google sheets`,
-    code: 'https://github.com/GenusDev/GenusAccountManagement',
-    sub_title: 'genus development partners',
-    lower_icons: ['python', 'pycrypto', 'googlesheets', 'selenium']
-  },
+  // 'progeny placeholder': {
+  //   image: Prgny,
+  //   descr: `This placeholder is intended to showcase Progeny's planning documents and the economic analysis built from our slide deck. Further it provides a brief summary of our project and profiles of those involved. `,
+  //   link: 'http://prgny.io/',
+  //   code: 'https://github.com/prgny/progenyPlaceholder',
+  //   sub_title: 'progeny',
+  //   lower_icons: ['react', 'emotion', 'svg', 'indesign', 'illustrator']
+  // },
+  // 'genie portal': {
+  //   image: GeniePortal,
+  //   descr: `This was built as a prototype of a blockchain portal for managing equity tailored to real estate developers. The portal consisted of a dashboard for tracking the performance of the token, as well as an interface for showcasing existing and proposed projects. Each project had detailed information available, including a 3d rendering, cashflows, and a spatial analysis.`,
+  //   link: 'http://www.genusdev.com/',
+  //   code: 'https://github.com/GenusDev/genie-portal',
+  //   sub_title: 'genus development partners',
+  //   lower_icons: [
+  //     'solidity',
+  //     'truffle',
+  //     'ganache',
+  //     'web3',
+  //     'react',
+  //     'redux',
+  //     'd3',
+  //     'node',
+  //     'infura',
+  //     'sass',
+  //     'webpack',
+  //     'jest',
+  //     'mocha',
+  //     'express'
+  //   ]
+  // },
+
   'semarang schools': {
     image: SemarangSample,
     descr: `School catchment information in Semarang is inaccessible and conflicting. This project intended to showcase how the city could utilize a spatial overlay to visualize school catchment areas. Further, because the data was incomplete, a user could suggest an edit that could be validated and incorporated into the display. `,
@@ -78,6 +64,21 @@ const projects = {
     code: 'https://github.com/matsteele/PD_Challenge',
     sub_title: '',
     lower_icons: ['python', 'dash', 'scikit-learn', 'd3', 'leaflet', 'mapbox']
+  },
+  'ham inn': {
+    image: HamInn,
+    descr: `This site provides information about Genus Development's first project, which was an inn in NY's Hamilton Heights neighborhood. `,
+    link: 'https://matsteele.github.io/haminn/',
+    code: 'https://github.com/matsteele/haminn',
+    sub_title: 'genus development partners',
+    lower_icons: ['javascript', 'sass', 'html']
+  },
+  'account manager': {
+    image: AccountManager,
+    descr: `This program uses pythons cryptopgraphy libraries to securely manage account information, including passwords. It also utilizes a scrapper that logs an automated monthly cashflow analysis to google sheets`,
+    code: 'https://github.com/GenusDev/GenusAccountManagement',
+    sub_title: 'genus development partners',
+    lower_icons: ['python', 'pycrypto', 'googlesheets', 'selenium']
   }
 };
 

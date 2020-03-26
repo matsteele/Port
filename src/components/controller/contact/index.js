@@ -21,7 +21,7 @@ const contactMethods = {
   },
   github: {
     image: Github,
-    descr: `This was built as a prototype of a blockchain portal for managing equity tailored to real estate developers. The portal consisted of a dashboard for tracking the performance of the token, as well as an interface for showcasing existing and proposed projects. Each project had detailed information available, including a 3d rendering, cashflows, and a spatial analysis.`,
+    descr: `My github is reflective of my non-private projects`,
     link: "https://www.linkedin.com/in/matsteele/",
     sub_title: "genus development partners"
   },
@@ -45,7 +45,7 @@ const contactMethods = {
   },
   linkedin: {
     image: LinkedIn,
-    descr: `I am always excited to connect to someone with similar professional interests`,
+    descr: `Reach out and connect if you are a developer or looking for one.`,
     link: "https://www.linkedin.com/in/matsteele/",
     sub_title: "matsteele"
   }
