@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bee79f9480e4ca154c02dc64cc615b1e",
+    "revision": "177a9ac6876464c374f45a58dc2d4708",
     "url": "/index.html"
   },
   {
-    "revision": "ac6798557b2514af05d8",
+    "revision": "bd24a9fa15287d2f8e15",
     "url": "/static/css/main.9288ea3e.chunk.css"
   },
   {
-    "revision": "48eaaa938c2090b848e3",
-    "url": "/static/js/2.ef45aaae.chunk.js"
+    "revision": "15859c3241f9d99c343a",
+    "url": "/static/js/2.506aae09.chunk.js"
   },
   {
-    "revision": "ac6798557b2514af05d8",
-    "url": "/static/js/main.499f001d.chunk.js"
+    "revision": "bd24a9fa15287d2f8e15",
+    "url": "/static/js/main.1b03bc49.chunk.js"
   },
   {
     "revision": "a6e3dc98bf14d00cdb8a",
@@ -50,6 +50,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0b9a8fc786cefccb1bb9c841ce01ecb7",
     "url": "/static/media/cell.0b9a8fc7.svg"
+  },
+  {
+    "revision": "d92ce7d9871c4fb086e36a3099c33fc6",
+    "url": "/static/media/crypto_trading_model.d92ce7d9.png"
+  },
+  {
+    "revision": "d600a12eabdab99858da5d264491b31a",
+    "url": "/static/media/docker.d600a12e.png"
   },
   {
     "revision": "9c48137d3957462d8628e8184b4a66dc",
@@ -126,6 +134,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e204c151c973d6ffd5878252be93a1e7",
     "url": "/static/media/node.e204c151.png"
+  },
+  {
+    "revision": "7c6fea3846ed0a4e3d81d4f3ba4596bc",
+    "url": "/static/media/pandas.7c6fea38.png"
+  },
+  {
+    "revision": "68e7759ff51776c593dac84ef85969b3",
+    "url": "/static/media/postgresql.68e7759f.png"
   },
   {
     "revision": "2c0bd3e9ab23b0f3dab9f66c65ee75b7",
