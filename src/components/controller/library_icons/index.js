@@ -25,6 +25,14 @@ import googlesheetsIcon from "./gsheets.png";
 import seleniumIcon from "./selenium.png";
 import illustratorIcon from "./illustrator.png";
 import leafletIcon from "./leaflet.jpg";
+import pandasIcon from "./pandas.png";
+import scikitLearnIcon from "./scikit-learn.png";
+import postgresqlIcon from "./postgresql.png";
+import dockerIcon from "./docker.png";
+import dashIcon from "./dash.png";
+import plotlyIcon from "./plotly.png";
+
+
 
 const libIcons = {
   solidity: solidityIcon,
@@ -53,7 +61,13 @@ const libIcons = {
   googlesheets: googlesheetsIcon,
   selenium: seleniumIcon,
   mapbox: mapboxIcon,
-  leaflet: leafletIcon
+  pandas: pandasIcon,
+  leaflet: leafletIcon,
+  scikitLearn: scikitLearnIcon,
+  docker: dockerIcon,
+  dash: dashIcon,
+  plotly: plotlyIcon,
+  postgresql: postgresqlIcon
 };
 
 export default libIcons;

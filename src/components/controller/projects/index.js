@@ -5,16 +5,26 @@ import HousingAnalysis from "./housing_analysis.png";
 import HamInn from "./ham_inn.png";
 import BuildingTemp from './building_temp.png'
 import AccountManager from './account_manager.svg'
+import CryptoTradingModel from './crypto_trading_model.png'
+
 
 
 const projects = {
-  'mutlifamily analysis': {
+  'multifamily analysis': {
     image: HousingAnalysis,
     descr: `This housing analysis uses 'parallax scrolling' to feature key factors that do and do not explain why the urban housing market is broken. `,
     link: 'https://matsteele.github.io/multifamily_analysis/',
     code: 'https://github.com/matsteele/multifamily_analysis',
     sub_title: 'genus development partners',
     lower_icons: ['react', 'emotion', 'svg', 'indesign', 'illustrator']
+  },
+    'crypto trading model': {
+    image: CryptoTradingModel,
+    descr: `This model uses historic crypto trading data to show how gains could be made using multi-level multi-class predictive modeling built on gradient boosted trees, trading between crypto and in and out of crypto.`,
+    link: 'https://crypto-trading-dashboard.herokuapp.com/',
+    code: 'https://github.com/matsteele/crypto_trading_model',
+    sub_title: 'metis',
+    lower_icons: ['pandas', 'docker', 'postgresql', 'dash', 'plotly', 'scikitLearn' ]
   },
   // 'progeny placeholder': {
   //   image: Prgny,
@@ -63,7 +73,7 @@ const projects = {
     link: 'https://pd-challenge-steele.herokuapp.com/',
     code: 'https://github.com/matsteele/PD_Challenge',
     sub_title: '',
-    lower_icons: ['python', 'dash', 'scikit-learn', 'd3', 'leaflet', 'mapbox']
+    lower_icons: ['python', 'dash', 'scikitLearn', 'd3']
   },
   'ham inn': {
     image: HamInn,
