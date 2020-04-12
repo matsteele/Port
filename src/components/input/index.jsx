@@ -111,7 +111,7 @@ const Input = props => {
             margin='50'
           >
             <ul className='userChoices'>
-              {state.context === "mat's li'l terminal" ||
+              {state.context === "mat's terminal" ||
               !Array.isArray(state.context) ||
               clearList
                 ? arrayofListItems

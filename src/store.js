@@ -1,7 +1,7 @@
 import React from "react";
 
 const initialState = {
-  context: "mat's li'l terminal",
+  context: "mat's terminal",
   animDir: 'initial',
   scroll: 0
 };
