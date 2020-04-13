@@ -72,7 +72,7 @@ const dashboards = {
     descr: `This dashboard parses a csv of building energy data into meaningful sub categories and then makes predictions for each day and week using a color scheme in order to identify outliers. `,
     link: 'https://pd-challenge-steele.herokuapp.com/',
     code: 'https://github.com/matsteele/PD_Challenge',
-    sub_title: '',
+    sub_title: 'metis',
     lower_icons: ['python', 'dash', 'scikitLearn', 'd3']
   },
   'ham inn': {

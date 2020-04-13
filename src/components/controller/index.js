@@ -6,9 +6,9 @@ import contact from "./contact";
 
 const controller = {
   dashboards: [dashboards, 'dashboards I have built'],
-  skills: [skills, 'skills I have developed'],
+  // skills: [skills, 'skills I have developed'],
   studies:[studies, 'studies I have conducted'],
-  blog: [blog, 'my blog posts'],
+  // blog: [blog, 'my blog posts'],
   contact: [
     contact,
     'ways to connect',

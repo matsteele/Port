@@ -2,12 +2,16 @@ import genusIcon from "./logos/Genus.png";
 import progenyIcon from "./logos/Progeny.png";
 import worldBankIcon from "./logos/world_bank.svg";
 import metisIcon from "./logos/metis.png";
+import pennIcon from "./logos/Penn.svg";
+import baeIcon from "./logos/bae.svg";
 
 export const OrgIcons = {
   "genus development partners": genusIcon,
   "progeny": progenyIcon,
   'metis': metisIcon,
-  "world bank" : worldBankIcon
+  "world bank" : worldBankIcon,
+  "UPenn": pennIcon,
+  "bae": baeIcon
 };
 
 const Organizations = {

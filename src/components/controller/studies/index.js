@@ -28,20 +28,21 @@ const studies = {
     descr: `This model uses historic crypto trading data to show how gains could be made using multi-level multi-class predictive modeling built on gradient boosted trees, trading between crypto and in and out of crypto.`,
     link: SPReport,
     sub_title: 'UPenn',
-    lower_icons: ['r', 'illustrator', 'indesign', 'arcgis', 'Rhino']
+    lower_icons: ['r', 'illustrator', 'indesign', 'arcgis', 'rhino']
   },
   'Educational Achievement in Semarang': {
     image: SemEdu_sc,
     descr: `This study attempted to model academic achievement in Semarang, a large city in Indonesia. The report was intended to inform a larger study on infrastructure in the city being done by the World Bank.`,
     link: SemEdu,
     sub_title: 'world bank',
-    lower_icons: ['r', 'illustrator', 'indesign', 'arcgis', 'Rhino']
+    lower_icons: ['r', 'illustrator', 'indesign', 'arcgis', 'rhino']
   },
   'GSA Inventory': {
     image: GSAInventory_sc,
     descr: `This was a small component of a larger study of demand for commercial space that I made that I felt was particularly well designed. `,
     link: GSAInventory,
     sub_title: 'bae',
+    logo_only: true,
     lower_icons: ['r', 'arcgis', 'illustrator', 'indesign']
   },
   'Land Value Capture Model': {

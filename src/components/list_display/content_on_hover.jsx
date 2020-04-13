@@ -111,6 +111,7 @@ export default function ContentOnHover(props) {
       <g
         className='opacityTransition'
         key={props.optionKey}
+        display={props.hovered[0] && props.hovered[1] === props.optionKey ? 'flex' : 'None'}
         opacity={
           props.hovered[0] && props.hovered[1] === props.optionKey ? 1 : 0
         }
@@ -118,7 +119,7 @@ export default function ContentOnHover(props) {
         <foreignObject
           id='G'
           width={window.innerWidth / 2}
-          height={'250' * ArrayOfLines.length}
+          height={'350'}
           x={leftBufferFromCircle - 50}
           y={
             props.base +
@@ -128,7 +129,7 @@ export default function ContentOnHover(props) {
           }
         />
         {/* <div height={props.circleSize * 2} width={props.circleSize * 2} color='red' /> */}
-        {OrgIcons[option.sub_title] ? (
+        {/* {OrgIcons[option.sub_title] ? (
           <image
             key={props.optionKey}
             height='50px'
@@ -143,8 +144,8 @@ export default function ContentOnHover(props) {
           />
         ) : (
           ''
-        )}
-
+        )} */}
+        
         <text
           x={
             OrgIcons[option.sub_title]
@@ -158,16 +159,17 @@ export default function ContentOnHover(props) {
             15
           }
           fontWeight='bold'
-        >
-          {option.sub_title && state.context === 'dashboards' ? (
+        > 
+          {/* {option.sub_title && state.context === 'dashboards' ? (
             <tspan fontSize='8' stroke='#9e9e9e75'>
               built for --
             </tspan>
           ) : (
             ''
-          )}
-          {option.sub_title}
+          )} */}
+          {/* {option.logo_only? "": option.sub_title} */}
         </text>
+
         <text
           inline-size='150'
           x={leftBufferFromCircle + 20}
