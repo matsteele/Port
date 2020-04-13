@@ -19,7 +19,7 @@ export default function ContentOnHover(props) {
   const createDescription = () => {
     const wordsAsArray = option.descr.split(' ');
     const descrWordCount = wordsAsArray.length;
-    const numberOfLines = Math.round(descrWordCount / 8);
+    const numberOfLines = Math.round(descrWordCount / 8)+1;
     const ArrayOfLines = [];
 
     for (let i = 0; i <= numberOfLines - 1; i++) {
@@ -159,7 +159,7 @@ export default function ContentOnHover(props) {
           }
           fontWeight='bold'
         >
-          {option.sub_title && state.context === 'projects' ? (
+          {option.sub_title && state.context === 'dashboards' ? (
             <tspan fontSize='8' stroke='#9e9e9e75'>
               built for --
             </tspan>

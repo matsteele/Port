@@ -21,7 +21,7 @@ const contactMethods = {
   },
   github: {
     image: Github,
-    descr: `My github is reflective of my non-private projects`,
+    descr: `My github is reflective of my non-private dashboards`,
     link: "https://www.linkedin.com/in/matsteele/",
     sub_title: "genus development partners"
   },

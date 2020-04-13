@@ -32,6 +32,8 @@ import dockerIcon from "./docker.png";
 import dashIcon from "./dash.png";
 import plotlyIcon from "./plotly.png";
 
+import rIcon from "./r.png";
+import arcgisIcon from "./arcgis.png";
 
 
 const libIcons = {
@@ -67,7 +69,11 @@ const libIcons = {
   docker: dockerIcon,
   dash: dashIcon,
   plotly: plotlyIcon,
-  postgresql: postgresqlIcon
+  postgresql: postgresqlIcon,
+  r: rIcon,
+  arcgis: arcgisIcon
+
+
 };
 
 export default libIcons;
