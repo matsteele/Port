@@ -5,24 +5,23 @@ import metisIcon from "./logos/metis.png";
 import pennIcon from "./logos/Penn.svg";
 import baeIcon from "./logos/bae.svg";
 
+import LinkedInIcon from "./logos/linkedin.svg";
+import TwitterIcon from "./logos/twitter.svg";
+import GithubIcon from "./logos/github.svg";
+
+export const LinkIcons = {
+  "https://www.linkedin.com/in/matsteele/": LinkedInIcon,
+  "https://github.com/matsteele/": GithubIcon,
+  "https://twitter.com/urbanagrapher": TwitterIcon
+};
+
+
+
 export const OrgIcons = {
   "genus development partners": genusIcon,
   "progeny": progenyIcon,
   'metis': metisIcon,
   "world bank" : worldBankIcon,
   "UPenn": pennIcon,
-  "bae": baeIcon
+  "bae": baeIcon,
 };
-
-const Organizations = {
-  email: {
-    image: "",
-    descr: `Email is always the best way to reach me. I try to respond within two days to brief emails. `,
-    link: "mailto:abc@example.com?subject = Feedback&body = Message",
-    sub_title: "matsteele@gmail.com"
-  },
-
-}
-
-
-export default Organizations;

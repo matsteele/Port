@@ -1,61 +1,42 @@
-import Email from "./email.svg";
-import Twitter from "./twitter.svg";
-import Github from "./github.svg";
-import Facebook from "./facebook.svg";
-import LinkedIn from "./linkedin.svg";
-import Instagram from "./instagram.svg";
-import Cell from "./cell.svg";
+import PersonalIMG from "./personal.jpeg";
+import ProfileIMG from "./profile.jpeg";
 
+import ProjectsIMG from "./projects.jpeg";
 
 const contactMethods = {
-  'where I have been': {
-    image: Email, // profile image
-    descr: `  `, 
-    // I celebrate my successes sure, but my failtures were more defining and probably more interesting. 
-    // I fear I failed the network of idealistic motivated and highly capable individuals I built with CoFED and KCFC
-    // as salaries and revenues weren't significant enough to sustain in the anti-captilist co-op world they existed in
-    // I failed at helping move Indonesia toward a more liberal urban future. 
-    // The more the World Bank pushed for more sustainable development, the stronger the country pushed back against western influence. 
-    // I failed at building a start up. I learned more in these two years than in either of my graduate degrees doing so. 
-    // 
-    link: 'mailto:abc@example.com?subject = Feedback&body = Message', // / linked In link
-    sub_title: 'matsteele@gmail.com',
+  LinkedIn: {
+    image: ProfileIMG, // profile image
+    descr: `I am a full stack data scientist. I arrived here after becoming increasingly capable at quantitative methods. While an urban economist I was pulled toward advanced ML techniques, initially using frameworks in R and then Python. Eventually I found that the presentation of data analysis was critical to its understanding and impact. I began to specialize in data visualization techniques using JavaScript. I took a hard vere into software development and startups after working at the World Bank. I was excited about the potential of web3, enabling investments in creative urban development ideas, and mobilizing private networks and so embarked on building a blockchain start-up focused on tokenizing the equity in real estate. In building this project I gained a foundation for blockchain engineering, data engineering, and backend development. When the start-up did not pan out for financial and legal reasons, I shifted to a well-financed analytics start-up, Elementus. There I developed dynamic and interactive analytical products and learned a lot more about the blockchain ecosystem.
+    check out my LinkedIn for details
+    or gmail matsteele 
+    `,
+    link: "https://www.linkedin.com/in/matsteele/", 
+    sub_title: "Profile",
   },
-  'where I am going': {
-    image: Github, // video circulating with a drone 
-    descr: `My github is reflective of my non-private dashboards`, 
-    // somewhere calm, full of thoughtful relationships, and ideally a view
-    // 
-    // I have failed a lot in life, and , living a lot of life, looking for substance / clear solutions grounded in pressing problems
-    // keep this short 
-    // passionate about the power of private networks,  (make everything you say paradoxical)
-    code: 'https://github.com/matsteele/multifamily_analysis',// make link work twice link 1, and link 2
-    link: 'https://www.linkedin.com/in/matsteele/', // github link
-    sub_title: 'genus development partners',
+  GitHub: {
+    image: ProjectsIMG, 
+    descr: `This page is intended to help position me for consulting work, exciting job prospects, and business proposals. Reach out to my LI to connect if you have something exciting to discuss. 
+
+    Historically I have been keen on projects that solve systemic economic problems. I am curious about applications for web3, particularly in the context of the mobilization of private networks. I am also a big urban planning geek, so I would jump at an opportunity to work on projects that shape the built environment.  That said, my key priority is joining a company with a grounded business strategy and a stable, even if modest, revenue stream in rapidly evolving industries. Regardless of what I build and where I work, it’s critical that I am dealing with smart but humble personas passionate about the specific economic issues/problems they are grappling with, in an inclusive supportive work culture.     
+    `,
+    link: "https://github.com/matsteele/",
+    sub_title: "Projects",
   },
-  contact: {
-    image: Facebook,
-    descr: `Facebook is mostly for close friends`,
-    link: 'https://www.facebook.com/Matthew.Stephan.Steele',
-    sub_title: 'matthew.stephan.steele',
-  },
-  twitter: {
-    image: Twitter,
-    descr: `follow my ramblings`,
-    link: 'https://twitter.com/urbanagrapher',
-    sub_title: 'urbanagrapher',
-  },
-  instagram: {
-    image: Instagram,
-    descr: `see a manufactured glimpse into my life`,
-    link: 'https://www.instagram.com/matsteele/',
-    sub_title: 'matsteele',
-  },
-  linkedin: {
-    image: LinkedIn,
-    descr: `Reach out and connect if you are a developer or looking for one.`,
-    link: 'https://www.linkedin.com/in/matsteele/',
-    sub_title: 'matsteele',
+  Twitter: {
+    image: PersonalIMG, 
+    descr: `
+    In my personal time I spend an inordinate amount of time reading scientific studies and summaries for maximizing health outcomes. Lately I have been keen on dopamine fasting and other methods for streamlining dopamine for long periods of optimal focus and motivation.
+
+    I do not have strong philosophical convictions but would consider myself a fan of stoicicism.
+        
+    I find solace in running and swimming.
+        
+    I spend my nights fighting back thoughts on implementation ideas for projects I will never likely get to and so I journal about them instead. 
+    
+    Check out my twitter to see my rants into the void.     
+    `,
+    link: "https://twitter.com/urbanagrapher", // github link
+    sub_title: "personal",
   },
 };
 

@@ -6,11 +6,12 @@ export default function InputWithCaret(props) {
   const [intervalBool, setintervalBool] = useState(true);
 
   const handleKeyUp = e => {
-    const caretIndex = e.target.selectionStart;
-    props.sethowleft(20 + caretIndex * 7);
+    const caretIndex = e.target.selectionEnd;
+    console.log('index', e.target.selectionEnd)
+    props.sethowleft(Math.min(20 + caretIndex *7, 300));
     props.setclearList(false);
   };
-
+  console.log('howLeft', props.howleft)
   const handleKeyDown = e => {
     if (e.key === "Tab") {
       e.preventDefault();
@@ -65,6 +66,7 @@ export default function InputWithCaret(props) {
 
 const InputContainer = styled.div({
   height: 40,
+  width: 300,
 });
 
 const ShiftingBlinker = styled.svg(props => ({
@@ -77,6 +79,7 @@ const ShiftingBlinker = styled.svg(props => ({
 
 const RelativeInput = styled.input({
   caretColor: "transparent",
+  width: 300,
   height: 40,
   border: "10px rgba(34, 36, 38, 0.15)",
   fontSize: "15px",

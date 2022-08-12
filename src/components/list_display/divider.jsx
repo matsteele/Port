@@ -14,20 +14,22 @@ export default function Divider(props) {
   const { state } = useContext(store);
 
   const circleSize = 150; //set by window height
-  const circleBuffer = circleSize * 2.5;
+  const circleBuffer = circleSize * 3;
   const base = 400;
 
   const ifMobile = window.innerWidth < 420 ? true : false;
 
   // changed direction for animations but it isn't working
   useEffect(() => {
-    if (state.context in controller) {
+    if (state.context !== "mat's terminal" && !Array.isArray(state.context)) {
       const options = controller[state.context][0];
       const lengthOfLine = 50 + Object.keys(options).length * circleBuffer;
-      setHeightOfSpine(lengthOfLine);
-    } else {
+      setHeightOfSpine(Math.max(lengthOfLine, 100));
+    }
+    else{
       setHeightOfSpine(100);
     }
+    
   }, [state.context, circleBuffer]);
 
   return (
@@ -41,8 +43,8 @@ export default function Divider(props) {
           y2={heightOfSpine}
           h={heightOfSpine}
           opacity={hovered[0] ? 0.05 : 1}
-          d={!(state.context in controller) ? 0 : 100}
-          e={!(state.context in controller) ? 200 : 0}
+          d={heightOfSpine > 100 ? 100 : 0}
+          e={heightOfSpine > 100 ? 0 : 200}
           // direction={state.animDir}
         />
 

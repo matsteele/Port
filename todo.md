@@ -8,6 +8,7 @@ TASKS
 
 * escaping at contact sheet bugs out
 
+* fix subtitle
 
 * solve secure connection issues
 * make options visible without having to scroll - like a legend to what's being scrolled
