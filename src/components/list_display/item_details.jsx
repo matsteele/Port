@@ -20,17 +20,20 @@ export default function ItemDetails(props) {
     // [('word', 4), 'four', 4]
     // push until count reached
 
-    const lineCharLength = 60;
+    const lineCharLength = 50;
 
     // const descrWordCount = wordsAsArray.length;
     // const numberOfLines = 0; //Math.round(descrWordCount / 10) + 1;
     // const ArrayOfLines = [];
+    
     let lineCount = 0;
     let charCount = 0;
     let lineOfWords = [];
     let ArrayOfLines = [];
-    // console.log(props.circleSize, props.scrollScale)
+
     wordsWithChars.forEach((wrds, i) => {
+      lineOfWords.push(wrds[0]);
+      charCount += wrds[1];
       if (charCount > lineCharLength || i === wordsWithChars.length - 1) {
         const lineSentence = lineOfWords.join(" ");
         const lineSpan = (
@@ -56,8 +59,7 @@ export default function ItemDetails(props) {
         totalLineCount += 1
         charCount = 0;
       }
-      lineOfWords.push(wrds[0]);
-      charCount += wrds[1];
+
     });
 
     return ArrayOfLines

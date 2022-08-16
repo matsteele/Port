@@ -8,7 +8,8 @@ import { AnimatedCircles } from "./item_display";
 
 export default function ContentOnHover(props) {
   const { state } = useContext(store);
-  const options = controller[state.context][0];
+  const options = state.options;
+  
   const option = options[props.optionKey];
 
   const teal = "rgba(62, 204, 203, 0.9)";
@@ -68,7 +69,7 @@ export default function ContentOnHover(props) {
 
           {option.code ? (
             <a href={option.code}>
-              <text
+              <text 
                 x={ifMobile ? props.circleSize : 25}
                 y={props.base + props.circleBuffer * props.i + 25}
                 textAnchor="middle"

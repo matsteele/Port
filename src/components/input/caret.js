@@ -5,22 +5,24 @@ export default function InputWithCaret(props) {
   const inputRef = useRef();
   const [intervalBool, setintervalBool] = useState(true);
 
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     const caretIndex = e.target.selectionEnd;
-    console.log('index', e.target.selectionEnd)
-    props.sethowleft(Math.min(20 + caretIndex *7, 300));
-    props.setclearList(false);
+    if (caretIndex === 0) props.sethowleft(150);
+    else {
+      props.sethowleft(Math.min(20 + caretIndex * 7.7, 300));
+      props.setclearList(false);
+    }
   };
-  console.log('howLeft', props.howleft)
-  const handleKeyDown = e => {
+
+  const handleKeyDown = (e) => {
     if (e.key === "Tab") {
       e.preventDefault();
-      if (props.firstOption) props.setChoice(props.firstOption.props.children)
+      if (props.firstOption) props.setChoice(props.firstOption.props.children);
     }
     if (e.key === "Escape") {
       e.preventDefault();
       props.setChoice("");
-      props.setclearList(true)
+      props.setclearList(true);
       document.activeElement.blur();
     }
   };
@@ -29,6 +31,7 @@ export default function InputWithCaret(props) {
     const resetid = setInterval(() => {
       setintervalBool(intervalBool ? false : true);
     }, 800);
+
     return () => clearInterval(resetid);
   }, [intervalBool]);
 
@@ -46,7 +49,7 @@ export default function InputWithCaret(props) {
         placeholder={props.placeholder}
         onChange={props.handleChange}
       />
-      {document.activeElement.id =="term_input" ? (
+      {document.activeElement.id == "term_input" ? (
         <ShiftingBlinker left={props.howleft} height="40" width="10">
           <line
             x1={0}
@@ -69,12 +72,12 @@ const InputContainer = styled.div({
   width: 300,
 });
 
-const ShiftingBlinker = styled.svg(props => ({
+const ShiftingBlinker = styled.svg((props) => ({
   left: props.left,
   position: "absolute",
   stroke: "grey",
   strokeWidth: 10,
-  strokeLinecap: "round"
+  strokeLinecap: "round",
 }));
 
 const RelativeInput = styled.input({
@@ -87,6 +90,6 @@ const RelativeInput = styled.input({
   position: "absolute",
   "&::placeholder": {
     opacity: 0.85,
-    fontSize: "15px"
-  }
+    fontSize: "15px",
+  },
 });

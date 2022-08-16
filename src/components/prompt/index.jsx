@@ -2,13 +2,15 @@ import React, { useContext } from "react";
 import styled from "@emotion/styled";
 import { store } from "../../store";
 import { keyframes } from "@emotion/core";
+import controller from "../controller/";
+
 
 export default function Prompt(props) {
   const { state } = useContext(store);
   let promptTextToDisplay = "";
 
-  if(Array.isArray(state.context)){
-    promptTextToDisplay = state.context[2]
+  if(state.interact){
+    promptTextToDisplay = controller[state.context].prompt1.prompt
   }
   else if (state.context.startsWith("mat")) {
     promptTextToDisplay = "what would you like to see?";

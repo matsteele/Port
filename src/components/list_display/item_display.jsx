@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { store } from "../../store";
-import controller from "../controller";
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 import ContentOnHover from "./content_on_hover";
@@ -8,12 +7,9 @@ import ItemDetails from "./item_details";
 
 export default function ItemDisplay(props) {
   const { state } = useContext(store);
-  const options = controller[state.context][0];
   const [windowLoc, setWindowLoc] = useState(window.screenY);
+  const options = state.interact ? {} : state.options;
 
-  // build in logic that sees if the options have changed,
-  // and if so reverses the animation - potentially easier with classes
-  // // convert elements to classes and trade out the classes to animate out
   const handleScroll = () => {
     setWindowLoc(window.scrollY);
   };
@@ -48,6 +44,7 @@ export default function ItemDisplay(props) {
 
     return scale > 0 ? scale : 0;
   };
+
   //probably need to set scrollY based on context/store to have it always adapt
 
   return (

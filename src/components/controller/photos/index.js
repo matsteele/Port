@@ -125,7 +125,7 @@ const Photos = {
   },
   "Madrid": {
     image: spain29,
-    descr: `Took a two week to Madrid. It was the first time in tens sense I had been back after spending 8 months there while an undergraduate student at UW.`,
+    descr: `Took a two week trip to Madrid. It was the first time in ten years I had been back. I spent 8 months there while an undergraduate student at UW.`,
     link: '',
     sub_title: '30',
     age: 30

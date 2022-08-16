@@ -5,16 +5,14 @@ import InputWithBlicker from "./caret";
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Input = (props) => {
   const { state, dispatch } = useContext(store);
   const [choice, setChoice] = useState("");
-  const [howleft, sethowleft] = useState(20);
+  const [howleft, sethowleft] = useState(150);
   const [clearList, setclearList] = useState(false);
-  const [placeholder, setPlaceholder] = useState(
-    ".  .  .   tab to autocomplete"
-  );
+  const [placeholder, setPlaceholder] = useState("type a selection or click");
 
   const handleChange = (e) => {
     if (e.target.value) {
@@ -25,45 +23,74 @@ const Input = (props) => {
   };
 
   const changeView = (input) => {
-    if (Array.isArray(state.context)) {
-      if (state.context[1] === input) {
-        // check for contact 
-        dispatch({ type: "SET_CONTEXT", payload: state.context[0] });
+    const checkForContact = () => {
+      const textCheck = controller[state.context].prompt1.default;
+      if (input === textCheck) {
+        dispatch({ type: "SET_INTERACT", payload: false });
         document.activeElement.blur();
-        setPlaceholder(".  .  .   tab to autocomplete");
+        setPlaceholder("type a selection or click");
         sethowleft(20);
+      } else {
+        setPlaceholder("try again");
       }
-      else if (state.context[0] ===  'message' ){
-        // check for sending message 
-        // dispatch({ type: "SET_CONTEXT", payload: 'message' }); 
-        sendEmail(input)
-        setPlaceholder(".  .  .   message sent");
-      }
-      else if (state.context[0] ===  'photos' ){
-        // check for photos
-        dispatch({ type: "SET_CONTEXT", payload: 'photos' });        
-        setPlaceholder("another age");
-      }
-    } else {
-      for (const key in controller) {
-        if (controller[key][1] === input) {
-          if (controller[key][2]) {
-            setPlaceholder('type "' + controller[key][2] + '"');
-            dispatch({
-              type: "SET_CONTEXT",
-              payload: [key, controller[key][2], controller[key][3]],
-            });
+    };
 
-          } else {
-            dispatch({
-              type: "SET_CONTEXT",
-              payload: key,
-            });
-            setPlaceholder(".  .  .   tab to autocomplete");
-          }
-          document.activeElement.blur();
-          sethowleft(20);
-        } 
+    const checkForMessage = () => {
+      // dispatch({ type: "SET_CONTEXT", payload: "message" });
+      sendEmail(input);
+      setPlaceholder(".  .  .   message sent");
+      dispatch({ type: "SET_INTERACT", payload: false });
+    };
+
+    const checkForPhotos = () => {
+      console.log("in photos input");
+      dispatch({ type: "SET_CONTEXT", payload: `photos-${input}` });
+      dispatch({ type: "SET_INTERACT", payload: false });
+      setPlaceholder("another age? or ");
+    };
+    console.log("state.context", state.context, input);
+
+    let inputTriggered = false;
+    for (const key in controller) {
+      if (controller[key].prompt0 === input) {
+        console.log("input inside", input);
+        if (controller[key].prompt1) {
+          setPlaceholder('type "' + controller[key].prompt1.default + '"');
+          dispatch({
+            type: "SET_INTERACT",
+            payload: true,
+          });
+          dispatch({
+            type: "SET_CONTEXT",
+            payload: key,
+          });
+        } else {
+          dispatch({
+            type: "SET_INTERACT",
+            payload: false,
+          });
+          dispatch({
+            type: "SET_CONTEXT",
+            payload: key,
+          });
+          setPlaceholder("type a selection or click");
+        }
+        document.activeElement.blur();
+        sethowleft(20);
+        setclearList(true);
+        setChoice("");
+        inputTriggered = true;
+      }
+    }
+    console.log("inputTriggered", inputTriggered);
+    if (!inputTriggered) {
+      if (state.context === "contact") {
+        console.log("in contact");
+        checkForContact();
+      } else if (state.context === "message") {
+        checkForMessage();
+      } else if (state.context === "photos") {
+        checkForPhotos();
       }
     }
   };
@@ -77,10 +104,12 @@ const Input = (props) => {
   const createDropDown = () => {
     const arrayofListItems = [];
 
+    console.log("choice, state", choice, state);
+
     for (const key in controller) {
       if (
-        ((choice.length && controller[key][1].startsWith(choice)) ||
-          state.context === "mat's terminal") &&
+        ((choice.length && controller[key].prompt0.startsWith(choice)) ||
+          (!choice.length && state.context === "mat's terminal")) &&
         key !== "mat's terminal"
       ) {
         arrayofListItems.push(
@@ -89,13 +118,15 @@ const Input = (props) => {
             value={key}
             id={key}
             key={key}
-            onClick={() => changeView(controller[key][1])}
+            onClick={() => changeView(controller[key].prompt0)}
           >
-            {controller[key][1]}
+            {controller[key].prompt0}
           </li>
         );
       }
     }
+
+    console.log("choice.length", choice.length, state.context);
     if (!choice.length && state.context !== "mat's terminal") {
       const key = "mat's terminal";
       arrayofListItems.push(
@@ -110,6 +141,7 @@ const Input = (props) => {
         </li>
       );
     }
+    console.log("arrayofListItems", arrayofListItems);
 
     return arrayofListItems;
   };
@@ -144,13 +176,7 @@ const Input = (props) => {
             className="listDiv"
             margin="50"
           >
-            <ul className="userChoices">
-              {state.context === "mat's terminal" ||
-              !Array.isArray(state.context) ||
-              clearList
-                ? arrayofListItems
-                : ""}
-            </ul>
+            <ul className="userChoices">{arrayofListItems}</ul>
           </AnimatedDivContainer>
         </>
       ) : (
@@ -185,24 +211,26 @@ const AnimatedDivContainer = styled.div`
   animation-direction: ${(props) => props.direction};
 `;
 
-
-
-const sendEmail = (message) =>{
-
+const sendEmail = (message) => {
   var templateParams = {
-    message
+    message,
   };
-  
-  emailjs.send('matportfolioanonmail', 'basicTemplate', templateParams, 'Z_FYYGpXlWpTJ7SIx')
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-  
 
-}
-
-
+  emailjs
+    .send(
+      "matportfolioanonmail",
+      "basicTemplate",
+      templateParams,
+      "Z_FYYGpXlWpTJ7SIx"
+    )
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+};
 
 export default Input;

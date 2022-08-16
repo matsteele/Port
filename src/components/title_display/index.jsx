@@ -8,7 +8,7 @@ const Display = props => {
   
   return (
     <TitleContainer>
-      {props.seq > 0 ? <AnimatedText> {Array.isArray(state.context)? state.context[0]: state.context} </AnimatedText> : ""}
+      {props.seq > 0 ? <AnimatedText> {state.context} </AnimatedText> : ""}
     </TitleContainer>
   );
 };

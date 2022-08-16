@@ -19,10 +19,9 @@ export default function Divider(props) {
 
   const ifMobile = window.innerWidth < 420 ? true : false;
 
-  // changed direction for animations but it isn't working
   useEffect(() => {
-    if (state.context !== "mat's terminal" && !Array.isArray(state.context)) {
-      const options = controller[state.context][0];
+    if (state.context !== "mat's terminal" && !state.interact) {
+      const options = state.options;
       const lengthOfLine = 50 + Object.keys(options).length * circleBuffer;
       setHeightOfSpine(Math.max(lengthOfLine, 100));
     }
@@ -30,7 +29,7 @@ export default function Divider(props) {
       setHeightOfSpine(100);
     }
     
-  }, [state.context, circleBuffer]);
+  }, [state.context, circleBuffer, state.interact, state.options]);
 
   return (
     <SpineContainer className='dividerContainer'>
