@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "matsteele.github.io",
+  "homepage": "https://matsteele.github.io/dynamic_portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
