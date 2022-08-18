@@ -43,17 +43,14 @@ const Input = (props) => {
     };
 
     const checkForPhotos = () => {
-      console.log("in photos input");
       dispatch({ type: "SET_CONTEXT", payload: `photos-${input}` });
       dispatch({ type: "SET_INTERACT", payload: false });
       setPlaceholder("another age? or ");
     };
-    console.log("state.context", state.context, input);
 
     let inputTriggered = false;
     for (const key in controller) {
       if (controller[key].prompt0 === input) {
-        console.log("input inside", input);
         if (controller[key].prompt1) {
           setPlaceholder('type "' + controller[key].prompt1.default + '"');
           dispatch({
@@ -82,10 +79,8 @@ const Input = (props) => {
         inputTriggered = true;
       }
     }
-    console.log("inputTriggered", inputTriggered);
     if (!inputTriggered) {
       if (state.context === "contact") {
-        console.log("in contact");
         checkForContact();
       } else if (state.context === "message") {
         checkForMessage();
@@ -103,9 +98,6 @@ const Input = (props) => {
 
   const createDropDown = () => {
     const arrayofListItems = [];
-
-    console.log("choice, state", choice, state);
-
     for (const key in controller) {
       if (
         ((choice.length && controller[key].prompt0.startsWith(choice)) ||
@@ -126,7 +118,6 @@ const Input = (props) => {
       }
     }
 
-    console.log("choice.length", choice.length, state.context);
     if (!choice.length && state.context !== "mat's terminal") {
       const key = "mat's terminal";
       arrayofListItems.push(
@@ -141,7 +132,6 @@ const Input = (props) => {
         </li>
       );
     }
-    console.log("arrayofListItems", arrayofListItems);
 
     return arrayofListItems;
   };
