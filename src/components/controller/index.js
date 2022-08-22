@@ -10,11 +10,11 @@ const controller = {
   // this would be better as a nested json
   contact: {
     options: contact, // evaluate the sentiment and respond / short term, have some favorite quotes
-    prompt0: "ways to connect",
-    prompt1: {
-      default: "I am not a robot",
-      prompt: "promise you aren't a robot? for the most part",
-    },
+    prompt0: "about/contact",
+    // prompt1: {
+    //   default: "I am not a robot",
+    //   prompt: "promise you aren't a robot? for the most part",
+    // },
   },
   message: {
     options: {}, // evaluate the sentiment and respond / short term, have some favorite quotes
