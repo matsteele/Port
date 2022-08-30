@@ -3,7 +3,13 @@ $promptHeight: 300px;
 $promptWidth: 300px;
 $textFontSize: 15px;
 $emphasisColor: rgb(62, 204, 203);
-$break-small: 420px;
+$break-smallpx: 1000px;
+$break-small: 1000;
+
+
+:export {
+    smlWindowSize: $break-small;
+}
 
 @font-face {
   font-family: 'koz';
@@ -52,6 +58,23 @@ $break-small: 420px;
       justify-content: center;
       width: 100%;
 
+      .promptTextMobile {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: $promptWidth;
+        h3 {
+          font-family: koz;
+          font-size: $textFontSize;
+        }
+
+        @media screen and (max-width: $break-smallpx) {
+          justify-content: center;
+          height: 100px;
+        }
+      }
+
       .promptText {
         text-align: left;
         display: flex;
@@ -63,32 +86,34 @@ $break-small: 420px;
           font-size: $textFontSize;
         }
 
-        @media screen and (max-width: $break-small) {
-          justify-content: center;
-          height: 100px;
+        @media screen and (max-width: $break-smallpx) {
+          grid-column: 2;
+          justify-content: flex-start;
+          height: 100px;          
         }
       }
       .dividerContainer {
-        gridcolumnstart: 2;
+        // grid-columnstart: 2;
         width: 50px;
         height: 100px;
-        @media screen and (max-width: $break-small) {
-          grid-column: auto;
-          width: 100%;
-          height: 15px;
+        @media screen and (max-width: $break-smallpx) {
+          grid-column: 1;
+          // grid-column: auto;
+          // width: 100%;
+          // height: 15px;
         }
-        .StyledSpine {
-          @media screen and (max-width: $break-small) {
-            display: none;
-            // x1: 25;
-            // x2: 300;
-            // y1: 25;
-            width: 100%;
-            height: 15;
-            stroke-dasharray: inherit;
-            stroke-dashoffset: inherit;
-          }
-        }
+        // .StyledSpine {
+        //   @media screen and (max-width: $break-smallpx) {
+        //     // display: none;
+        //     // x1: 25;
+        //     // x2: 300;
+        //     // // y1: 25;
+        //     // width: 100%;
+        //     // height: 15;
+        //     // stroke-dasharray: inherit;
+        //     // stroke-dashoffset: inherit;
+        //   }
+        // }
         .imageProfiled {
           transition: opacity 1.2s ease-in-out;
         }
@@ -101,9 +126,10 @@ $break-small: 420px;
         align-items: center;
         text-align: left;
         position: relative;
-        @media screen and (max-width: $break-small) {
-          grid-column: auto;
+        @media screen and (max-width: $break-smallpx) {
+          grid-column: 2;
           float: none;
+          
         }
         .formDivContainer {
           display: grid;
@@ -174,5 +200,5 @@ $break-small: 420px;
 }
 
 .opacityTransition {
-  transition: all 1.2s;
+  transition: all .75s;
 }

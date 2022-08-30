@@ -4,11 +4,14 @@ import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 import ContentOnHover from "./content_on_hover";
 import ItemDetails from "./item_details";
+import styleVars from "../../style/style.scss";
 
 export default function ItemDisplay(props) {
   const { state } = useContext(store);
   const [windowLoc, setWindowLoc] = useState(window.screenY);
   const options = state.interact ? {} : state.options;
+
+  const imageMobileOffset = 310;
 
   const handleScroll = () => {
     setWindowLoc(window.scrollY);
@@ -18,7 +21,7 @@ export default function ItemDisplay(props) {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  const ifMobile = window.innerWidth < 420 ? true : false;
+  const ifMobile = window.innerWidth < styleVars.smlWindowSize ? true : false;
 
   const findscrollScale = (i) => {
     const scale =
@@ -65,56 +68,108 @@ export default function ItemDisplay(props) {
             >
               <defs>
                 <clipPath id={`imgpath_${i}`}>
-                  <AnimatedCircles
-                    id={optionKey}
-                    secs={i + 2}
-                    key={optionKey}
-                    cx={ifMobile ? 150 : 25}
-                    cy={props.base + props.circleBuffer * i}
-                    originx={ifMobile ? 150 : 25}
-                    originy={props.base + props.circleBuffer * i}
-                    r={
-                      props.circleSize * scrollScale < 0
-                        ? 0
-                        : props.circleSize * scrollScale
-                    }
-                    direction={props.direction}
-                  />
+                  {ifMobile ? (
+                    <AnimatedRectangle
+                      id={optionKey}
+                      secs={i + 2}
+                      key={optionKey}
+                      x={25}
+                      y={
+                        props.base - imageMobileOffset + props.circleBuffer * i
+                      }
+                      width={
+                        props.circleSize * scrollScale < 0
+                          ? 0
+                          : props.circleSize * scrollScale * 2
+                      }
+                      height={
+                        props.circleSize * scrollScale < 0
+                          ? 0
+                          : props.circleSize * scrollScale
+                      }
+                    />
+                  ) : (
+                    <AnimatedCircles
+                      id={optionKey}
+                      secs={i + 2}
+                      key={optionKey}
+                      cx={25}
+                      cy={props.base + props.circleBuffer * i}
+                      originx={25}
+                      originy={props.base + props.circleBuffer * i}
+                      r={
+                        props.circleSize * scrollScale < 0
+                          ? 0
+                          : props.circleSize * scrollScale
+                      }
+                      direction={props.direction}
+                    />
+                  )}
                 </clipPath>
               </defs>
-              <AnimatedCircles
-                id={optionKey}
-                secs={i + 2}
-                key={optionKey}
-                cx={ifMobile ? 150 : 25}
-                cy={props.base + props.circleBuffer * i}
-                originx={ifMobile ? 150 : 25}
-                originy={props.base + props.circleBuffer * i}
-                r={
-                  props.circleSize * scrollScale < 0
-                    ? 0
-                    : props.circleSize * scrollScale
-                }
-                delay={2}
-                fill="lightgrey"
-                direction={props.direction}
-              />
+              {ifMobile ? (
+                <AnimatedRectangle
+                  id={optionKey}
+                  secs={i + 2}
+                  key={optionKey}
+                  x={25}
+                  y={props.base - imageMobileOffset + props.circleBuffer * i}
+                  width={
+                    props.circleSize * scrollScale < 0
+                      ? 0
+                      : props.circleSize * scrollScale * 2
+                  }
+                  height={
+                    props.circleSize * scrollScale < 0
+                      ? 0
+                      : props.circleSize * scrollScale
+                  }
+                />
+              ) : (
+                <AnimatedCircles
+                  id={optionKey}
+                  secs={i + 2}
+                  key={optionKey}
+                  cx={ifMobile ? 150 : 25}
+                  cy={props.base + props.circleBuffer * i}
+                  originx={ifMobile ? 150 : 25}
+                  originy={props.base + props.circleBuffer * i}
+                  r={
+                    props.circleSize * scrollScale < 0
+                      ? 0
+                      : props.circleSize * scrollScale
+                  }
+                  delay={2}
+                  fill="lightgrey"
+                  direction={props.direction}
+                />
+              )}
               <image
                 className="imageProfiled"
                 x={ifMobile ? 0 : -props.circleSize}
-                y={props.base - props.circleSize + props.circleBuffer * i}
+                y={
+                  ifMobile
+                    ? props.base - imageMobileOffset + props.circleBuffer * i
+                    : props.base - props.circleSize + props.circleBuffer * i
+                }
                 height={props.circleSize * 2}
                 href={option.image}
-                opacity={ifMobile && props.hovered[0] ? 0.2 : 1}
+                opacity={1}
                 clipPath={`url(#imgpath_${i})`}
               />
               <AnimatedText
                 x={ifMobile ? props.circleSize : -props.circleSize}
-                y={props.base / 2 + 20 + props.circleBuffer * i}
+                y={
+                  ifMobile
+                    ? props.base -
+                      imageMobileOffset * 1.1 +
+                      props.circleBuffer * i
+                    : props.base / 2 + 20 + props.circleBuffer * i
+                }
                 secs={i + 2}
                 scale={`scale(${scrollScale},${scrollScale})`}
                 opacity={scrollScale}
-                textAnchor={ifMobile ? "middle" : "end"}
+                textAnchor={"middle"}
                 origin={props.base / 2 + 20 + props.circleBuffer * i}
                 direction={props.direction}
                 fontWeight="bold"
@@ -127,8 +182,10 @@ export default function ItemDisplay(props) {
                   circleSize={props.circleSize * scrollScale}
                   circleBuffer={props.circleBuffer}
                   hovered={props.hovered}
-                  scrollScale={props.circleSize * scrollScale}
+                  scrollCircle={props.circleSize * scrollScale}
+                  scrollScale={ scrollScale}
                   base={props.base}
+                  imageMobileOffset={imageMobileOffset}
                   i={i}
                   optionKey={optionKey}
                 />
@@ -180,7 +237,7 @@ const draw_in = keyframes`
     }
 `;
 
-const AnimatedText = styled.text((props) => ({
+export const AnimatedText = styled.text((props) => ({
   transform: props.scale,
   // animation: `${draw_in} ${props.secs}s ease`,
   transformOrigin: `25px ${props.origin}px`,
@@ -194,5 +251,9 @@ export const AnimatedCircles = styled.circle((props) => ({
   transform: "scale(1,1)",
   animation: `${draw_in} ${props.secs}s ease`,
   transformOrigin: `${props.originx}px ${props.originy}px`,
+  animationDirection: props.direction,
+}));
+
+export const AnimatedRectangle = styled.rect((props) => ({
   animationDirection: props.direction,
 }));

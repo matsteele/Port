@@ -6,18 +6,13 @@ import ProjectsIMG from "./projects.jpeg";
 const contactMethods = {
   LinkedIn: {
     image: ProfileIMG, // profile image
-    descr: `While an urban economist I was pulled toward advanced ML techniques and data visualization. Eventually I took a hard vere into software development and startups. I became excited about the potential of web3, enabling investments in creative urban development strategies, and mobilizing private networks and so I embarked on building a blockchain start-up focused on tokenizing the equity in real estate. In building this project I gained a foundation for blockchain engineering, data engineering, and backend development. When the start-up did not pan out for financial and legal reasons, I shifted to a well-financed analytics start-up, Elementus. `,
+    descr: `While an urban economist I was pulled toward advanced ML techniques and data visualization. Eventually I took a hard vere into software development and startups. I became excited about the potential of web3, enabling investments in creative urban development strategies, and mobilizing private networks and so I embarked on building a blockchain start-up focused on tokenizing the equity in real estate. When the start-up did not pan out for financial and legal reasons, I shifted to a well-financed analytics start-up, Elementus. `,
     link: "https://www.linkedin.com/in/matsteele/", 
     sub_title: "Profile",
   },
   GitHub: {
     image: ProjectsIMG, 
-    descr: `This site was originally built from scratch as a fun way to apply my skills but it is overall intended to help position me for consulting work, exciting job prospects, and business proposals. 
-
-    \n 
-    \n 
-    Historically I have been keen on projects that solve systemic economic problems. I am curious about applications for web3, particularly in the context of the mobilization of private networks. I am also a big urban planning and economics geek, so I would jump at the opportunity to work on projects that restructure how capital flows or that shape the built environment.  Regardless of what I build and where I work, it’s critical that I am dealing with smart but humble personas passionate about the specific economic issues/problems they are grappling with, in an inclusive supportive work culture.  Further it’s important to me that any employment prospects have a grounded business strategy and a stable, even if modest, revenue stream in a rapidly evolving industry. 
-     
+    descr: `Historically I have been keen on projects that solve systemic economic problems. I am curious about applications for web3, particularly in the context of the mobilization of private networks. I am also a big urban planning and economics geek, so I would jump at the opportunity to work on projects that restructure how capital flows or that shape the built environment. 
     `,
     link: "https://github.com/matsteele/",
     sub_title: "Projects",

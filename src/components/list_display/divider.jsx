@@ -4,6 +4,7 @@ import { keyframes } from '@emotion/core';
 import { store } from '../../store';
 import controller from '../controller';
 import ItemDisplay from './item_display';
+import styleVars from "../../style/style.scss";
 
 const widthOfContainer = 50;
 
@@ -12,12 +13,13 @@ export default function Divider(props) {
   const [heightOfSpine, setHeightOfSpine] = useState(100);
 
   const { state } = useContext(store);
+  const ifMobile = window.innerWidth < styleVars.smlWindowSize ? true : false;
 
   const circleSize = 150; //set by window height
   const circleBuffer = circleSize * 3;
-  const base = 400;
 
-  const ifMobile = window.innerWidth < 420 ? true : false;
+  const base = ifMobile? 600: 300;
+  
 
   useEffect(() => {
     if (state.context !== "mat's terminal" && !state.interact) {
@@ -49,8 +51,6 @@ export default function Divider(props) {
 
         {!(state.context in controller) ? (
           ''
-        ) : ifMobile ? (
-          <Disclaimer />
         ) : (
           <ItemDisplay
             circleSize={circleSize}
@@ -114,8 +114,8 @@ const Disclaimer = () => (
       // text-anchor='middle'
       x='30'
       y='460'
-      font-family='Verdana'
-      font-size='35'
+      fontFamily='Verdana'
+      fontSize='35'
       fill='white'
       stroke='none'
     >
@@ -125,8 +125,8 @@ const Disclaimer = () => (
       // text-anchor='middle'
       x='30'
       y='520'
-      font-family='Verdana'
-      font-size='35'
+      fontFamily='Verdana'
+      fontSize='35'
       fill='white'
       stroke='none'
     >

@@ -2,11 +2,13 @@ import React, { useContext, useState, useEffect } from "react";
 import LibraryIcons from "../controller/library_icons";
 import { OrgIcons } from "../controller/organizations";
 import { store } from "../../store";
+import styleVars from  "../../style/style.scss";
+
 
 export default function ItemDetails(props) {
   const [iconName, setifIconHover] = useState("");
-  const ifMobile = window.innerWidth < 420 ? true : false;
-  const leftBufferFromCircle = ifMobile ? 0 : props.circleSize * 1.6;
+  const ifMobile = window.innerWidth < styleVars.smlWindowSize ? true : false;
+  const leftBufferFromCircle = ifMobile ? 50 : props.circleSize * 1.6;
   const textUpFrontCenter = props.circleSize + 50;
   const { state } = useContext(store);
   const teal = "rgba(62, 204, 203, 0.9)";
@@ -20,7 +22,7 @@ export default function ItemDetails(props) {
     // [('word', 4), 'four', 4]
     // push until count reached
 
-    const lineCharLength = 50;
+    const lineCharLength = ifMobile? 40 : 50
 
     // const descrWordCount = wordsAsArray.length;
     // const numberOfLines = 0; //Math.round(descrWordCount / 10) + 1;

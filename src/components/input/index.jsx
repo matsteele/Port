@@ -158,14 +158,17 @@ const Input = (props) => {
                 setclearList={setclearList}
                 placeholder={placeholder}
               />
+              {/* <GoButton onClick={handleSubmit}>{'->'}</GoButton> */}
             </form>
           </AnimatedDivContainer>
-
           <AnimatedDivContainer
             height={heightofContainer / 3}
             className="listDiv"
             margin="50"
           >
+            {choice.length > 0 && state.interact && (
+              <GoButton onClick={handleSubmit}>{"--->"}</GoButton>
+            )}
             <ul className="userChoices">{arrayofListItems}</ul>
           </AnimatedDivContainer>
         </>
@@ -199,6 +202,13 @@ const AnimatedDivContainer = styled.div`
   animation-fill-mode: forwards;
   margin-left: ${(props) => props.margin}px;
   animation-direction: ${(props) => props.direction};
+`;
+const GoButton = styled.button`
+  fill: white;
+  color: #3ecccb;
+  border: white;
+  font-size: 20px;
+  background: white;
 `;
 
 const sendEmail = (message) => {
