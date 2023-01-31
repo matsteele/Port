@@ -16,21 +16,21 @@ import WBDataViz from './wb_datavizexamples.pdf'
 
 
 const studies = {
-  'Indonesian Urbanization Graphics': {
+  'Indonesian Urbanization': {
     image: WBDataViz_sc,
     descr: `These pieces were part of an urban economic study I worked with a team of graphic designers at the World Bank.`,
     link: WBDataViz,
     sub_title: 'world bank',
     lower_icons: ['r', 'arcgis', 'illustrator', 'indesign']
   },
-    'Capstone - Social Housing in Sao Paulo': {
+    'Social Housing in Sao Paulo': {
     image: SPReport_sc,
-    descr: `This model uses historic crypto trading data to show how gains could be made using multi-level multi-class predictive modeling built on gradient boosted trees, trading between crypto and in and out of crypto.`,
+    descr: `This plan was the output of a Sao Paolo Social Housing Studio focused on development strategies for the Brazilian inner city neighborhood of Nova Luz. The report was presented as a consultation for AECOM. The neighborhood was centrally located and a prime focus for urban development projects, but it was also the refuge of a large population of poor and marginalized populations. The plan attempted to present a model for development that balanced the provision of supportive services while abetting modern dense housing development for the area. `,
     link: SPReport,
     sub_title: 'UPenn',
     lower_icons: ['r', 'illustrator', 'indesign', 'arcgis', 'rhino']
   },
-  'Educational Achievement in Semarang': {
+  'Educational Dev in Semarang': {
     image: SemEdu_sc,
     descr: `This study attempted to model academic achievement in Semarang, a large city in Indonesia. The report was intended to inform a larger study on infrastructure in the city being done by the World Bank.`,
     link: SemEdu,

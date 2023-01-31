@@ -167,7 +167,7 @@ export default function ItemDisplay(props) {
                     : props.base / 2 + 20 + props.circleBuffer * i
                 }
                 secs={i + 2}
-                scale={`scale(${scrollScale},${scrollScale})`}
+                scale={ifMobile? '': `scale(${scrollScale},${scrollScale})`}
                 opacity={scrollScale}
                 textAnchor={"middle"}
                 origin={props.base / 2 + 20 + props.circleBuffer * i}
