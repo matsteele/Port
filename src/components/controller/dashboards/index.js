@@ -67,7 +67,7 @@ const dashboards = {
     sub_title: 'world bank',
     lower_icons: ['javascript', 'html', 'css', 'd3', 'leaflet', 'mapbox']
   },
-  'predicting building temperature': {
+  'building temperatures': {
     image: BuildingTemp,
     descr: `This dashboard parses a csv of building energy data into meaningful sub categories and then makes predictions for each day and week using a color scheme in order to identify outliers. `,
     link: 'https://pd-challenge-steele.herokuapp.com/',

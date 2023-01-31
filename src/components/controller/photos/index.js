@@ -146,4 +146,9 @@ const Photos = {
   },
 };
 
-export default Photos;
+
+const photoArray = Object.entries(Photos);
+photoArray.sort((a, b) =>  b[1].age- a[1].age);
+const sortedPhotos = Object.fromEntries(photoArray);
+
+export default sortedPhotos;

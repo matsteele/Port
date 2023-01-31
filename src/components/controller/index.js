@@ -30,10 +30,6 @@ const controller = {
   photos: {
     options: photos, // evaluate the sentiment and respond / short term, have some favorite quotes
     prompt0: "random photos",
-    prompt1: {
-      default: "any age",
-      prompt: "pick an age",
-    },
   },
   "mat's terminal": { options: {}, prompt0: "back to main menu" },
 };
