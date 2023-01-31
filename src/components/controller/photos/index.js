@@ -76,7 +76,7 @@ const Photos = {
   },
   "World Bank Excursion": {
     image: indo27,
-    descr: `I worked closely with the Semarang City Government to help them cenralize and upgrade their data systems.`,
+    descr: `I worked closely with the Semarang City Government to help them centralize and upgrade their data systems.`,
     link: '',
     sub_title: '28',
     age: 28
